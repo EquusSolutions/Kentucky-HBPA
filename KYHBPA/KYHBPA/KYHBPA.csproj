@@ -200,11 +200,17 @@
     <Compile Include="Migrations\201709132120433_AddMemberTable.Designer.cs">
       <DependentUpon>201709132120433_AddMemberTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709132206060_AddMinuteTable.cs" />
+    <Compile Include="Migrations\201709132206060_AddMinuteTable.Designer.cs">
+      <DependentUpon>201709132206060_AddMinuteTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Minute.cs" />
+    <Compile Include="Models\MinuteType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -290,6 +296,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201709132120433_AddMemberTable.resx">
       <DependentUpon>201709132120433_AddMemberTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709132206060_AddMinuteTable.resx">
+      <DependentUpon>201709132206060_AddMinuteTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

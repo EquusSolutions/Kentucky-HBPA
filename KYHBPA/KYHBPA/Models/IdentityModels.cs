@@ -21,6 +21,8 @@ namespace KYHBPA.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Member> Members { get; set; }
+        public DbSet<Minute> Minutes { get; set; }
+        public DbSet<MinuteType> MinuteTypes { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
