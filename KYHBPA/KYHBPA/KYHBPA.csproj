@@ -208,12 +208,17 @@
     <Compile Include="Migrations\201709181749235_UpdateMinuteTypeToMinuteTable.Designer.cs">
       <DependentUpon>201709181749235_UpdateMinuteTypeToMinuteTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709181945137_addContactTable.cs" />
+    <Compile Include="Migrations\201709181945137_addContactTable.Designer.cs">
+      <DependentUpon>201709181945137_addContactTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201709181949295_addEventTable.cs" />
     <Compile Include="Migrations\201709181949295_addEventTable.Designer.cs">
       <DependentUpon>201709181949295_addEventTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -310,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709181749235_UpdateMinuteTypeToMinuteTable.resx">
       <DependentUpon>201709181749235_UpdateMinuteTypeToMinuteTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709181945137_addContactTable.resx">
+      <DependentUpon>201709181945137_addContactTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709181949295_addEventTable.resx">
       <DependentUpon>201709181949295_addEventTable.cs</DependentUpon>

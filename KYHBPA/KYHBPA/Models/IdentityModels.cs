@@ -22,6 +22,7 @@ namespace KYHBPA.Models
     {
         public DbSet<Member> Members { get; set; }
         public DbSet<Minute> Minutes { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
         public DbSet<Event> Events { get; set; }
 
