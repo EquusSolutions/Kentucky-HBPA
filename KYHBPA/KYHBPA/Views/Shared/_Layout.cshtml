@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("KY HBPA", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand glyphicon glyphicon-home" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -25,6 +25,16 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Member", "Index", "Member")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Community
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("News", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Newsletter", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Blog", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Events", "Index", "Home")</li>
+                        </ul>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
