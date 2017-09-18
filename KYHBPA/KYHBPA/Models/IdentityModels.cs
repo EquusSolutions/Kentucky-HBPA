@@ -23,6 +23,10 @@ namespace KYHBPA.Models
         public DbSet<Member> Members { get; set; }
         public DbSet<Minute> Minutes { get; set; }
 
+        public DbSet<Event> Events { get; set; }
+
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
