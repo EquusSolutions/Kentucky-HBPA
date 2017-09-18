@@ -217,6 +217,10 @@
     <Compile Include="Migrations\201709181949295_addEventTable.Designer.cs">
       <DependentUpon>201709181949295_addEventTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709182019083_AddDocumentTable.cs" />
+    <Compile Include="Migrations\201709182019083_AddDocumentTable.Designer.cs">
+      <DependentUpon>201709182019083_AddDocumentTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -328,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709181949295_addEventTable.resx">
       <DependentUpon>201709181949295_addEventTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709182019083_AddDocumentTable.resx">
+      <DependentUpon>201709182019083_AddDocumentTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
