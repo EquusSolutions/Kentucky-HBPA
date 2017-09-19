@@ -7,18 +7,18 @@ using System.Web;
 
 namespace KYHBPA.Models
 {
-    public class Minute
+    public class Minutes
     {
         public int Id { get; set; }
         public string Note { get; set; }
         public DateTime Date { get; set; }
 
-        [DisplayName("Minute Type")]
-        [EnumDataType(typeof(MinuteType))]
-        public MinuteType MinuteType { get; set; }
+        [DisplayName("Minutes Type")]
+        [EnumDataType(typeof(MinutesType))]
+        public MinutesType MinutesType { get; set; }
     }
 
-    public enum MinuteType
+    public enum MinutesType
     {
         Board,
         Community,

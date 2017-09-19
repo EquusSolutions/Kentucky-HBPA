@@ -8,7 +8,7 @@ namespace KYHBPA.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Minutes",
+                "dbo.Minute",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -17,11 +17,11 @@ namespace KYHBPA.Migrations
                         MinuteTypeId = c.Byte(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.MinuteTypes", t => t.MinuteTypeId, cascadeDelete: true)
+                .ForeignKey("dbo.MinuteType", t => t.MinuteTypeId, cascadeDelete: true)
                 .Index(t => t.MinuteTypeId);
             
             CreateTable(
-                "dbo.MinuteTypes",
+                "dbo.MinuteType",
                 c => new
                     {
                         Id = c.Byte(nullable: false),
@@ -33,10 +33,10 @@ namespace KYHBPA.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Minutes", "MinuteTypeId", "dbo.MinuteTypes");
-            DropIndex("dbo.Minutes", new[] { "MinuteTypeId" });
-            DropTable("dbo.MinuteTypes");
-            DropTable("dbo.Minutes");
+            DropForeignKey("dbo.Minute", "MinuteTypeId", "dbo.MinuteType");
+            DropIndex("dbo.Minute", new[] { "MinuteTypeId" });
+            DropTable("dbo.MinuteType");
+            DropTable("dbo.Minute");
         }
     }
 }

@@ -21,11 +21,10 @@ namespace KYHBPA.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Member> Members { get; set; }
-        public DbSet<Minute> Minutes { get; set; }
+        public DbSet<Minutes> Minutes { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-
         public DbSet<Event> Events { get; set; }
-
+        public DbSet<Document> Documents { get; set; }
 
 
         public ApplicationDbContext()
@@ -37,7 +36,5 @@ namespace KYHBPA.Models
         {
             return new ApplicationDbContext();
         }
-
-        public System.Data.Entity.DbSet<KYHBPA.Models.Document> Documents { get; set; }
     }
 }

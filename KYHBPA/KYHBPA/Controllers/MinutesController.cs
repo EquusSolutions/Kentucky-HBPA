@@ -27,12 +27,12 @@ namespace KYHBPA.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Minute minute = db.Minutes.Find(id);
-            if (minute == null)
+            Minutes minutes = db.Minutes.Find(id);
+            if (minutes == null)
             {
                 return HttpNotFound();
             }
-            return View(minute);
+            return View(minutes);
         }
 
         // GET: Minutes/Create
@@ -46,16 +46,16 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Note,Date,MinuteType")] Minute minute)
+        public ActionResult Create([Bind(Include = "Id,Note,Date,MinutesType")] Minutes minutes)
         {
             if (ModelState.IsValid)
             {
-                db.Minutes.Add(minute);
+                db.Minutes.Add(minutes);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(minute);
+            return View(minutes);
         }
 
         // GET: Minutes/Edit/5
@@ -65,12 +65,12 @@ namespace KYHBPA.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Minute minute = db.Minutes.Find(id);
-            if (minute == null)
+            Minutes minutes = db.Minutes.Find(id);
+            if (minutes == null)
             {
                 return HttpNotFound();
             }
-            return View(minute);
+            return View(minutes);
         }
 
         // POST: Minutes/Edit/5
@@ -78,15 +78,15 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Note,Date,MinuteType")] Minute minute)
+        public ActionResult Edit([Bind(Include = "Id,Note,Date,MinutesType")] Minutes minutes)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(minute).State = EntityState.Modified;
+                db.Entry(minutes).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(minute);
+            return View(minutes);
         }
 
         // GET: Minutes/Delete/5
@@ -96,12 +96,12 @@ namespace KYHBPA.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Minute minute = db.Minutes.Find(id);
-            if (minute == null)
+            Minutes minutes = db.Minutes.Find(id);
+            if (minutes == null)
             {
                 return HttpNotFound();
             }
-            return View(minute);
+            return View(minutes);
         }
 
         // POST: Minutes/Delete/5
@@ -109,8 +109,8 @@ namespace KYHBPA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Minute minute = db.Minutes.Find(id);
-            db.Minutes.Remove(minute);
+            Minutes minutes = db.Minutes.Find(id);
+            db.Minutes.Remove(minutes);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

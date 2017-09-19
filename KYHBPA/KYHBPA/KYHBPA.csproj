@@ -224,6 +224,10 @@
     <Compile Include="Migrations\201709182019083_AddDocumentTable.Designer.cs">
       <DependentUpon>201709182019083_AddDocumentTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709182139524_UpdateMinuteTableName.cs" />
+    <Compile Include="Migrations\201709182139524_UpdateMinuteTableName.Designer.cs">
+      <DependentUpon>201709182139524_UpdateMinuteTableName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -232,7 +236,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Member.cs" />
-    <Compile Include="Models\Minute.cs" />
+    <Compile Include="Models\Minutes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -353,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709182019083_AddDocumentTable.resx">
       <DependentUpon>201709182019083_AddDocumentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709182139524_UpdateMinuteTableName.resx">
+      <DependentUpon>201709182139524_UpdateMinuteTableName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

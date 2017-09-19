@@ -7,17 +7,17 @@ namespace KYHBPA.Migrations
     {
         public override void Up()
         {
-            DropForeignKey("dbo.Minutes", "MinuteTypeId", "dbo.MinuteTypes");
-            DropIndex("dbo.Minutes", new[] { "MinuteTypeId" });
-            AddColumn("dbo.Minutes", "MinuteType", c => c.Int(nullable: false));
-            DropColumn("dbo.Minutes", "MinuteTypeId");
-            DropTable("dbo.MinuteTypes");
+            DropForeignKey("dbo.Minute", "MinuteTypeId", "dbo.MinuteType");
+            DropIndex("dbo.Minute", new[] { "MinuteTypeId" });
+            AddColumn("dbo.Minute", "MinuteType", c => c.Int(nullable: false));
+            DropColumn("dbo.Minute", "MinuteTypeId");
+            DropTable("dbo.MinuteType");
         }
         
         public override void Down()
         {
             CreateTable(
-                "dbo.MinuteTypes",
+                "dbo.MinuteType",
                 c => new
                     {
                         Id = c.Byte(nullable: false),
@@ -25,10 +25,10 @@ namespace KYHBPA.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
-            AddColumn("dbo.Minutes", "MinuteTypeId", c => c.Byte(nullable: false));
-            DropColumn("dbo.Minutes", "MinuteType");
-            CreateIndex("dbo.Minutes", "MinuteTypeId");
-            AddForeignKey("dbo.Minutes", "MinuteTypeId", "dbo.MinuteTypes", "Id", cascadeDelete: true);
+            AddColumn("dbo.Minute", "MinuteTypeId", c => c.Byte(nullable: false));
+            DropColumn("dbo.Minute", "MinuteType");
+            CreateIndex("dbo.Minute", "MinuteTypeId");
+            AddForeignKey("dbo.Minute", "MinuteTypeId", "dbo.MinuteType", "Id", cascadeDelete: true);
         }
     }
 }

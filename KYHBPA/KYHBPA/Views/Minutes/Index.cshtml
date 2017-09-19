@@ -1,4 +1,4 @@
-﻿@model IEnumerable<KYHBPA.Models.Minute>
+﻿@model IEnumerable<KYHBPA.Models.Minutes>
 
 @{
     ViewBag.Title = "Index";
@@ -18,7 +18,7 @@
             @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MinuteType)
+            @Html.DisplayNameFor(model => model.MinutesType)
         </th>
         <th></th>
     </tr>
@@ -32,7 +32,7 @@
             @Html.DisplayFor(modelItem => item.Date)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.MinuteType)
+            @Html.DisplayFor(modelItem => item.MinutesType)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
