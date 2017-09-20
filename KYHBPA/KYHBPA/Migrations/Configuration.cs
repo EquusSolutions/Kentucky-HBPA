@@ -1,3 +1,5 @@
+using KYHBPA.Models;
+
 namespace KYHBPA.Migrations
 {
     using System;
@@ -26,6 +28,16 @@ namespace KYHBPA.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Minutes.AddOrUpdate(
+                m => m.Id,
+                new Minutes { Id = 1, Date = DateTime.Now,
+                    MinutesType = MinutesType.Board, Note = "Test Board Minutes"},
+                new Minutes { Id = 2, Date = DateTime.Now,
+                    MinutesType = MinutesType.Community, Note = "Test Community Minutes" },
+                new Minutes { Id = 3, Date = DateTime.Now,
+                    MinutesType = MinutesType.Other, Note = "Test Other Minutes" }
+            );
         }
     }
 }

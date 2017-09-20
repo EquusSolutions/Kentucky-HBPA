@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KYHBPA.Models;
+using KYHBPA.Models.ViewModels;
 
 namespace KYHBPA.Controllers
 {
@@ -17,7 +18,16 @@ namespace KYHBPA.Controllers
         // GET: Minutes
         public ActionResult Index()
         {
-            return View(db.Minutes.ToList());
+            var minutes = db.Minutes.Select(m => new MinutesViewModel()
+            {
+                Id = m.Id,
+                Date = m.Date,
+                MinutesType = m.MinutesType,
+                Note = m.Note
+            });
+
+            return View(minutes);
+            //return View(db.Minutes.ToList());
         }
 
         // GET: Minutes/Details/5
@@ -113,6 +123,65 @@ namespace KYHBPA.Controllers
             db.Minutes.Remove(minutes);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        // GET: Minutes/Save/5
+        public ActionResult Save(int? id)
+        {
+            if (id == null) 
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Minutes minutes = db.Minutes.Find(id);
+            if (minutes == null)
+            {
+                return HttpNotFound();
+            }
+            var viewModel = new MinutesViewModel()
+            {
+                Id = minutes.Id,
+                Note = minutes.Note,
+                Date = minutes.Date,
+                MinutesType = minutes.MinutesType
+            };
+            return View("MinutesFormView", viewModel);
+        }
+
+        // POST: Minutes/Save/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Save(Minutes minutes)
+        {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MinutesViewModel()
+                {
+                    Id = minutes.Id,
+                    Note = minutes.Note,
+                    Date = minutes.Date,
+                    MinutesType = minutes.MinutesType
+                };
+                return View("MinutesFormView", viewModel);
+            }
+            // If the minutes Id is 0 it is a new customer
+            if (minutes.Id == 0)
+            {
+                db.Minutes.Add(minutes);
+            }
+            else
+            {
+                var minuteInDb = db.Minutes.Single(m => m.Id == minutes.Id);
+
+                minuteInDb.Note = minutes.Note;
+                minuteInDb.Date = minutes.Date;
+                minuteInDb.MinutesType = minutes.MinutesType;
+            }
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Minutes");
         }
 
         protected override void Dispose(bool disposing)
