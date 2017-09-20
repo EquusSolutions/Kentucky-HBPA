@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -17,5 +18,18 @@ namespace KYHBPA.Models
         public string ContentType { get; set; }
         public string FileName { get; set; }
         public string UploadedBy { get; set; }
+        [DisplayName("Document Discriminator")]
+        [EnumDataType(typeof(DocumentDiscriminator))]
+        public DocumentDiscriminator Discriminator { get; set; }
+        public DateTime UploadDate { get; set; }
+    }
+
+    public enum DocumentDiscriminator
+    {
+        Image,
+        Newsletter,
+        MemberCard,
+        Letter,
+        Other
     }
 }
