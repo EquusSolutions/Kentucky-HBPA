@@ -30,6 +30,48 @@ namespace KYHBPA.Controllers
             //return View(db.Minutes.ToList());
         }
 
+        // GET: Minutes/BoardMinutes
+        public ActionResult BoardMinutes()
+        {
+            var viewModels = db.Minutes.Where(m => m.MinutesType == MinutesType.Board).Select(m => new MinutesViewModel()
+            {
+                Id = m.Id,
+                Date = m.Date,
+                MinutesType = m.MinutesType,
+                Note = m.Note
+            });
+
+            return View("Index", viewModels);
+        }
+
+        // GET: Minutes/Community
+        public ActionResult CommunityMinutes()
+        {
+            var viewModels = db.Minutes.Where(m => m.MinutesType == MinutesType.Community).Select(m => new MinutesViewModel()
+            {
+                Id = m.Id,
+                Date = m.Date,
+                MinutesType = m.MinutesType,
+                Note = m.Note
+            });
+
+            return View("Index", viewModels);
+        }
+
+        // GET: Minutes/Other
+        public ActionResult OtherMinutes()
+        {
+            var viewModels = db.Minutes.Where(m => m.MinutesType == MinutesType.Other).Select(m => new MinutesViewModel()
+            {
+                Id = m.Id,
+                Date = m.Date,
+                MinutesType = m.MinutesType,
+                Note = m.Note
+            });
+
+            return View("Index", viewModels);
+        }
+
         // GET: Minutes/Details/5
         public ActionResult Details(int? id)
         {

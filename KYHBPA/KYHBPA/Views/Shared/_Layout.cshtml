@@ -29,9 +29,9 @@
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                             <li>@Html.ActionLink("Contact(Make partial view and combine)", "Index", "Contact")</li>
                             <li>@Html.ActionLink("Biography(Need to add)", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Board Minutes(Add Board View)", "Index", "Minutes")</li>
-                            <li>@Html.ActionLink("Community Minutes(Add Community View)", "Index", "Minutes")</li>
-                            <li>@Html.ActionLink("Other Minutes(Add Other View)", "Index", "Minutes")</li>
+                            <li>@Html.ActionLink("Board Minutes", "BoardMinutes", "Minutes")</li>
+                            <li>@Html.ActionLink("Community Minutes", "CommunityMinutes", "Minutes")</li>
+                            <li>@Html.ActionLink("Other Minutes", "OtherMinutes", "Minutes")</li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -68,7 +68,7 @@
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("My Account", "Index", "Member")</li>  
-                            <li>@Html.ActionLink("Benefits", "Index", "Member")</li>                             
+                            <li>@Html.ActionLink("Benefits", "Index", "Home")</li>                             
                             <li>@Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand glyphicon glyphicon-log-out" })</li>
                         </ul>
                     </li>  
