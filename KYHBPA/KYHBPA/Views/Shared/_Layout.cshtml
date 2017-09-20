@@ -21,14 +21,19 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Member", "Index", "Member")</li>
-                    <li>@Html.ActionLink("Minutes", "Index", "Minutes")</li>
-                    <li>@Html.ActionLink("Contact", "Index", "Contact")</li>
-                    <li>@Html.ActionLink("Event", "Index", "Event")</li>
-                    <li>@Html.ActionLink("Document", "Index", "Document")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Organization
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Contact(Make partial view and combine)", "Index", "Contact")</li>
+                            <li>@Html.ActionLink("Biography(Need to add)", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Board Minutes(Add Board View)", "Index", "Minutes")</li>
+                            <li>@Html.ActionLink("Community Minutes(Add Community View)", "Index", "Minutes")</li>
+                            <li>@Html.ActionLink("Other Minutes(Add Other View)", "Index", "Minutes")</li>
+                        </ul>
+                    </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Community
                             <span class="caret"></span></a>
@@ -36,11 +41,42 @@
                             <li>@Html.ActionLink("News", "Index", "Home")</li>
                             <li>@Html.ActionLink("Newsletter", "Index", "Home")</li>
                             <li>@Html.ActionLink("Blog", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Events", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Events", "Index", "Event")</li>
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Member
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Roster", "Index", "Member")</li>  
+                            <li>@Html.ActionLink("Benefits(Add static page)", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Benevolence(Add static page)", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Registration", "Create", "Member")</li>
+                        </ul>
+                    </li>  
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Other
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Document", "Index", "Document")</li>
+                        </ul>
+                    </li> 
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" href="~/">
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("My Account", "Index", "Member")</li>  
+                            <li>@Html.ActionLink("Benefits", "Index", "Member")</li>                             
+                            <li>@Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand glyphicon glyphicon-log-out" })</li>
+                        </ul>
+                    </li>  
                 </ul>
                 @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Donate", "Index", "Home")</li>
+                </ul>
             </div>
         </div>
     </div>
