@@ -78,7 +78,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,MemberId,FileBytes,ContentLength,ContentType,FileName,UploadedBy")] Document document)
+        public ActionResult Edit([Bind(Include = "Id,MemberId,FileBytes,ContentLength,ContentType,FileName,UploadedBy,Discriminator,UploadDate")] Document document)
         {
             if (ModelState.IsValid)
             {
@@ -92,7 +92,7 @@ namespace KYHBPA.Controllers
         public ActionResult Fetch(Document document)
         {
 
-            return View();
+            return View("Index");
         }
 
         // GET: Document/Delete/5
