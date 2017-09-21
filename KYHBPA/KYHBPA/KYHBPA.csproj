@@ -329,6 +329,7 @@
     <Content Include="Views\Minutes\Index.cshtml" />
     <Content Include="Views\Minutes\MinutesFormView.cshtml" />
     <Content Include="Views\Home\DocumentManagement.cshtml" />
+    <Content Include="Views\Document\_FetchImage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

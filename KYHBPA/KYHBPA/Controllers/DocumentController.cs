@@ -89,6 +89,12 @@ namespace KYHBPA.Controllers
             return View(document);
         }
 
+        public ActionResult Fetch(Document document)
+        {
+
+            return View();
+        }
+
         // GET: Document/Delete/5
         public ActionResult Delete(int? id)
         {

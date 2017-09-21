@@ -32,32 +32,34 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MemberId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FileBytes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContentLength)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContentType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FileName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UploadedBy)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MemberId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileBytes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContentLength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UploadedBy)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
 
 </table>
+
+@Html.Partial("_FetchImage")

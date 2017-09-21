@@ -33,7 +33,6 @@ namespace KYHBPA.Controllers
         {
             return View();
         }
-
         
         [HttpPost]
         public ActionResult UploadDocument(int memberId, HttpPostedFileBase file)
@@ -53,7 +52,8 @@ namespace KYHBPA.Controllers
                     ContentLength = file.ContentLength,
                     ContentType = file.ContentType,
                     FileName = file.FileName,
-                    FileBytes = uploadedFile
+                    FileBytes = uploadedFile,
+                    UploadDate = DateTime.Now
                 };
 
                 db.Documents.Add(documentModel);
@@ -62,19 +62,19 @@ namespace KYHBPA.Controllers
 
             return View("DocumentManagement");
         }
-        /*
-        public ActionResult GetDocument(int studentId)
+        
+        public ActionResult GetDocument(int memberId)
         {
-            var allDocumentsForStudent = _db.Documents.Where(d => d.StudentId == studentId);
+            var allDocumentsForMember = db.Documents.Where(d => d.MemberId == memberId);
 
-            var oneDocumentFromStudent = allDocumentsForStudent.FirstOrDefault();
+            var oneDocumentFromMember = allDocumentsForMember.FirstOrDefault();
 
-            if (oneDocumentFromStudent != null)
+            if (oneDocumentFromMember != null)
             {
-                return File(oneDocumentFromStudent.FileBytes, "application/octet-stream", oneDocumentFromStudent.FileName);
+                return File(oneDocumentFromMember.FileBytes, "application/octet-stream", oneDocumentFromMember.FileName);
             }
             return RedirectToAction("DocumentManagement");
         }
-        */
+        
     }
 }
