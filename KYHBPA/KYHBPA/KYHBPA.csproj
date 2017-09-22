@@ -197,6 +197,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\MinutesController.cs" />
+    <Compile Include="Controllers\PollController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -232,6 +233,10 @@
     <Compile Include="Migrations\201709201951003_UpdateDocumentTable.Designer.cs">
       <DependentUpon>201709201951003_UpdateDocumentTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709220155571_AddPollTables.cs" />
+    <Compile Include="Migrations\201709220155571_AddPollTables.Designer.cs">
+      <DependentUpon>201709220155571_AddPollTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -241,6 +246,8 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Minutes.cs" />
+    <Compile Include="Models\Poll.cs" />
+    <Compile Include="Models\PollOption.cs" />
     <Compile Include="Models\ViewModels\DocumentViewModel.cs" />
     <Compile Include="Models\ViewModels\MinutesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -331,6 +338,11 @@
     <Content Include="Views\Minutes\MinutesFormView.cshtml" />
     <Content Include="Views\Home\DocumentManagement.cshtml" />
     <Content Include="Views\Document\_FetchImage.cshtml" />
+    <Content Include="Views\Poll\Create.cshtml" />
+    <Content Include="Views\Poll\Delete.cshtml" />
+    <Content Include="Views\Poll\Details.cshtml" />
+    <Content Include="Views\Poll\Edit.cshtml" />
+    <Content Include="Views\Poll\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -372,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709201951003_UpdateDocumentTable.resx">
       <DependentUpon>201709201951003_UpdateDocumentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709220155571_AddPollTables.resx">
+      <DependentUpon>201709220155571_AddPollTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
