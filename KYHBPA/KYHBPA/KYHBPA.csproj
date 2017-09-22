@@ -338,6 +338,7 @@
     <Content Include="Views\Minutes\MinutesFormView.cshtml" />
     <Content Include="Views\Home\DocumentManagement.cshtml" />
     <Content Include="Views\Document\_FetchImage.cshtml" />
+    <Content Include="Views\Home\_ContactForm.cshtml" />
     <Content Include="Views\Poll\Create.cshtml" />
     <Content Include="Views\Poll\Delete.cshtml" />
     <Content Include="Views\Poll\Details.cshtml" />
