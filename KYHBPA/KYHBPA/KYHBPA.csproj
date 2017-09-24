@@ -237,6 +237,10 @@
     <Compile Include="Migrations\201709220155571_AddPollTables.Designer.cs">
       <DependentUpon>201709220155571_AddPollTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709232222084_AddNameToPollTable.cs" />
+    <Compile Include="Migrations\201709232222084_AddNameToPollTable.Designer.cs">
+      <DependentUpon>201709232222084_AddNameToPollTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -391,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709220155571_AddPollTables.resx">
       <DependentUpon>201709220155571_AddPollTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709232222084_AddNameToPollTable.resx">
+      <DependentUpon>201709232222084_AddNameToPollTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

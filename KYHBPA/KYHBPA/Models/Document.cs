@@ -21,6 +21,8 @@ namespace KYHBPA.Models
         [DisplayName("Document Discriminator")]
         [EnumDataType(typeof(DocumentDiscriminator))]
         public DocumentDiscriminator Discriminator { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime UploadDate { get; set; }
     }
 

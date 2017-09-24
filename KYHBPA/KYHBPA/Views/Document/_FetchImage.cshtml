@@ -1,2 +1,4 @@
-﻿
-<img src= "@Url.Content("http://lorempixel.com/400/200/")" alt="Image" />
+﻿@model KYHBPA.Models.Document
+@*<img src= "@Url.Content("http://lorempixel.com/400/200/")" alt="Image" />*@
+
+<img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.FileBytes)))" />

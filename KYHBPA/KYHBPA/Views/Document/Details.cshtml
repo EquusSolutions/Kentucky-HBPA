@@ -19,7 +19,7 @@
         </dd>
 
         <dd>
-            @Html.DisplayFor(model => model.FileBytes)
+            @Html.HiddenFor(model => model.FileBytes)
         </dd>
 
         <dt>
@@ -56,6 +56,9 @@
 
     </dl>
 </div>
+
+@Html.Partial("_FetchImage")
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")

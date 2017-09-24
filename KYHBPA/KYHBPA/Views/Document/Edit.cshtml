@@ -3,7 +3,19 @@
 @{
     ViewBag.Title = "Edit";
 }
-
+<header>
+    <script type="text/javascript">
+    $(document).ready(
+        function () {
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                minDate: "-99Y",
+                dateFormat: "dd/mm/yyyy"
+            });
+        });
+    </script>
+</header>
 <h2>Edit</h2>
 
 
@@ -16,6 +28,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.FileBytes)
 
         <div class="form-group">
             @Html.LabelFor(model => model.MemberId, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -69,15 +82,7 @@
             @Html.LabelFor(model => model.UploadDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.UploadDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UploadDate, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        
-        <div class="form-group">
-            @Html.LabelFor(model => model.FileBytes, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.HiddenFor(model => model.FileBytes, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FileBytes, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.UploadDate, "", new {@class = "text-danger"})
             </div>
         </div>
 
