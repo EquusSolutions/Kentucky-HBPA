@@ -32,7 +32,27 @@ namespace KYHBPA.Migrations
                     , Zip = "40202", Email = "test@test.com", DateOfBirth = DateTime.Now.AddYears(-20),
                     FirstName = "Corey", LastName = "Cooley", Income = 100000, Id = 1, IsAgreedToTerms = true,
                     IsHorseOwner = false, IsStaff = true, IsTrainer = false, MemberDate = DateTime.Now,
-                    Signature = "Corey Cooley"}
+                    Signature = "Corey Cooley"},
+                new Member
+                {
+                    Address = "456 Test Blvd",
+                    City = "Louisville",
+                    State = "KY"
+                    ,
+                    Zip = "40215",
+                    Email = "test@email.com",
+                    DateOfBirth = DateTime.Now.AddYears(-39),
+                    FirstName = "John",
+                    LastName = "Hopson",
+                    Income = 1000000,
+                    Id = 1,
+                    IsAgreedToTerms = true,
+                    IsHorseOwner = false,
+                    IsStaff = true,
+                    IsTrainer = false,
+                    MemberDate = DateTime.Now,
+                    Signature = "John C Hopson"
+                }
                 );
                
         }
