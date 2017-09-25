@@ -34,6 +34,7 @@ namespace KYHBPA.Migrations
                     IsHorseOwner = false, IsStaff = true, IsTrainer = false, MemberDate = DateTime.Now,
                     Signature = "Corey Cooley"}
                 );
+               
         }
     }
 }
