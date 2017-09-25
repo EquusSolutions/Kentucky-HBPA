@@ -47,7 +47,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Question,StartDate,EndDate")] Poll poll)
+        public ActionResult Create([Bind(Include = "Id,Question,StartDate,EndDate,PollOptions")] Poll poll)
         {
             if (ModelState.IsValid)
             {
@@ -102,12 +102,8 @@ namespace KYHBPA.Controllers
             {
                 return HttpNotFound();
             }
-            //List<PollOption> pollOptions = db.PollOptions.Where(p => p.Poll == poll).ToList();
-            List<PollOption> pollOptions = new List<PollOption>();
-            //pollOptions.Add(new PollOption{Poll = poll, Votes = 0, Title = "Option 1"});
-            //pollOptions.Add(new PollOption { Poll = poll, Votes = 0, Title = "Option 2" });
-            //pollOptions.Add(new PollOption { Poll = poll, Votes = 0, Title = "Option 3" });
-            //pollOptions.Add(new PollOption { Poll = poll, Votes = 0, Title = "Option 4" });
+            List<PollOption> pollOptions = db.PollOptions.Where(p => p.Poll.Id == poll.Id).ToList();
+            //List<PollOption> pollOptions = new List<PollOption>();
             var viewModel = new PollViewModel()
             {
                 Poll = poll,
@@ -117,52 +113,66 @@ namespace KYHBPA.Controllers
         }
         
         // https://stackoverflow.com/questions/38513599/asp-net-mvc-how-to-dynamically-add-items-to-an-object-and-bind-it-to-the-contr
-        public ActionResult AddPollOption(int PollId)
+        public ActionResult AddPollOption(Poll poll)
         {
             var newOption = new PollOption();
-            Poll poll = db.Polls.Find(PollId);
-            poll.PollOptions.Add(newOption);
-            db.SaveChanges();
+            poll.PollOptions = new List<PollOption>();
+            Poll pollInDb = db.Polls.Find(poll.Id);
+            if (pollInDb != null)
+            {
+                pollInDb.PollOptions = new List<PollOption>();
+                newOption.Poll = pollInDb;
+                newOption.Title = "Enter Poll Option";
 
-            return View("PollForm");
+                pollInDb.PollOptions.Add(newOption);
+                db.SaveChanges();
+
+                var pollView = new PollViewModel()
+                {
+                    Poll = pollInDb,
+                    PollOptions = pollInDb.PollOptions
+                };
+                return View("PollForm", pollView);
+            }
+            return View("Index");
         }
 
         // POST: Minutes/Save/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Save(Minutes minutes)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        var viewModel = new MinutesViewModel()
-        //        {
-        //            Id = minutes.Id,
-        //            Note = minutes.Note,
-        //            Date = minutes.Date,
-        //            MinutesType = minutes.MinutesType
-        //        };
-        //        return View("MinutesFormView", viewModel);
-        //    }
-        //    // If the minutes Id is 0 it is a new customer
-        //    if (minutes.Id == 0)
-        //    {
-        //        db.Minutes.Add(minutes);
-        //    }
-        //    else
-        //    {
-        //        var minuteInDb = db.Minutes.Single(m => m.Id == minutes.Id);
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Save(PollViewModel pollView)
+        {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new PollViewModel()
+                {
+                    Poll = pollView.Poll,
+                    PollOptions = new List<PollOption>()
+                };
+                return View("PollForm", viewModel);
+            }
+            // If the minutes Id is 0 it is a new customer
+            if (pollView.Poll.Id == 0)
+            {
+                db.Polls.Add(pollView.Poll);
+            }
+            else
+            {
+                var pollInDb = db.Polls.Single(p => p.Id == pollView.Poll.Id);
 
-        //        minuteInDb.Note = minutes.Note;
-        //        minuteInDb.Date = minutes.Date;
-        //        minuteInDb.MinutesType = minutes.MinutesType;
-        //    }
+                pollInDb.Name = pollView.Poll.Name;
+                pollInDb.Question = pollView.Poll.Question;
+                pollInDb.StartDate = pollView.Poll.StartDate;
+                pollInDb.EndDate = pollView.Poll.EndDate;
+                pollInDb.PollOptions = pollView.PollOptions;
+            }
 
-        //    db.SaveChanges();
+            db.SaveChanges();
 
-        //    return RedirectToAction("Index", "Minutes");
-        //}
+            return RedirectToAction("Index", "Poll");
+        }
 
         // GET: Poll/Delete/5
         public ActionResult Delete(int? id)
