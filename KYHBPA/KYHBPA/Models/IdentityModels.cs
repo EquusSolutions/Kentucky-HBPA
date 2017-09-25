@@ -25,6 +25,8 @@ namespace KYHBPA.Models
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<Document> Documents { get; set; }
+        public DbSet<Poll> Polls { get; set; }
+        public DbSet<PollOption> PollOptions { get; set; }
 
 
         public ApplicationDbContext()

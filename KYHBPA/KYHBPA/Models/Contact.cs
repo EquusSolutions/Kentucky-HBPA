@@ -1,5 +1,11 @@
-﻿using System;
+﻿//Steps for making a model, then a controller which will then make a view.
+    //Step 1: Go to Models class and then create a new class in there
+    //Step 2:
+
+
+using System;
 using System.Collections.Generic;
+//Must have this using statement if you want to use [DisplayName]
 using System.ComponentModel;
 using System.Linq;
 using System.Web;

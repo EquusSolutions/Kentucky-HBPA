@@ -16,19 +16,6 @@ namespace KYHBPA.Migrations
 
         protected override void Seed(KYHBPA.Models.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
-
             context.Minutes.AddOrUpdate(
                 m => m.Id,
                 new Minutes { Id = 1, Date = DateTime.Now,
@@ -38,6 +25,15 @@ namespace KYHBPA.Migrations
                 new Minutes { Id = 3, Date = DateTime.Now,
                     MinutesType = MinutesType.Other, Note = "Test Other Minutes" }
             );
+
+            context.Members.AddOrUpdate(
+                m => m.Email,
+                new Member { Address = "123 Test Road", City = "Louisville", State = "KY"
+                    , Zip = "40202", Email = "test@test.com", DateOfBirth = DateTime.Now.AddYears(-20),
+                    FirstName = "Corey", LastName = "Cooley", Income = 100000, Id = 1, IsAgreedToTerms = true,
+                    IsHorseOwner = false, IsStaff = true, IsTrainer = false, MemberDate = DateTime.Now,
+                    Signature = "Corey Cooley"}
+                );
         }
     }
 }

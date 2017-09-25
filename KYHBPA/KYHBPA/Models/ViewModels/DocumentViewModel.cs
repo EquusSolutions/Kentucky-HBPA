@@ -5,9 +5,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace KYHBPA.Models
+namespace KYHBPA.Models.ViewModels
 {
-    public class Document
+    public class DocumentViewModel
     {
         public int Id { get; set; }
         [DisplayName("Member Id")]
@@ -21,17 +21,6 @@ namespace KYHBPA.Models
         [DisplayName("Document Discriminator")]
         [EnumDataType(typeof(DocumentDiscriminator))]
         public DocumentDiscriminator Discriminator { get; set; }
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime UploadDate { get; set; }
-    }
-
-    public enum DocumentDiscriminator
-    {
-        Image,
-        Newsletter,
-        MemberCard,
-        Letter,
-        Other
     }
 }
