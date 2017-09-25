@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KYHBPA.Models;
+using KYHBPA.Models.ViewModels;
 
 namespace KYHBPA.Controllers
 {
@@ -88,6 +89,80 @@ namespace KYHBPA.Controllers
             }
             return View(poll);
         }
+
+        // GET: Minutes/Save/5
+        public ActionResult Save(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Poll poll = db.Polls.Find(id);
+            if (poll == null)
+            {
+                return HttpNotFound();
+            }
+            //List<PollOption> pollOptions = db.PollOptions.Where(p => p.Poll == poll).ToList();
+            List<PollOption> pollOptions = new List<PollOption>();
+            //pollOptions.Add(new PollOption{Poll = poll, Votes = 0, Title = "Option 1"});
+            //pollOptions.Add(new PollOption { Poll = poll, Votes = 0, Title = "Option 2" });
+            //pollOptions.Add(new PollOption { Poll = poll, Votes = 0, Title = "Option 3" });
+            //pollOptions.Add(new PollOption { Poll = poll, Votes = 0, Title = "Option 4" });
+            var viewModel = new PollViewModel()
+            {
+                Poll = poll,
+                PollOptions = pollOptions
+            };
+            return View("PollForm", viewModel);
+        }
+        
+        // https://stackoverflow.com/questions/38513599/asp-net-mvc-how-to-dynamically-add-items-to-an-object-and-bind-it-to-the-contr
+        public ActionResult AddPollOption(int PollId)
+        {
+            var newOption = new PollOption();
+            Poll poll = db.Polls.Find(PollId);
+            poll.PollOptions.Add(newOption);
+            db.SaveChanges();
+
+            return View("PollForm");
+        }
+
+        // POST: Minutes/Save/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Save(Minutes minutes)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        var viewModel = new MinutesViewModel()
+        //        {
+        //            Id = minutes.Id,
+        //            Note = minutes.Note,
+        //            Date = minutes.Date,
+        //            MinutesType = minutes.MinutesType
+        //        };
+        //        return View("MinutesFormView", viewModel);
+        //    }
+        //    // If the minutes Id is 0 it is a new customer
+        //    if (minutes.Id == 0)
+        //    {
+        //        db.Minutes.Add(minutes);
+        //    }
+        //    else
+        //    {
+        //        var minuteInDb = db.Minutes.Single(m => m.Id == minutes.Id);
+
+        //        minuteInDb.Note = minutes.Note;
+        //        minuteInDb.Date = minutes.Date;
+        //        minuteInDb.MinutesType = minutes.MinutesType;
+        //    }
+
+        //    db.SaveChanges();
+
+        //    return RedirectToAction("Index", "Minutes");
+        //}
 
         // GET: Poll/Delete/5
         public ActionResult Delete(int? id)
