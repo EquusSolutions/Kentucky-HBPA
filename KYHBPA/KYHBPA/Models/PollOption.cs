@@ -10,5 +10,6 @@ namespace KYHBPA.Models
         public int Id { get; set; }
         public int Votes { get; set; }
         public string Title { get; set; }
+        public Poll Poll { get; set; }
     }
 }
