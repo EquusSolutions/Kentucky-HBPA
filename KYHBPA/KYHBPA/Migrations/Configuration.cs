@@ -54,7 +54,6 @@ namespace KYHBPA.Migrations
                     Signature = "John C Hopson"
                 }
                 );
-               
         }
     }
 }
