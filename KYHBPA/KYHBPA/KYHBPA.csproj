@@ -276,6 +276,7 @@
     <Content Include="img\EquusSolutions1.png" />
     <Content Include="img\EquusSolutionsLogo.png" />
     <Content Include="img\HBPAhighres141-1.png" />
+    <None Include="img\kyhbpa-logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
