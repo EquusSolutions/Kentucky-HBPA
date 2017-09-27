@@ -368,6 +368,7 @@
     <Content Include="Views\Home\BoardOfDirectors.cshtml" />
     <Content Include="Views\Minutes\MinutesView.cshtml" />
     <Content Include="Views\Document\Newsletter.cshtml" />
+    <Content Include="Views\Contact\SuccessfulSubmission.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
