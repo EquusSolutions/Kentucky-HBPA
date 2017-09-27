@@ -41,7 +41,7 @@ namespace KYHBPA.Controllers
                 Note = m.Note
             });
 
-            return View("Index", viewModels);
+            return View("MinutesView", viewModels);
         }
 
         // GET: Minutes/Community
@@ -55,7 +55,7 @@ namespace KYHBPA.Controllers
                 Note = m.Note
             });
 
-            return View("Index", viewModels);
+            return View("MinutesView", viewModels);
         }
 
         // GET: Minutes/Other
@@ -69,7 +69,7 @@ namespace KYHBPA.Controllers
                 Note = m.Note
             });
 
-            return View("Index", viewModels);
+            return View("MinutesView", viewModels);
         }
 
         // GET: Minutes/Details/5
