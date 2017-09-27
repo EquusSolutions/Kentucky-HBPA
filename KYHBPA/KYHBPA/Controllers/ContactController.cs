@@ -52,7 +52,7 @@ namespace KYHBPA.Controllers
             {
                 db.Contacts.Add(contact);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return View("SuccessfulSubmission");
             }
 
             return View(contact);

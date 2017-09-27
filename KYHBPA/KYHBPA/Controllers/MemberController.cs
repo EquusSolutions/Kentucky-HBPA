@@ -123,5 +123,12 @@ namespace KYHBPA.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+        public ActionResult Benefits()
+            {
+                return View("Benefits");
+        }
+        
     }
 }

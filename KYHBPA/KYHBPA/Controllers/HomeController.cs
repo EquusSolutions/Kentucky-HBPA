@@ -34,6 +34,11 @@ namespace KYHBPA.Controllers
             return View();
         }
         
+        public ActionResult BoardOfDirectors()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult UploadDocument(int memberId, HttpPostedFileBase file)
         {

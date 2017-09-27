@@ -6,7 +6,7 @@ using System.Web;
 
 namespace KYHBPA.Models
 {
-    public class Biography
+    public class BoardOfDirectors
     {
         public int Id { get; set; }
         public string Title { get; set; }

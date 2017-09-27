@@ -95,6 +95,19 @@ namespace KYHBPA.Controllers
             return View("Index");
         }
 
+        public ActionResult GetNewsletter()
+        {
+            var newsletter = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Newsletter);
+            var oneNewsletter = newsletter.FirstOrDefault();
+
+            if (oneNewsletter != null)
+            {
+                return File(oneNewsletter.FileBytes, "application/octet-stream", oneNewsletter.FileName);
+            }
+    
+            return View("Index");
+        }
+
         // GET: Document/Delete/5
         public ActionResult Delete(int? id)
         {
