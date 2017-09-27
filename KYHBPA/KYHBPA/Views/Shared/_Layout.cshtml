@@ -26,40 +26,42 @@
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("About", "About", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>                            
-                            <li>@Html.ActionLink("Biography(Need to add)", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Board Minutes", "BoardMinutes", "Minutes")</li>
-                            <li>@Html.ActionLink("Community Minutes", "CommunityMinutes", "Minutes")</li>
-                            <li>@Html.ActionLink("Other Minutes", "OtherMinutes", "Minutes")</li>
+                            <li>@Html.ActionLink("Staff", "BoardOfDirectors", "Home")</li>
+                            <li>@Html.ActionLink("Board Minutes (V)", "BoardMinutes", "Minutes")</li>
+                            <li>@Html.ActionLink("Community Minutes (V)", "CommunityMinutes", "Minutes")</li>
+                            <li>@Html.ActionLink("Other Minutes (V)", "OtherMinutes", "Minutes")</li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Community
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("News", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Newsletter", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Blog", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Events", "Index", "Event")</li>
+                            <li>@Html.ActionLink("News (MVC)", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Newsletter (V)", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Blog (MVC)", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Events (V)", "Index", "Event")</li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Member
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Roster", "Index", "Member")</li>  
+                            <li>@Html.ActionLink("Roster (V)", "Index", "Member")</li>  
                             <li>@Html.ActionLink("Benefits", "Benefits", "Member")</li>
-                            <li>@Html.ActionLink("Benevolence(Add static page)", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Benevolence (V)", "Index", "Home")</li>
                             <li>@Html.ActionLink("Registration", "Create", "Member")</li>
                         </ul>
                     </li>  
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Other
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Admin Portal
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Document", "Index", "Document")</li>
                             <li>@Html.ActionLink("Document Manager", "DocumentManagement", "Home")</li>
                             <li>@Html.ActionLink("Vistor Contacts", "Index", "Contact")</li>
                             <li>@Html.ActionLink("Polls", "Index", "Poll")</li>
+                            <li>@Html.ActionLink("Minutes", "Index", "Minutes")</li>
+                            <li>@Html.ActionLink("Events", "Index", "Event")</li>
                         </ul>
                     </li> 
                 </ul>
@@ -68,9 +70,8 @@
                         <a class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" href="~/">
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("My Account", "Index", "Member")</li>  
-                            <li>@Html.ActionLink("Benefits", "Index", "Home")</li>                             
-                            <li>@Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand glyphicon glyphicon-log-out" })</li>
+                            <li>@Html.ActionLink("My Account (V)", "Index", "Member")</li>  
+                            <li>@Html.ActionLink("Logout (Implement)", "Index", "Home")</li>
                         </ul>
                     </li>  
                 </ul>
