@@ -111,11 +111,41 @@ namespace KYHBPA.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Kentucky_HBPA_Membership_Card {
+            get {
+                object obj = ResourceManager.GetObject("Kentucky_HBPA_Membership_Card", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap kyhbpa_logo {
             get {
                 object obj = ResourceManager.GetObject("kyhbpa_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap office {
+            get {
+                object obj = ResourceManager.GetObject("office", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap staff_photo {
+            get {
+                object obj = ResourceManager.GetObject("staff_photo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

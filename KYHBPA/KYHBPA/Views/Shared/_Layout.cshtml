@@ -21,12 +21,12 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Organization
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Our Organization
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>                            
-                            <li>@Html.ActionLink("Staff", "BoardOfDirectors", "Home")</li>
+                            <li>@Html.ActionLink("Who We Are", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>                            
+                            <li>@Html.ActionLink("Meet Our Staff", "BoardOfDirectors", "Home")</li>
                             <li>@Html.ActionLink("Board Minutes", "BoardMinutes", "Minutes")</li>
                             <li>@Html.ActionLink("Community Minutes", "CommunityMinutes", "Minutes")</li>
                             <li>@Html.ActionLink("Other Minutes", "OtherMinutes", "Minutes")</li>
@@ -78,7 +78,7 @@
                 @Html.Partial("_LoginPartial")
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="https://www.paypal.com/fundraiser/hub">
+                        <a href="https://www.paypal.com/us/webapps/mpp/donations" target="_blank">
                             <img src="~/img/donate-btn.png" alt="Donate through PayPal" height="24" width="101" />
                         </a>
                     </li>

@@ -241,6 +241,10 @@
     <Compile Include="Migrations\201709232222084_AddNameToPollTable.Designer.cs">
       <DependentUpon>201709232222084_AddNameToPollTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709272039528_UpdateEventDates.cs" />
+    <Compile Include="Migrations\201709272039528_UpdateEventDates.Designer.cs">
+      <DependentUpon>201709272039528_UpdateEventDates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
@@ -251,6 +255,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Minutes.cs" />
+    <Compile Include="Models\News.cs" />
     <Compile Include="Models\Poll.cs" />
     <Compile Include="Models\PollOption.cs" />
     <Compile Include="Models\ViewModels\DocumentViewModel.cs" />
@@ -271,12 +276,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <None Include="Documents\Kentucky-HBPA-Membership-Card.pdf" />
     <None Include="Resources\favicon.ico" />
     <None Include="img\donate-btn.png" />
     <Content Include="img\EquusSolutions1.png" />
     <Content Include="img\EquusSolutionsLogo.png" />
     <Content Include="img\HBPAhighres141-1.png" />
     <None Include="img\kyhbpa-logo.png" />
+    <None Include="img\office.jpg" />
+    <None Include="img\staff-photo.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -368,6 +376,7 @@
     <Content Include="Views\Home\BoardOfDirectors.cshtml" />
     <Content Include="Views\Minutes\MinutesView.cshtml" />
     <Content Include="Views\Document\Newsletter.cshtml" />
+    <Content Include="Views\Contact\SuccessfulSubmission.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -416,6 +425,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709232222084_AddNameToPollTable.resx">
       <DependentUpon>201709232222084_AddNameToPollTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709272039528_UpdateEventDates.resx">
+      <DependentUpon>201709272039528_UpdateEventDates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
