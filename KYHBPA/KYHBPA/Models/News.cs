@@ -1,7 +1,11 @@
 ﻿//Steps for making a model, then a controller which will then make a view.
 //Step 1: Go to Models class and then create a new class in there
 //Step 2: Create the fields for the table in the database
-//Step 3: 
+//Step 3: Go to team explorer fetch and then pull 
+//Step 4: updata-database in the Paclage Manager Console
+//Step 5: add-migration AddNewsTable to Paclage Manager Console
+//Step 6: Then add it to the IdentityModels
+//Step 7: Update-database to Paclage Manager Console
 
 using System;
 using System.Collections.Generic;
