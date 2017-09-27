@@ -241,6 +241,10 @@
     <Compile Include="Migrations\201709232222084_AddNameToPollTable.Designer.cs">
       <DependentUpon>201709232222084_AddNameToPollTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709272039528_UpdateEventDates.cs" />
+    <Compile Include="Migrations\201709272039528_UpdateEventDates.Designer.cs">
+      <DependentUpon>201709272039528_UpdateEventDates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
@@ -417,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709232222084_AddNameToPollTable.resx">
       <DependentUpon>201709232222084_AddNameToPollTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709272039528_UpdateEventDates.resx">
+      <DependentUpon>201709272039528_UpdateEventDates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
