@@ -27,9 +27,9 @@
                             <li>@Html.ActionLink("About", "About", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>                            
                             <li>@Html.ActionLink("Staff", "BoardOfDirectors", "Home")</li>
-                            <li>@Html.ActionLink("Board Minutes (V)", "BoardMinutes", "Minutes")</li>
-                            <li>@Html.ActionLink("Community Minutes (V)", "CommunityMinutes", "Minutes")</li>
-                            <li>@Html.ActionLink("Other Minutes (V)", "OtherMinutes", "Minutes")</li>
+                            <li>@Html.ActionLink("Board Minutes", "BoardMinutes", "Minutes")</li>
+                            <li>@Html.ActionLink("Community Minutes", "CommunityMinutes", "Minutes")</li>
+                            <li>@Html.ActionLink("Other Minutes", "OtherMinutes", "Minutes")</li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -37,7 +37,7 @@
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("News (MVC)", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Newsletter (V)", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Newsletter (V)", "GetNewsletter", "Document")</li>
                             <li>@Html.ActionLink("Blog (MVC)", "Index", "Home")</li>
                             <li>@Html.ActionLink("Events (V)", "Index", "Event")</li>
                         </ul>
@@ -77,9 +77,11 @@
                 </ul>
                 @Html.Partial("_LoginPartial")
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://www.paypal.com/fundraiser/hub">
-                            <img src="~/img/donate-btn.png" alt="Donate through PayPal" height="24" width="101" /></li>
+                    <li>
+                        <a href="https://www.paypal.com/fundraiser/hub">
+                            <img src="~/img/donate-btn.png" alt="Donate through PayPal" height="24" width="101" />
                         </a>
+                    </li>
                 </ul>
             </div>
         </div>

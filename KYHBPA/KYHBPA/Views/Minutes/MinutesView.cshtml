@@ -1,0 +1,23 @@
+﻿@model IEnumerable<KYHBPA.Models.ViewModels.MinutesViewModel>
+
+@{
+    ViewBag.Title = "MinutesView";
+}
+<div>
+    <br/>
+    <h2>Minutes:</h2>
+</div>
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Note)
+            </td>
+        </tr>
+    }
+</table>
