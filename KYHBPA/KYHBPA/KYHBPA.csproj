@@ -255,6 +255,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Minutes.cs" />
+    <Compile Include="Models\News.cs" />
     <Compile Include="Models\Poll.cs" />
     <Compile Include="Models\PollOption.cs" />
     <Compile Include="Models\ViewModels\DocumentViewModel.cs" />
@@ -281,6 +282,8 @@
     <Content Include="img\EquusSolutionsLogo.png" />
     <Content Include="img\HBPAhighres141-1.png" />
     <None Include="img\kyhbpa-logo.png" />
+    <None Include="img\office.jpg" />
+    <None Include="img\staff-photo.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
