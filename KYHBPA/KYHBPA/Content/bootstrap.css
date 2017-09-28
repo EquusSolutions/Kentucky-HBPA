@@ -234,6 +234,11 @@ td,
 th {
     padding: 0;
 }
+
+.padCols td {
+    padding: 0 5px 0 5px;
+}
+
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
     *,
@@ -1638,6 +1643,11 @@ h5,
 h6,
 .h6 {
     font-size: 13px;
+}
+
+.h5News {
+    font-size: 15px;
+    color: #156691;
 }
 
 p {

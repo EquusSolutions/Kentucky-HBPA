@@ -63,6 +63,86 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _1_May {
+            get {
+                object obj = ResourceManager.GetObject("_1_May", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _12_Sep {
+            get {
+                object obj = ResourceManager.GetObject("_12_Sep", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _17_Sep {
+            get {
+                object obj = ResourceManager.GetObject("_17_Sep", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _2_Aug {
+            get {
+                object obj = ResourceManager.GetObject("_2_Aug", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _20_Apr {
+            get {
+                object obj = ResourceManager.GetObject("_20_Apr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _20_July {
+            get {
+                object obj = ResourceManager.GetObject("_20_July", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _21_Sep {
+            get {
+                object obj = ResourceManager.GetObject("_21_Sep", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _26_Sep {
+            get {
+                object obj = ResourceManager.GetObject("_26_Sep", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap donate_btn1 {
             get {
                 object obj = ResourceManager.GetObject("donate_btn1", resourceCulture);
@@ -73,9 +153,9 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap EquusSolutions11 {
+        public static System.Drawing.Bitmap EquusSolutions_logo {
             get {
-                object obj = ResourceManager.GetObject("EquusSolutions11", resourceCulture);
+                object obj = ResourceManager.GetObject("EquusSolutions_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

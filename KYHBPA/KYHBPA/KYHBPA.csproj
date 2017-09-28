@@ -288,6 +288,14 @@
     <None Include="Documents\Kentucky-HBPA-Membership-Card.pdf" />
     <None Include="Resources\favicon.ico" />
     <None Include="Images\donate-btn.png" />
+    <None Include="Images\2-Aug.png" />
+    <None Include="Images\20-July.png" />
+    <None Include="Images\1-May.png" />
+    <None Include="Images\12-Sep.png" />
+    <None Include="Images\17-Sep.png" />
+    <None Include="Images\20-Apr.png" />
+    <None Include="Images\21-Sep.png" />
+    <None Include="Images\26-Sep.png" />
     <Content Include="Images\EquusSolutions-logo.png" />
     <Content Include="Images\HBPAhighres141-1.png" />
     <None Include="Images\kyhbpa-logo.png" />
