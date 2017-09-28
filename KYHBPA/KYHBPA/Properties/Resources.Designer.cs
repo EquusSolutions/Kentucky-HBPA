@@ -63,9 +63,9 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap donate_btn {
+        public static System.Drawing.Bitmap donate_btn1 {
             get {
-                object obj = ResourceManager.GetObject("donate_btn", resourceCulture);
+                object obj = ResourceManager.GetObject("donate_btn1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,19 +73,9 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap EquusSolutions1 {
+        public static System.Drawing.Bitmap EquusSolutions11 {
             get {
-                object obj = ResourceManager.GetObject("EquusSolutions1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap EquusSolutionsLogo {
-            get {
-                object obj = ResourceManager.GetObject("EquusSolutionsLogo", resourceCulture);
+                object obj = ResourceManager.GetObject("EquusSolutions11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +93,9 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap HBPAhighres141_1 {
+        public static System.Drawing.Bitmap HBPAhighres141_11 {
             get {
-                object obj = ResourceManager.GetObject("HBPAhighres141_1", resourceCulture);
+                object obj = ResourceManager.GetObject("HBPAhighres141_11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +113,9 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap kyhbpa_logo {
+        public static System.Drawing.Bitmap kyhbpa_logo1 {
             get {
-                object obj = ResourceManager.GetObject("kyhbpa_logo", resourceCulture);
+                object obj = ResourceManager.GetObject("kyhbpa_logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +123,9 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap office {
+        public static System.Drawing.Bitmap office1 {
             get {
-                object obj = ResourceManager.GetObject("office", resourceCulture);
+                object obj = ResourceManager.GetObject("office1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +133,9 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap staff_photo {
+        public static System.Drawing.Bitmap staff_photo1 {
             get {
-                object obj = ResourceManager.GetObject("staff_photo", resourceCulture);
+                object obj = ResourceManager.GetObject("staff_photo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

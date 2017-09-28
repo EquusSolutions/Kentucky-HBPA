@@ -118,31 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="EquusSolutions1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\EquusSolutions1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="EquusSolutionsLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\EquusSolutionsLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="favicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\favicon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HBPAhighres141_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\HBPAhighres141-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="donate_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\donate-btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kyhbpa_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\kyhbpa-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="office" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\office.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="staff_photo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\staff-photo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Kentucky_HBPA_Membership_Card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Documents\Kentucky-HBPA-Membership-Card.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="donate_btn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\donate-btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EquusSolutions11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\EquusSolutions1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HBPAhighres141_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\HBPAhighres141-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kyhbpa_logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\kyhbpa-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="office1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\office.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="staff_photo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\staff-photo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
