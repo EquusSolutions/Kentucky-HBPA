@@ -78,7 +78,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,description,Date,Time,Title,Location")] Event @event)
+        public ActionResult Edit([Bind(Include = "Id,Description,StartDate,EndDate,Time,Title,Location")] Event @event)
         {
             if (ModelState.IsValid)
             {
