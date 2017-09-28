@@ -7,13 +7,13 @@ namespace KYHBPA.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class UpdateNewsTable : IMigrationMetadata
+    public sealed partial class AddNewsTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateNewsTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddNewsTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201709271406587_UpdateNewsTable"; }
+            get { return "201709280123524_AddNewsTable"; }
         }
         
         string IMigrationMetadata.Source

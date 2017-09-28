@@ -241,17 +241,13 @@
     <Compile Include="Migrations\201709232222084_AddNameToPollTable.Designer.cs">
       <DependentUpon>201709232222084_AddNameToPollTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201709271025275_AddNewsTable.cs" />
-    <Compile Include="Migrations\201709271025275_AddNewsTable.Designer.cs">
-      <DependentUpon>201709271025275_AddNewsTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709271406587_UpdateNewsTable.cs" />
-    <Compile Include="Migrations\201709271406587_UpdateNewsTable.Designer.cs">
-      <DependentUpon>201709271406587_UpdateNewsTable.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201709272039528_UpdateEventDates.cs" />
     <Compile Include="Migrations\201709272039528_UpdateEventDates.Designer.cs">
       <DependentUpon>201709272039528_UpdateEventDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709280123524_AddNewsTable.cs" />
+    <Compile Include="Migrations\201709280123524_AddNewsTable.Designer.cs">
+      <DependentUpon>201709280123524_AddNewsTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -434,14 +430,11 @@
     <EmbeddedResource Include="Migrations\201709232222084_AddNameToPollTable.resx">
       <DependentUpon>201709232222084_AddNameToPollTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709271025275_AddNewsTable.resx">
-      <DependentUpon>201709271025275_AddNewsTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709271406587_UpdateNewsTable.resx">
-      <DependentUpon>201709271406587_UpdateNewsTable.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709272039528_UpdateEventDates.resx">
       <DependentUpon>201709272039528_UpdateEventDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709280123524_AddNewsTable.resx">
+      <DependentUpon>201709280123524_AddNewsTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
