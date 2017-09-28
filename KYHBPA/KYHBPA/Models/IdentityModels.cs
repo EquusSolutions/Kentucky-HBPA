@@ -27,6 +27,7 @@ namespace KYHBPA.Models
         public DbSet<Document> Documents { get; set; }
         public DbSet<Poll> Polls { get; set; }
         public DbSet<PollOption> PollOptions { get; set; }
+        public DbSet<News> News { get; set; }
 
 
         public ApplicationDbContext()
