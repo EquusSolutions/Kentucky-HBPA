@@ -288,7 +288,7 @@
     <None Include="Documents\Kentucky-HBPA-Membership-Card.pdf" />
     <None Include="Resources\favicon.ico" />
     <None Include="Images\donate-btn.png" />
-    <Content Include="Images\EquusSolutions1.png" />
+    <Content Include="Images\EquusSolutions-logo.png" />
     <Content Include="Images\HBPAhighres141-1.png" />
     <None Include="Images\kyhbpa-logo.png" />
     <None Include="Images\office.jpg" />
