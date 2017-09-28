@@ -249,6 +249,10 @@
     <Compile Include="Migrations\201709280123524_AddNewsTable.Designer.cs">
       <DependentUpon>201709280123524_AddNewsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709280211183_SeedUsers.cs" />
+    <Compile Include="Migrations\201709280211183_SeedUsers.Designer.cs">
+      <DependentUpon>201709280211183_SeedUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
@@ -262,6 +266,7 @@
     <Compile Include="Models\News.cs" />
     <Compile Include="Models\Poll.cs" />
     <Compile Include="Models\PollOption.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Models\ViewModels\DocumentViewModel.cs" />
     <Compile Include="Models\ViewModels\MinutesViewModel.cs" />
     <Compile Include="Models\ViewModels\PollViewModel.cs" />
@@ -381,6 +386,8 @@
     <Content Include="Views\Minutes\MinutesView.cshtml" />
     <Content Include="Views\Document\Newsletter.cshtml" />
     <Content Include="Views\Contact\SuccessfulSubmission.cshtml" />
+    <Content Include="Views\Member\List.cshtml" />
+    <Content Include="Views\Member\ReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -435,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709280123524_AddNewsTable.resx">
       <DependentUpon>201709280123524_AddNewsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709280211183_SeedUsers.resx">
+      <DependentUpon>201709280211183_SeedUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

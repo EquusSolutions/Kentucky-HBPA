@@ -11,6 +11,7 @@ using KYHBPA.Models.ViewModels;
 
 namespace KYHBPA.Controllers
 {
+    [Authorize]
     public class PollController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
