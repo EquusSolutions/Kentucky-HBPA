@@ -395,6 +395,7 @@
     <Content Include="Views\Contact\SuccessfulSubmission.cshtml" />
     <Content Include="Views\Member\List.cshtml" />
     <Content Include="Views\Member\ReadOnlyList.cshtml" />
+    <Content Include="Views\Shared\_VisitorLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -159,8 +159,8 @@ namespace KYHBPA.Controllers
                     // Uncomment to add an admin
                     //var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
                     //var roleManager = new RoleManager<IdentityRole>(roleStore);
-                    //await roleManager.CreateAsync(new IdentityRole("Administrator"));
-                    //await UserManager.AddToRoleAsync(user.Id, "Administrator");
+                    //await roleManager.CreateAsync(new IdentityRole("Staff"));
+                    //await UserManager.AddToRoleAsync(user.Id, "Staff");
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
@@ -169,7 +169,7 @@ namespace KYHBPA.Controllers
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
+                    
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
