@@ -1,0 +1,30 @@
+﻿@model KYHBPA.Models.Member
+
+@{
+    ViewBag.Title = "Profile";
+}
+
+<br />
+<br />
+
+<div class="pad">
+    <div class="textclearfloat">
+
+        <figure class="pull-left">
+            <img src="https://lh4.ggpht.com/TdlLk3aX4xFdm6-vFoR1e7gzPoskPUT52mDCaOWpu7_eY6y0UEWhecpggltELABiTrE=w300" alt="Member Image" hspace="16" width="140">
+            <figcaption>
+            </figcaption>
+            <br />
+        </figure>
+
+        <h3 style="color:darkcyan">@Model.FirstName @Model.LastName</h3>
+        <p><b>Kentucky HBPA Member</b></p>
+    </div>
+</div>
+
+<div class="pad vert-space">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Contact Info</p>
+    <p>Email: <a href="mailto:@Model.Email" target="_blank">@Model.Email</a></p>
+    <p>Phone: @Model.PhoneNumber</p>    
+</div>

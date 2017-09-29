@@ -23,6 +23,21 @@ namespace KYHBPA.Controllers
             //return View(db.Members.ToList());
         }
 
+        // GET: Member/Profile/5
+        public ActionResult Profile(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Member member = db.Members.Find(id);
+            if (member == null)
+            {
+                return HttpNotFound();
+            }
+            return View(member);
+        }
+
         // GET: Member/Details/5
         public ActionResult Details(int? id)
         {

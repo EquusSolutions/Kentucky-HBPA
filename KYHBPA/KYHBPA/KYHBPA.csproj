@@ -397,6 +397,7 @@
     <Content Include="Views\Member\ReadOnlyList.cshtml" />
     <Content Include="Views\Shared\_VisitorLayout.cshtml" />
     <Content Include="Views\Event\ReadOnlyList.cshtml" />
+    <Content Include="Views\Member\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

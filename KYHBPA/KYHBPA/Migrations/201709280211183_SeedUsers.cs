@@ -20,6 +20,11 @@ namespace KYHBPA.Migrations
         
         public override void Down()
         {
+            Sql(@"
+                DELETE FROM [dbo].[AspNetUsers];
+                DELETE FROM [dbo].[AspNetRoles];
+                DELETE FROM [dbo].[AspNetUserRoles];
+                ");
         }
     }
 }
