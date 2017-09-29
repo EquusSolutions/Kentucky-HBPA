@@ -17,10 +17,14 @@ namespace KYHBPA.Controllers
         // GET: Event
         public ActionResult Index()
         {
-            return View(db.Events.ToList());
+            if (User.IsInRole(RoleName.Administrator) || User.IsInRole(RoleName.Staff))
+                return View(db.Events.ToList());
+                return View("ReadOnlyList", db.Events.ToList());
+            //return View(db.Events.ToList());
         }
 
         // GET: Event/Details/5
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +40,7 @@ namespace KYHBPA.Controllers
         }
 
         // GET: Event/Create
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Create()
         {
             return View();
@@ -46,6 +51,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Create([Bind(Include = "Id,Description,StartDate,EndDate,Time,Title,Location")] Event @event)
         {
             if (ModelState.IsValid)
@@ -59,6 +65,7 @@ namespace KYHBPA.Controllers
         }
 
         // GET: Event/Edit/5
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,6 +85,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Edit([Bind(Include = "Id,Description,StartDate,EndDate,Time,Title,Location")] Event @event)
         {
             if (ModelState.IsValid)
@@ -90,6 +98,7 @@ namespace KYHBPA.Controllers
         }
 
         // GET: Event/Delete/5
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -107,6 +116,7 @@ namespace KYHBPA.Controllers
         // POST: Event/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult DeleteConfirmed(int id)
         {
             Event @event = db.Events.Find(id);

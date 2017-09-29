@@ -5,5 +5,16 @@
 }
 
 <h2>Newsletter</h2>
+@if (Model != null)
+{
+    <iframe src="@string.Format("data:application/pdf;base64,{0}", Convert.ToBase64String(Model.FileBytes))" style="width: 100%"; height="600"> </iframe>
+    <div>
+        <h4>Download Newsletters</h4>
 
-<iframe src="@Url.Action("GetNewsletter")"></iframe>
+        @Html.ActionLink("Download October 2017 Newsletter", "GetNewsletter")
+    </div>
+}
+else
+{
+    <h4>No Newsletters uploaded.</h4>
+}

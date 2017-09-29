@@ -95,6 +95,14 @@ namespace KYHBPA.Controllers
             return View("Index");
         }
 
+        public ActionResult NewsLetter()
+        {
+            var newsletter = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Newsletter);
+            var oneNewsletter = newsletter.FirstOrDefault();
+
+            return View("Newsletter", oneNewsletter);
+        }
+
         public ActionResult GetNewsletter()
         {
             var newsletter = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Newsletter);
@@ -105,7 +113,7 @@ namespace KYHBPA.Controllers
                 return File(oneNewsletter.FileBytes, "application/octet-stream", oneNewsletter.FileName);
             }
     
-            return View("Index");
+            return RedirectToAction("Index","Home");
         }
 
         // GET: Document/Delete/5

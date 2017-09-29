@@ -41,6 +41,9 @@ namespace KYHBPA.Controllers
                 Note = m.Note
             });
 
+            if (User.IsInRole(RoleName.Administrator) || User.IsInRole(RoleName.Staff))           
+                return View("Index", viewModels);
+
             return View("MinutesView", viewModels);
         }
 
@@ -54,6 +57,8 @@ namespace KYHBPA.Controllers
                 MinutesType = m.MinutesType,
                 Note = m.Note
             });
+            if (User.IsInRole(RoleName.Administrator) || User.IsInRole(RoleName.Staff))
+                return View("Index", viewModels);
 
             return View("MinutesView", viewModels);
         }
@@ -68,11 +73,14 @@ namespace KYHBPA.Controllers
                 MinutesType = m.MinutesType,
                 Note = m.Note
             });
+            if (User.IsInRole(RoleName.Administrator) || User.IsInRole(RoleName.Staff))
+                return View("Index", viewModels);
 
             return View("MinutesView", viewModels);
         }
 
         // GET: Minutes/Details/5
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -88,6 +96,7 @@ namespace KYHBPA.Controllers
         }
 
         // GET: Minutes/Create
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Create()
         {
             return View();
@@ -98,6 +107,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Create([Bind(Include = "Id,Note,Date,MinutesType")] Minutes minutes)
         {
             if (ModelState.IsValid)
@@ -111,6 +121,7 @@ namespace KYHBPA.Controllers
         }
 
         // GET: Minutes/Edit/5
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -130,6 +141,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Edit([Bind(Include = "Id,Note,Date,MinutesType")] Minutes minutes)
         {
             if (ModelState.IsValid)
@@ -142,6 +154,7 @@ namespace KYHBPA.Controllers
         }
 
         // GET: Minutes/Delete/5
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -159,6 +172,7 @@ namespace KYHBPA.Controllers
         // POST: Minutes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult DeleteConfirmed(int id)
         {
             Minutes minutes = db.Minutes.Find(id);
@@ -168,6 +182,7 @@ namespace KYHBPA.Controllers
         }
 
         // GET: Minutes/Save/5
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Save(int? id)
         {
             if (id == null) 
@@ -194,6 +209,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
         public ActionResult Save(Minutes minutes)
         {
             if (!ModelState.IsValid)

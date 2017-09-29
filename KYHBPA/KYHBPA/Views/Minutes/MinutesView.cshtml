@@ -8,7 +8,14 @@
     <h2>Minutes:</h2>
 </div>
 <table class="table">
-
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Note)
+        </th>
+    </tr>
     @foreach (var item in Model)
     {
         <tr>

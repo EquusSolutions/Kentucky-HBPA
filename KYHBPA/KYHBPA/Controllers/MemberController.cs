@@ -17,7 +17,7 @@ namespace KYHBPA.Controllers
         // GET: Member
         public ActionResult Index()
         {
-            if (User.IsInRole(RoleName.Administrator))
+            if (User.IsInRole(RoleName.Administrator) || User.IsInRole(RoleName.Staff))
                 return View("List", db.Members.ToList());
                 return View("ReadOnlyList", db.Members.ToList());
             //return View(db.Members.ToList());
@@ -39,7 +39,6 @@ namespace KYHBPA.Controllers
         }
 
         // GET: Member/Create
-        [Authorize(Roles = RoleName.Administrator)]
         public ActionResult Create()
         {
             return View();
@@ -50,7 +49,6 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = RoleName.Administrator)]
         public ActionResult Create([Bind(Include = "Id,FirstName,LastName,DateOfBirth,MemberDate,Address,City,State,Zip,Email,PhoneNumber,RacingLicense,Income,IsTrainer,IsHorseOwner,IsStaff,IsAgreedToTerms,Signature")] Member member)
         {
             if (ModelState.IsValid)
