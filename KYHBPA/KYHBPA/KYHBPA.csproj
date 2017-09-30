@@ -311,6 +311,14 @@
     <None Include="Images\keenland.jpg" />
     <None Include="Images\race_horse.jpg" />
     <None Include="Images\Racing_at_Arlington_Park.jpg" />
+    <None Include="Images\Image1.jpg" />
+    <None Include="Images\Image2.jpg" />
+    <None Include="Images\Image3.jpg" />
+    <None Include="Images\Image4.jpg" />
+    <None Include="Images\Image5.jpg" />
+    <None Include="Images\Image6.jpg" />
+    <None Include="Images\Image7.jpg" />
+    <None Include="Images\Image8.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">

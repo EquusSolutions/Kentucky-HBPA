@@ -169,31 +169,28 @@
   <data name="Sports_betting_board" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Sports-betting-board.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Twitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Image1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Image1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="A_day_at_Churchill_Downs__11151426603_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\A_day_at_Churchill_Downs_(11151426603).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Image2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Image2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="grass_track_farm_run_animal_bend_812292_pxhere_com" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\grass-track-farm-run-animal-bend-812292-pxhere.com.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Image3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Image3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="John_Battaglia_Memorial_030417_FINISH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\John-Battaglia-Memorial-030417-FINISH.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Image4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Image4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="keenland" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\keenland.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Image5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Image5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="race_horse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\race_horse.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Image6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Image6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Racing_at_Arlington_Park" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Racing_at_Arlington_Park.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Image7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Image7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_1280px_Horse_race__Churchill_Downs_2008_04_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\1280px-Horse_race,_Churchill_Downs_2008-04-18.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_16507933_10154387625341270_4896702627390194009_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\16507933_10154387625341270_4896702627390194009_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Image8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Image8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

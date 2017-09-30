@@ -83,26 +83,6 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _1280px_Horse_race__Churchill_Downs_2008_04_18 {
-            get {
-                object obj = ResourceManager.GetObject("_1280px_Horse_race__Churchill_Downs_2008_04_18", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap _16507933_10154387625341270_4896702627390194009_n {
-            get {
-                object obj = ResourceManager.GetObject("_16507933_10154387625341270_4896702627390194009_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap _17_Sep {
             get {
                 object obj = ResourceManager.GetObject("_17_Sep", resourceCulture);
@@ -163,16 +143,6 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap A_day_at_Churchill_Downs__11151426603_ {
-            get {
-                object obj = ResourceManager.GetObject("A_day_at_Churchill_Downs__11151426603_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap donate_btn1 {
             get {
                 object obj = ResourceManager.GetObject("donate_btn1", resourceCulture);
@@ -203,16 +173,6 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap grass_track_farm_run_animal_bend_812292_pxhere_com {
-            get {
-                object obj = ResourceManager.GetObject("grass_track_farm_run_animal_bend_812292_pxhere_com", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap HBPAhighres141_11 {
             get {
                 object obj = ResourceManager.GetObject("HBPAhighres141_11", resourceCulture);
@@ -223,9 +183,9 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap John_Battaglia_Memorial_030417_FINISH {
+        public static System.Drawing.Bitmap Image1 {
             get {
-                object obj = ResourceManager.GetObject("John_Battaglia_Memorial_030417_FINISH", resourceCulture);
+                object obj = ResourceManager.GetObject("Image1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +193,69 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap keenland {
+        public static System.Drawing.Bitmap Image2 {
             get {
-                object obj = ResourceManager.GetObject("keenland", resourceCulture);
+                object obj = ResourceManager.GetObject("Image2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Image3 {
+            get {
+                object obj = ResourceManager.GetObject("Image3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Image4 {
+            get {
+                object obj = ResourceManager.GetObject("Image4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Image5 {
+            get {
+                object obj = ResourceManager.GetObject("Image5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Image6 {
+            get {
+                object obj = ResourceManager.GetObject("Image6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Image7 {
+            get {
+                object obj = ResourceManager.GetObject("Image7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Image8 {
+            get {
+                object obj = ResourceManager.GetObject("Image8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,26 +293,6 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap race_horse {
-            get {
-                object obj = ResourceManager.GetObject("race_horse", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Racing_at_Arlington_Park {
-            get {
-                object obj = ResourceManager.GetObject("Racing_at_Arlington_Park", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap Sports_betting_board {
             get {
                 object obj = ResourceManager.GetObject("Sports_betting_board", resourceCulture);
@@ -306,16 +306,6 @@ namespace KYHBPA.Properties {
         public static System.Drawing.Bitmap staff_photo1 {
             get {
                 object obj = ResourceManager.GetObject("staff_photo1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Twitter {
-            get {
-                object obj = ResourceManager.GetObject("Twitter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
