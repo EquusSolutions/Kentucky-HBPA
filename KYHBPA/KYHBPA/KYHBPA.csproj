@@ -302,6 +302,7 @@
     <None Include="Images\office.jpg" />
     <None Include="Images\staff-photo.jpg" />
     <None Include="Images\Sports-betting-board.jpg" />
+    <None Include="Images\Twitter.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
