@@ -95,6 +95,49 @@ namespace KYHBPA.Controllers
             return View("Index");
         }
 
+        public ActionResult UploadMemberCard()
+        {
+            return View("UploadMemberCard");
+        }
+
+        [HttpPost]
+        public ActionResult UploadMemberCard(int? memberId, HttpPostedFileBase file)
+        {
+
+            byte[] uploadedFile = new byte[file.InputStream.Length];
+            file.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
+
+            var member = db.Members.FirstOrDefault();
+
+            if (member != null)
+            {
+                var documentModel = new Document
+                {
+                    MemberId = member.Id,
+                    UploadedBy = member.FirstName + " " + member.LastName,
+                    ContentLength = file.ContentLength,
+                    ContentType = file.ContentType,
+                    FileName = file.FileName,
+                    FileBytes = uploadedFile,
+                    UploadDate = DateTime.Now,
+                    Discriminator = DocumentDiscriminator.MemberCard
+                };
+
+                db.Documents.Add(documentModel);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Profile","Member");
+        }
+
+        public ActionResult MemberCard()
+        {
+            var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard);
+            var memberCard = memberCards.FirstOrDefault();
+
+            return PartialView("_MemberCard", memberCard);
+        }
+
         public ActionResult NewsLetter()
         {
             var newsletter = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Newsletter);

@@ -398,6 +398,9 @@
     <Content Include="Views\Shared\_VisitorLayout.cshtml" />
     <Content Include="Views\Event\ReadOnlyList.cshtml" />
     <Content Include="Views\Member\Profile.cshtml" />
+    <Content Include="Views\Document\UploadMemberCard.cshtml" />
+    <Content Include="Views\Document\_MemberCard.cshtml" />
+    <Content Include="Views\Document\_Blank.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
