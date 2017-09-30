@@ -78,10 +78,27 @@
     @RenderBody()
     <hr />
     <footer>
-        <p>
-            &copy; @DateTime.Now.Year - Kentucky Horsemen’s Benevolent and Protective Association, Inc. -- Site design by Equus Solutions 
-            <img src="~/Images/EquusSolutions-logo.png" height="20" width="58" alt="Equus Solutions Logo"/>
-        </p>
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <table style="border-style:none" width="100%">
+            <tr>
+                <td>&copy; @DateTime.Now.Year - Kentucky Horsemen’s Benevolent and Protective Association, Inc.</td>
+                <td align="right" valign="middle">
+                    <a href="https://www.facebook.com/KYhbpa/" class="fa fa-facebook" target="_blank"></a>
+                    <a href="https://twitter.com/kyhbpa" class="fa fa-twitter" target="_blank"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Site design by Equus Solutions
+                    <img src="~/Images/EquusSolutions-logo.png" height="20" width="58" alt="Equus Solutions Logo" />
+                </td>
+                <td>
+                    | <a href="https://danii1696.wixsite.com/kyhbpamodel2">Model 1</a> |
+                    <a href="https://kentuckyhorsemensbenevolentand.godaddysites.com/home">Model 2</a> |
+                    <a href="www.test.com">Model 3</a> |
+                </td>
+        </table>
     </footer>
 </div>
 
