@@ -213,6 +213,16 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Sports_betting_board {
+            get {
+                object obj = ResourceManager.GetObject("Sports_betting_board", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap staff_photo1 {
             get {
                 object obj = ResourceManager.GetObject("staff_photo1", resourceCulture);

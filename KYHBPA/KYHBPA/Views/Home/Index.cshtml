@@ -44,12 +44,11 @@
 <div class="jumbotron">
     
     <img src="~/Images/kyhbpa-logo.png" style="float:left;" alt="KYHBPA Logo"/>
-    <h1>Kentucky HBPA</h1>
+
     <p class="lead">
         The Kentucky Horsemen's Benevolent and Protective Association (HPBA) provides benevolence to horsemen in need, education and recreation programs to the backstretch,
         and various insurance packages. Horsemen helping Horsemen.
-    </p>
-    <p><a href="/Home/About" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <a href="/Home/About" class="btn btn-primary btn-lg" style="float:right">Learn more &raquo;</a></p>
 </div>
 
 <div class="row">
@@ -125,17 +124,38 @@
                 </td>
             </tr>
         </table>
-        <p><a class="btn btn-default" href="http://nationalhbpa.com/headlines">See more &raquo;</a></p>
+        <p><a class="btn btn-default" href="http://nationalhbpa.com/headlines" target="_blank">See more &raquo;</a></p>
     </div>
     
-    <div class="col-md-12">
+    <div class="col-md-6">
         <h2>Get Involved</h2>
-        <p>Legislation 1</p>
-        <p>Legislation 2</p>
-        <p>Petition 1</p>
-        <p>Legislation 3</p>
-        <p>Petition 2</p>
-        <p><a class="btn btn-default" href="/Home/Engagement">Learn more &raquo;</a></p>
+        <table class="table">
+            <tr>
+                <td class="padCols"><img src="~/Images/Sports-betting-board.jpg" height="69" width="91" /></td>
+                <td class="padCols">
+                    <a href="http://www.lrc.ky.gov/record/16RS/HB155.htm" target="_blank">
+                        <h5 class="h5News">
+                            Click here to support HB155 to allow sports betting at tracks and off-track facilities
+                        </h5>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+        </table>
+        <p><a class="btn btn-default" href="/Home/">Learn more &raquo;</a></p>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Latest Poll</h2>
+        <p>
+            <h4>What color should we paint the office?</h4>
+            <input id="RadioBLue" type="radio" /> Blue <br>
+            <input id="RadioGreen" type="radio" /> Green<br>
+            <input id="RadioYellow" type="radio" /> Yellow<br>
+            <input id="RadioOther" type="radio" /> Other<br>
+            <input id="SubmitPoll" type="submit" value="Submit Poll" />
+        </p>
+<p><a class="btn btn-default" href="/Home/Poll">See All Polls &raquo;</a></p>
     </div>
     
 </div>
