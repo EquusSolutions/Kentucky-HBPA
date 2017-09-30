@@ -28,9 +28,10 @@ namespace KYHBPA.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
             }
-            Member member = db.Members.Find(id);
+            Member member = db.Members.FirstOrDefault();
             if (member == null)
             {
                 return HttpNotFound();

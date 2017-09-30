@@ -1,0 +1,15 @@
+﻿@model KYHBPA.Models.Document
+
+@{
+    ViewBag.Title = "Newsletter";
+}
+
+<h2>Member Card</h2>
+@if (Model != null)
+{
+    <iframe src="@string.Format("data:application/pdf;base64,{0}", Convert.ToBase64String(Model.FileBytes))" style="width: 50%" ; height="250"> </iframe>
+}
+else
+{
+    <h4>No Member Card Uploaded.</h4>
+}
