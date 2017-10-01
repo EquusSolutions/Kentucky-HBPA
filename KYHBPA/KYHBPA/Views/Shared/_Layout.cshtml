@@ -42,20 +42,19 @@
                             <li>@Html.ActionLink("News", "Index", "Home")</li>
                             <li>@Html.ActionLink("Newsletters", "NewsLetter", "Document")</li>
                             <li>@Html.ActionLink("Blog", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Events", "Index", "Event")</li>
+                            <li>@Html.ActionLink("Events Calendar", "Index", "Home")</li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="~/">
-                            Member
+                            Membership
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Roster", "Index", "Member")</li>
                             <li>@Html.ActionLink("Benefits of Membership", "Benefits", "Member")</li>
                             <li>@Html.ActionLink("Benevolence", "Index", "Home")</li>
                             <li>@Html.ActionLink("Become a Member", "Create", "Member")</li>
-                            <li>@Html.ActionLink("Member Card", "DownloadMemberCard", "Document")</li>
+                            <li>@Html.ActionLink("Download Member Card", "DownloadMemberCard", "Document")</li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -64,8 +63,9 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Documents", "Index", "Document")</li>
-                            <li>@Html.ActionLink("Document Manager", "DocumentManagement", "Home")</li>
+                            <li>@Html.ActionLink("Roster", "Index", "Member")</li>
+                            <li>@Html.ActionLink("File Manager", "Index", "Document")</li>
+                            <li>@Html.ActionLink("Upload File", "DocumentManagement", "Home")</li>
                             <li>@Html.ActionLink("Vistor Contacts", "Index", "Contact")</li>
                             <li>@Html.ActionLink("Poll Manager", "Index", "Poll")</li>
                             <li>@Html.ActionLink("Minutes Manager", "Index", "Minutes")</li>
@@ -79,7 +79,7 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("My Profile", "Profile", "Member")</li>  
+                            <li>@Html.ActionLink("My Profile", "Profile", "Member")</li>
                         </ul>
                     </li>
                 </ul>
@@ -103,9 +103,8 @@
             <table style="border-style:none" width="100%">
                 <tr>
                     <td>&copy; @DateTime.Now.Year - Kentucky Horsemen’s Benevolent and Protective Association, Inc.</td>
-                    <td align="right" valign="middle">
-                        <a href="https://www.facebook.com/KYhbpa/" class="fa fa-facebook" target="_blank"></a>
-                        <a href="https://twitter.com/kyhbpa" class="fa fa-twitter" target="_blank"></a>
+                    <td align="center" valign="middle">
+                        Connect with us
                     </td>
                 </tr>
                 <tr>
@@ -113,10 +112,12 @@
                         Site design by Equus Solutions
                         <img src="~/Images/EquusSolutions-logo.png" height="20" width="58" alt="Equus Solutions Logo" />
                     </td>
-                    <td>
-                      | <a href="~/Images/Model1.png" target="_blank">Model 1</a> |
+                    <td align="center">
+                        <a href="https://www.facebook.com/KYhbpa/" class="fa fa-facebook" target="_blank"></a>
+                        <a href="https://twitter.com/kyhbpa" class="fa fa-twitter" target="_blank"></a>
+                        <!--| <a href="~/Images/Model1.png" target="_blank">Model 1</a> |
                         <a href="~/Images/Modle2.png" target="_blank">Model 2</a> |
-                        <!--<a href="www.test.com">Model 3</a> |-->
+                        <a href="www.test.com">Model 3</a> |-->
                     </td>
             </table>
         </footer>
