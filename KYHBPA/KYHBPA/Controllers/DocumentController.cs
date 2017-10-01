@@ -130,12 +130,28 @@ namespace KYHBPA.Controllers
             return RedirectToAction("Profile","Member");
         }
 
-        public ActionResult MemberCard()
+        public ActionResult DownloadMemberCard()
         {
             var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard);
             var memberCard = memberCards.FirstOrDefault();
 
-            return PartialView("_MemberCard", memberCard);
+            if (memberCard != null)
+            {
+                return File(memberCard.FileBytes, "application/octet-stream", memberCard.FileName);
+            }
+
+            return RedirectToAction("Index","Home");
+        }
+
+        public ActionResult MemberCard()
+        {
+            var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName, "Default_Member_Card") != 0);
+            var memberCard = memberCards.FirstOrDefault();
+            if (memberCard != null)
+                return PartialView("_MemberCard", memberCard);
+
+            return PartialView("_UploadMemberCard");
+
         }
 
         public ActionResult NewsLetter()

@@ -35,9 +35,9 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Community
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("News (MVC)", "Index", "Home")</li>
+                        <li>@Html.ActionLink("News", "Index", "Home")</li>
                         <li>@Html.ActionLink("Newsletters", "NewsLetter", "Document")</li>
-                        <li>@Html.ActionLink("Blog (MVC)", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Blog", "Index", "Home")</li>
                         <li>@Html.ActionLink("Events", "Index", "Event")</li>
                     </ul>
                 </li>
@@ -47,8 +47,9 @@
                     <ul class="dropdown-menu">
                         <li>@Html.ActionLink("Roster", "Index", "Member")</li>  
                         <li>@Html.ActionLink("Benefits", "Benefits", "Member")</li>
-                        <li>@Html.ActionLink("Benevolence (MVC)", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Benevolence", "Index", "Home")</li>
                         <li>@Html.ActionLink("Registration", "Create", "Member")</li>
+                        <li>@Html.ActionLink("Member Card", "DownloadMemberCard", "Document")</li>
                     </ul>
                 </li>  
             </ul>
@@ -58,7 +59,6 @@
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li>@Html.ActionLink("My Account", "Profile", "Member")</li>  
-                        <li>@Html.ActionLink("Member Card", "UploadMemberCard", "Document")</li>
                     </ul>
                 </li>  
             </ul>

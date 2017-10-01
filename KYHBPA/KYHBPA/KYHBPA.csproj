@@ -418,6 +418,7 @@
     <Content Include="Views\Document\UploadMemberCard.cshtml" />
     <Content Include="Views\Document\_MemberCard.cshtml" />
     <Content Include="Views\Document\_Blank.cshtml" />
+    <Content Include="Views\Document\_UploadMemberCard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

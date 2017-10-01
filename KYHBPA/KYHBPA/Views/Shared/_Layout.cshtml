@@ -53,8 +53,9 @@
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Roster", "Index", "Member")</li>
                             <li>@Html.ActionLink("Benefits of Membership", "Benefits", "Member")</li>
-                            <li>@Html.ActionLink("Benevolence (MVC)", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Benevolence", "Index", "Home")</li>
                             <li>@Html.ActionLink("Become a Member", "Create", "Member")</li>
+                            <li>@Html.ActionLink("Member Card", "DownloadMemberCard", "Document")</li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -79,7 +80,6 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("My Profile", "Profile", "Member")</li>  
-                            <li>@Html.ActionLink("Upload Member Card", "UploadMemberCard", "Document")</li>
                         </ul>
                     </li>
                 </ul>
