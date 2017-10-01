@@ -29,7 +29,6 @@
                         <li>@Html.ActionLink("Meet Our Staff", "BoardOfDirectors", "Home")</li>
                         <li>@Html.ActionLink("Board Minutes", "BoardMinutes", "Minutes")</li>
                         <li>@Html.ActionLink("Community Minutes", "CommunityMinutes", "Minutes")</li>
-                        <li>@Html.ActionLink("Other Minutes", "OtherMinutes", "Minutes")</li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -46,9 +45,9 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="~/">Member
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Roster (V)", "Index", "Member")</li>  
+                        <li>@Html.ActionLink("Roster", "Index", "Member")</li>  
                         <li>@Html.ActionLink("Benefits", "Benefits", "Member")</li>
-                        <li>@Html.ActionLink("Benevolence (V)", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Benevolence (MVC)", "Index", "Home")</li>
                         <li>@Html.ActionLink("Registration", "Create", "Member")</li>
                     </ul>
                 </li>  
@@ -58,8 +57,8 @@
                     <a class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" href="~/">
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("My Account (V)", "Profile", "Member")</li>  
-                        <li>@Html.ActionLink("Member Card (V)", "UploadMemberCard", "Document")</li>
+                        <li>@Html.ActionLink("My Account", "Profile", "Member")</li>  
+                        <li>@Html.ActionLink("Member Card", "UploadMemberCard", "Document")</li>
                     </ul>
                 </li>  
             </ul>
