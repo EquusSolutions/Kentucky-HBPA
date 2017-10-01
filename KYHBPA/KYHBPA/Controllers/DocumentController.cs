@@ -132,8 +132,8 @@ namespace KYHBPA.Controllers
 
         public ActionResult DownloadMemberCard()
         {
-            var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard);
-            var memberCard = memberCards.FirstOrDefault();
+            //var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName, "Member Card.pdf") == 0);
+            var memberCard = db.Documents.FirstOrDefault(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName, "Member Card.pdf") == 0);
 
             if (memberCard != null)
             {
@@ -145,7 +145,7 @@ namespace KYHBPA.Controllers
 
         public ActionResult MemberCard()
         {
-            var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName, "Default_Member_Card") != 0);
+            var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName, "Member Card.pdf") != 0);
             var memberCard = memberCards.FirstOrDefault();
             if (memberCard != null)
                 return PartialView("_MemberCard", memberCard);
