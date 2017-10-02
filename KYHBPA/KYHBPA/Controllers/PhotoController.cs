@@ -127,6 +127,26 @@ namespace KYHBPA.Controllers
             return RedirectToAction("Profile", "Member");
         }
 
+        public ActionResult Image()
+        {
+            var image = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Image);
+            var oneImage = image.FirstOrDefault();
+
+            return View("Image");
+        }
+
+        public ActionResult GetImage()
+        {
+            var image = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Image);
+            var oneImage = image.FirstOrDefault();
+
+            if(oneImage != null)
+            {
+                return File(oneImage.FileBytes, "application/octet-stream", oneImage.FileName);
+            }
+            return RedirectToAction("Index", "Home");
+        }
+
         // GET: Photo/Delete/5
         public ActionResult Delete(int? id)
         {
