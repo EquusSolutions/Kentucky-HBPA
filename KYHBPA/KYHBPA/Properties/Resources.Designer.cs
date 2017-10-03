@@ -183,6 +183,16 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Horse_Racing_Background_33 {
+            get {
+                object obj = ResourceManager.GetObject("Horse_Racing_Background_33", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Image1 {
             get {
                 object obj = ResourceManager.GetObject("Image1", resourceCulture);
@@ -293,9 +303,19 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Modle2 {
+        public static System.Drawing.Bitmap Model2 {
             get {
-                object obj = ResourceManager.GetObject("Modle2", resourceCulture);
+                object obj = ResourceManager.GetObject("Model2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Model3 {
+            get {
+                object obj = ResourceManager.GetObject("Model3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
