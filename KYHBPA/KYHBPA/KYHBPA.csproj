@@ -317,6 +317,10 @@
     <None Include="Images\partners-Keeneland.png" />
     <None Include="Images\partners-Thoroughbred.png" />
     <None Include="Images\partners-Turfway.png" />
+    <None Include="Images\Horse-Racing-Background.jpg" />
+    <None Include="Images\Horse-Racing-Background-33.jpg" />
+    <None Include="Images\Model2.png" />
+    <None Include="Images\Model3.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">

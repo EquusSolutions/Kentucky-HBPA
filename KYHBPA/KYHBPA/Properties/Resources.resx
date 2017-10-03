@@ -196,9 +196,6 @@
   <data name="Model1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Model1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Modle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Modle2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="partners_ChurchillDowns" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\partners-ChurchillDowns.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -213,5 +210,14 @@
   </data>
   <data name="partners_Turfway" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\partners-Turfway.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Horse_Racing_Background_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Horse-Racing-Background-33.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Model2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Model2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Model3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Model3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
