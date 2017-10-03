@@ -6,6 +6,8 @@
 //Step 5: add-migration AddNewsTable to Paclage Manager Console
 //Step 6: Then add it to the IdentityModels
 //Step 7: Update-database to Paclage Manager Console
+//Step 8: Go to Controller class and right-click and click add and then click on controller
+//Step 9: Then click add once you fill out the required fields and then click add
 
 using System;
 using System.Collections.Generic;

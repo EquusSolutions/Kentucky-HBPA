@@ -10,17 +10,17 @@ using KYHBPA.Models;
 
 namespace KYHBPA.Controllers
 {
-    public class DocumentController : Controller
+    public class PhotoController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Document
-        public ActionResult Index() 
+        // GET: Photo
+        public ActionResult Index()
         {
             return View(db.Documents.ToList());
         }
 
-        // GET: Document/Details/5
+        // GET: Photo/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,18 +35,18 @@ namespace KYHBPA.Controllers
             return View(document);
         }
 
-        // GET: Document/Create
+        // GET: Photo/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Document/Create
+        // POST: Photo/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,MemberId,FileBytes,ContentLength,ContentType,FileName,UploadedBy")] Document document)
+        public ActionResult Create([Bind(Include = "Id,MemberId,FileBytes,ContentLength,ContentType,FileName,UploadedBy,Discriminator,UploadDate")] Document document)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +58,7 @@ namespace KYHBPA.Controllers
             return View(document);
         }
 
-        // GET: Document/Edit/5
+        // GET: Photo/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace KYHBPA.Controllers
             return View(document);
         }
 
-        // POST: Document/Edit/5
+        // POST: Photo/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,93 +89,65 @@ namespace KYHBPA.Controllers
             return View(document);
         }
 
-        public ActionResult Fetch(Document document)
+        public ActionResult Fetch(Document Photo)
         {
-
             return View("Index");
         }
 
-        public ActionResult UploadMemberCard()
+        public ActionResult UploadPhoto()
         {
-            return View("UploadMemberCard");
+            return View("Index");
         }
 
         [HttpPost]
-        public ActionResult UploadMemberCard(int? memberId, HttpPostedFileBase file)
+        public ActionResult UploadPhoto(int? photoId, HttpPostedFileBase file)
         {
-
             byte[] uploadedFile = new byte[file.InputStream.Length];
             file.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
 
             var member = db.Members.FirstOrDefault();
 
-            if (member != null)
+            if(member != null)
             {
                 var documentModel = new Document
                 {
-                    MemberId = member.Id,
-                    UploadedBy = member.FirstName + " " + member.LastName,
-                    ContentLength = file.ContentLength,
-                    ContentType = file.ContentType,
-                    FileName = file.FileName,
-                    FileBytes = uploadedFile,
-                    UploadDate = DateTime.Now,
-                    Discriminator = DocumentDiscriminator.MemberCard
+                    MemberId = member.Id
+                    , UploadedBy = member.FirstName + " " + member.LastName
+                    , ContentLength = file.ContentLength
+                    , ContentType = file.ContentType
+                    , FileName = file.FileName
+                    , FileBytes = uploadedFile
+                    , UploadDate = DateTime.Now
+                    , Discriminator = DocumentDiscriminator.Image
                 };
-
                 db.Documents.Add(documentModel);
                 db.SaveChanges();
             }
-
-            return RedirectToAction("Profile","Member");
+            //Not sure what I am suppose to put here
+            return RedirectToAction("Profile", "Member");
         }
 
-        public ActionResult DownloadMemberCard()
+        public ActionResult Image()
         {
-            //var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName, "Member Card.pdf") == 0);
-            var memberCard = db.Documents.FirstOrDefault(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName, "Member Card.pdf") == 0);
+            var image = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Image);
+            var oneImage = image.FirstOrDefault();
 
-            if (memberCard != null)
+            return View("Image");
+        }
+
+        public ActionResult GetImage()
+        {
+            var image = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Image);
+            var oneImage = image.FirstOrDefault();
+
+            if(oneImage != null)
             {
-                return File(memberCard.FileBytes, "application/octet-stream", memberCard.FileName);
+                return File(oneImage.FileBytes, "application/octet-stream", oneImage.FileName);
             }
-
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
 
-        public ActionResult MemberCard()
-        {
-            var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName, "Member Card.pdf") != 0);
-            var memberCard = memberCards.FirstOrDefault();
-            if (memberCard != null)
-                return PartialView("_MemberCard", memberCard);
-
-            return PartialView("_UploadMemberCard");
-
-        }
-
-        public ActionResult NewsLetter()
-        {
-            var newsletter = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Newsletter);
-            var oneNewsletter = newsletter.FirstOrDefault();
-
-            return View("Newsletter", oneNewsletter);
-        }
-
-        public ActionResult GetNewsletter()
-        {
-            var newsletter = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Newsletter);
-            var oneNewsletter = newsletter.FirstOrDefault();
-
-            if (oneNewsletter != null)
-            {
-                return File(oneNewsletter.FileBytes, "application/octet-stream", oneNewsletter.FileName);
-            }
-    
-            return RedirectToAction("Index","Home");
-        }
-
-        // GET: Document/Delete/5
+        // GET: Photo/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -190,7 +162,7 @@ namespace KYHBPA.Controllers
             return View(document);
         }
 
-        // POST: Document/Delete/5
+        // POST: Photo/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
