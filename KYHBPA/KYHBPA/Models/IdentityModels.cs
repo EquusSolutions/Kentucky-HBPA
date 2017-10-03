@@ -75,5 +75,7 @@ namespace KYHBPA.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<KYHBPA.Models.CallToAction> CallToActions { get; set; }
     }
 }
