@@ -255,6 +255,10 @@
     <Compile Include="Migrations\201709280211183_SeedUsers.Designer.cs">
       <DependentUpon>201709280211183_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710030123532_AddMemberDataToApplicationUser.cs" />
+    <Compile Include="Migrations\201710030123532_AddMemberDataToApplicationUser.Designer.cs">
+      <DependentUpon>201710030123532_AddMemberDataToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
@@ -412,7 +416,6 @@
     <Content Include="Views\Contact\SuccessfulSubmission.cshtml" />
     <Content Include="Views\Member\List.cshtml" />
     <Content Include="Views\Member\ReadOnlyList.cshtml" />
-    <Content Include="Views\Shared\_VisitorLayout.cshtml" />
     <Content Include="Views\Event\ReadOnlyList.cshtml" />
     <Content Include="Views\Member\Profile.cshtml" />
     <Content Include="Views\Document\UploadMemberCard.cshtml" />
@@ -430,6 +433,7 @@
     <Content Include="Views\Photo\Edit.cshtml" />
     <Content Include="Views\Photo\Index.cshtml" />
     <Content Include="Views\Document\UploadPhoto.cshtml" />
+    <Content Include="Views\Shared\_AdminPortal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -488,6 +492,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709280211183_SeedUsers.resx">
       <DependentUpon>201709280211183_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710030123532_AddMemberDataToApplicationUser.resx">
+      <DependentUpon>201710030123532_AddMemberDataToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
