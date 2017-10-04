@@ -190,6 +190,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CallToActionController.cs" />
     <Compile Include="Controllers\DocumentController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\EventController.cs" />
@@ -259,6 +260,10 @@
     <Compile Include="Migrations\201710030123532_AddMemberDataToApplicationUser.Designer.cs">
       <DependentUpon>201710030123532_AddMemberDataToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710031556199_AddCallToAction.cs" />
+    <Compile Include="Migrations\201710031556199_AddCallToAction.Designer.cs">
+      <DependentUpon>201710031556199_AddCallToAction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201710030305458_AddMemberIdAppUser.cs" />
     <Compile Include="Migrations\201710030305458_AddMemberIdAppUser.Designer.cs">
       <DependentUpon>201710030305458_AddMemberIdAppUser.cs</DependentUpon>
@@ -266,6 +271,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
+    <Compile Include="Models\CallToAction.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Document.cs" />
@@ -347,7 +353,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -442,6 +450,11 @@
     <Content Include="Views\Photo\Index.cshtml" />
     <Content Include="Views\Document\UploadPhoto.cshtml" />
     <Content Include="Views\Shared\_AdminPortal.cshtml" />
+    <Content Include="Views\CallToAction\Create.cshtml" />
+    <Content Include="Views\CallToAction\Delete.cshtml" />
+    <Content Include="Views\CallToAction\Details.cshtml" />
+    <Content Include="Views\CallToAction\Edit.cshtml" />
+    <Content Include="Views\CallToAction\Index.cshtml" />
     <Content Include="Views\Shared\_AcctPortal.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -504,6 +517,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710030123532_AddMemberDataToApplicationUser.resx">
       <DependentUpon>201710030123532_AddMemberDataToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710031556199_AddCallToAction.resx">
+      <DependentUpon>201710031556199_AddCallToAction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710030305458_AddMemberIdAppUser.resx">
       <DependentUpon>201710030305458_AddMemberIdAppUser.cs</DependentUpon>
