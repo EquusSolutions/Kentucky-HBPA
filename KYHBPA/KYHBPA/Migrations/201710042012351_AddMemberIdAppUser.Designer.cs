@@ -13,7 +13,7 @@ namespace KYHBPA.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201710030305458_AddMemberIdAppUser"; }
+            get { return "201710042012351_AddMemberIdAppUser"; }
         }
         
         string IMigrationMetadata.Source
