@@ -10,6 +10,9 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using KYHBPA.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections;
+using System.Collections.Generic;
+using KYHBPA.Models.ViewModels;
 
 namespace KYHBPA.Controllers
 {
@@ -18,6 +21,8 @@ namespace KYHBPA.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         public AccountController()
         {
@@ -51,6 +56,33 @@ namespace KYHBPA.Controllers
             {
                 _userManager = value;
             }
+        }
+
+        // GET: Account
+        public ActionResult Index()
+        {
+            if (User.IsInRole(RoleName.Administrator) || User.IsInRole(RoleName.Staff))
+            {
+                var members = db.Users.ToList();
+                var memberView = new List<MemberViewModel>();
+
+                foreach (var member in members)
+                {
+                    memberView.Add(
+                        new MemberViewModel
+                        {
+                            FirstName   = member.FirstName,
+                            LastName = member.LastName,
+                            DateOfBirth = member.DateOfBirth,
+                            MemberDate = member.MemberDate,
+                            Address = member.Address,
+                            City = member.City,
+                            State = member.State
+                        });
+                }
+                return View("List", memberView);
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         //

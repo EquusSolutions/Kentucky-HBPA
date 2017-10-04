@@ -52,7 +52,7 @@ namespace KYHBPA.Controllers
             {
                 var documentModel = new Document
                 {
-                    MemberId = member.Id,
+                    MemberId = "UploadDocumentAction Update!!",
                     UploadedBy = HttpContext.User.Identity.Name,
                     ContentLength = file.ContentLength,
                     ContentType = file.ContentType,
@@ -70,7 +70,7 @@ namespace KYHBPA.Controllers
         
         public ActionResult GetDocument(int memberId)
         {
-            var allDocumentsForMember = db.Documents.Where(d => d.MemberId == memberId);
+            var allDocumentsForMember = db.Documents.Where(d => String.Compare(d.MemberId, "GetDocuement") == 0);
 
             var oneDocumentFromMember = allDocumentsForMember.FirstOrDefault();
 
