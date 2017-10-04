@@ -264,6 +264,10 @@
     <Compile Include="Migrations\201710031556199_AddCallToAction.Designer.cs">
       <DependentUpon>201710031556199_AddCallToAction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710030305458_AddMemberIdAppUser.cs" />
+    <Compile Include="Migrations\201710030305458_AddMemberIdAppUser.Designer.cs">
+      <DependentUpon>201710030305458_AddMemberIdAppUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
@@ -451,6 +455,7 @@
     <Content Include="Views\CallToAction\Details.cshtml" />
     <Content Include="Views\CallToAction\Edit.cshtml" />
     <Content Include="Views\CallToAction\Index.cshtml" />
+    <Content Include="Views\Shared\_AcctPortal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -515,6 +520,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710031556199_AddCallToAction.resx">
       <DependentUpon>201710031556199_AddCallToAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710030305458_AddMemberIdAppUser.resx">
+      <DependentUpon>201710030305458_AddMemberIdAppUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

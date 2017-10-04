@@ -59,30 +59,27 @@
                     </li>
 
                     @{
-                        //if (User.Identity.IsAuthenticated)
                         if (User.IsInRole(KYHBPA.Models.RoleName.Administrator))
                         {
                             Html.RenderPartial("_AdminPortal");
                         }
                     }
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" href="~/">
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("My Profile", "Profile", "Member")</li>
-                        </ul>
-                    </li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="https://www.paypal.com/us/webapps/mpp/donations" target="_blank">
                             <img src="~/Images/donate-btn.png" alt="Donate through PayPal" height="24" width="101" />
                         </a>
                     </li>
+                    
+                    @{
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            Html.RenderPartial("_AcctPortal");
+                        }
+                    }
+                    @Html.Partial("_LoginPartial")
                 </ul>
             </div>
         </div>
