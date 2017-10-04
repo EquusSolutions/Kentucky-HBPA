@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KYHBPA.Models;
+using Microsoft.AspNet.Identity;
 
 namespace KYHBPA.Controllers
 {
@@ -23,15 +24,15 @@ namespace KYHBPA.Controllers
             //return View(db.Members.ToList());
         }
 
-        // GET: Member/Profile/5
-        public ActionResult Profile(int? id)
+        // GET: Member/Profile
+        public ActionResult Profile()
         {
-            if (id == null)
+            var userId = User.Identity.GetUserId<string>();
+            if (userId == null)
             {
-                //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Member member = db.Members.FirstOrDefault();
+            var member = db.Users.FirstOrDefault(m => String.Compare(m.Id, userId) == 0);
             if (member == null)
             {
                 return HttpNotFound();
