@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KYHBPA.Models;
+using Microsoft.AspNet.Identity;
 
 namespace KYHBPA.Controllers
 {
@@ -103,29 +104,35 @@ namespace KYHBPA.Controllers
         [HttpPost]
         public ActionResult UploadMemberCard(int? memberId, HttpPostedFileBase file)
         {
+            var userId = User.Identity.GetUserId<string>();
+            if (userId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var member = db.Users.FirstOrDefault(m => String.Compare(m.Id, userId) == 0);
+            if (member == null)
+            {
+                return HttpNotFound();
+            }
 
             byte[] uploadedFile = new byte[file.InputStream.Length];
             file.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
 
-            var member = db.Members.FirstOrDefault();
-
-            if (member != null)
+            var documentModel = new Document
             {
-                var documentModel = new Document
-                {
-                    MemberId = member.Id,
-                    UploadedBy = member.FirstName + " " + member.LastName,
-                    ContentLength = file.ContentLength,
-                    ContentType = file.ContentType,
-                    FileName = file.FileName,
-                    FileBytes = uploadedFile,
-                    UploadDate = DateTime.Now,
-                    Discriminator = DocumentDiscriminator.MemberCard
-                };
+                MemberId = userId,
+                UploadedBy = member.FirstName + " " + member.LastName,
+                ContentLength = file.ContentLength,
+                ContentType = file.ContentType,
+                FileName = file.FileName,
+                FileBytes = uploadedFile,
+                UploadDate = DateTime.Now,
+                Discriminator = DocumentDiscriminator.MemberCard                
+            };
 
-                db.Documents.Add(documentModel);
-                db.SaveChanges();
-            }
+            db.Documents.Add(documentModel);
+            db.SaveChanges();
 
             return RedirectToAction("Profile","Member");
         }

@@ -10,8 +10,10 @@ namespace KYHBPA.Models
     public class Document
     {
         public int Id { get; set; }
+        //[DisplayName("Member Id")]
+        //public int MemberId { get; set; }
         [DisplayName("Member Id")]
-        public int MemberId { get; set; }
+        public string MemberId { get; set; }
         [DisplayName("File Bytes")]
         public byte[] FileBytes { get; set; }
         public int ContentLength { get; set; }
