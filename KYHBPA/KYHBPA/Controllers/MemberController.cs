@@ -25,14 +25,16 @@ namespace KYHBPA.Controllers
         }
 
         // GET: Member/Profile
+        [Authorize]
         public ActionResult Profile()
         {
-            var userId = User.Identity.GetUserId<string>();
+            var userId = User.Identity.GetUserName();// .GetUserId<string>();
             if (userId == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var member = db.Users.FirstOrDefault(m => String.Compare(m.Id, userId) == 0);
+            var username = User.Identity.GetUserName();
+            var member = db.Members.FirstOrDefault(m => String.Compare(m.Email, username) == 0);
             if (member == null)
             {
                 return HttpNotFound();

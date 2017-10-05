@@ -140,12 +140,6 @@ namespace KYHBPA.Controllers
             }
         }
 
-        public ActionResult Profile()
-        {
-
-            return RedirectToAction("Profile", "Member", User.Identity.GetUserId());
-        }
-
         //
         // GET: /Account/Register
         [AllowAnonymous]

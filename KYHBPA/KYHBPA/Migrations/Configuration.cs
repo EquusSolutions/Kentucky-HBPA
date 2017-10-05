@@ -70,7 +70,7 @@ namespace KYHBPA.Migrations
             );
 
             context.Members.AddOrUpdate(
-                m => m.Id,
+                m => m.Email,
                 new Member { Address = "123 Test Road", City = "Louisville", State = "KY"
                     , Zip = "40202", Email = "Corey@test.com", DateOfBirth = DateTime.Now.AddYears(-20),
                     FirstName = "Corey", LastName = "Cooley", Income = 100000, Id = 1, IsAgreedToTerms = true,
