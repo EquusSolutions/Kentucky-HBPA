@@ -89,7 +89,7 @@ namespace KYHBPA.Models
         [DisplayName("Last Name")]
         public string LastName { get; set; }
         [DisplayName("Date Of Birth")]
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         [DisplayName("Member Date")]
         public DateTime MemberDate { get; set; }
 
@@ -105,7 +105,6 @@ namespace KYHBPA.Models
         // Additional Information
         [DisplayName("Racing License")]
         public string RacingLicense { get; set; }
-        public decimal Income { get; set; }
 
         // Member Types
         [DisplayName("Trainer")]

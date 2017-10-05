@@ -123,7 +123,7 @@ namespace KYHBPA.Controllers
             {
                 var documentModel = new Document
                 {
-                    MemberId = "UploadDocumentAction Update!!",
+                    MemberId = 1,
                     UploadedBy = HttpContext.User.Identity.Name,
                     ContentLength = file.ContentLength,
                     ContentType = file.ContentType,
@@ -141,7 +141,7 @@ namespace KYHBPA.Controllers
         
         public ActionResult GetDocument(int memberId)
         {
-            var allDocumentsForMember = db.Documents.Where(d => String.Compare(d.MemberId, "GetDocuement") == 0);
+            var allDocumentsForMember = db.Documents.Where(d => d.MemberId == 1);
 
             var oneDocumentFromMember = allDocumentsForMember.FirstOrDefault();
 

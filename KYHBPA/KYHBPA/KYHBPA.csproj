@@ -278,6 +278,14 @@
     <Compile Include="Migrations\201710042152454_TryUpdateDocumentMemberId.Designer.cs">
       <DependentUpon>201710042152454_TryUpdateDocumentMemberId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710050218406_UpdateMemberDoBNullable.cs" />
+    <Compile Include="Migrations\201710050218406_UpdateMemberDoBNullable.Designer.cs">
+      <DependentUpon>201710050218406_UpdateMemberDoBNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710050225337_RemovePropertyAppUser.cs" />
+    <Compile Include="Migrations\201710050225337_RemovePropertyAppUser.Designer.cs">
+      <DependentUpon>201710050225337_RemovePropertyAppUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
@@ -535,6 +543,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710042152454_TryUpdateDocumentMemberId.resx">
       <DependentUpon>201710042152454_TryUpdateDocumentMemberId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710050218406_UpdateMemberDoBNullable.resx">
+      <DependentUpon>201710050218406_UpdateMemberDoBNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710050225337_RemovePropertyAppUser.resx">
+      <DependentUpon>201710050225337_RemovePropertyAppUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

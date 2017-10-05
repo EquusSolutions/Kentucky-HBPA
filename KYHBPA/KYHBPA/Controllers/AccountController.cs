@@ -58,33 +58,6 @@ namespace KYHBPA.Controllers
             }
         }
 
-        // GET: Account
-        public ActionResult Index()
-        {
-            if (User.IsInRole(RoleName.Administrator) || User.IsInRole(RoleName.Staff))
-            {
-                var members = db.Users.ToList();
-                var memberView = new List<MemberViewModel>();
-
-                foreach (var member in members)
-                {
-                    memberView.Add(
-                        new MemberViewModel
-                        {
-                            FirstName   = member.FirstName,
-                            LastName = member.LastName,
-                            DateOfBirth = member.DateOfBirth,
-                            MemberDate = member.MemberDate,
-                            Address = member.Address,
-                            City = member.City,
-                            State = member.State
-                        });
-                }
-                return View("List", memberView);
-            }
-            return RedirectToAction("Index", "Home");
-        }
-
         //
         // GET: /Account/Login
         [AllowAnonymous]
@@ -194,23 +167,6 @@ namespace KYHBPA.Controllers
                 {
                     UserName = model.Email,
                     Email = model.Email,
-                    FirstName = model.FirstName,
-                    LastName = model.LastName,
-                    DateOfBirth = model.DateOfBirth,
-                    MemberDate = DateTime.Now,
-                    PhoneNumber = model.PhoneNumber,
-                    Address = model.Address,
-                    City = model.City,
-                    State = model.State,
-                    Zip = model.Zip,
-                    RacingLicense = model.RacingLicense,
-                    Income = model.Income,
-                    IsTrainer = model.IsTrainer,
-                    IsHorseOwner = model.IsHorseOwner,
-                    IsStaff = model.IsStaff,
-                    IsAgreedToTerms = model.IsAgreedToTerms,
-                    Signature = model.Signature
-
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -220,6 +176,29 @@ namespace KYHBPA.Controllers
                     //var roleManager = new RoleManager<IdentityRole>(roleStore);
                     //await roleManager.CreateAsync(new IdentityRole("Staff"));
                     //await UserManager.AddToRoleAsync(user.Id, "Staff");
+
+                    var member = new Member
+                    {
+                        FirstName = model.FirstName,
+                        LastName = model.LastName,
+                        Email = model.Email,
+                        DateOfBirth = model.DateOfBirth,
+                        MemberDate = DateTime.Now,
+                        PhoneNumber = model.PhoneNumber,
+                        Address = model.Address,
+                        City = model.City,
+                        State = model.State,
+                        Zip = model.Zip,
+                        RacingLicense = model.RacingLicense,
+                        IsTrainer = model.IsTrainer,
+                        IsHorseOwner = model.IsHorseOwner,
+                        IsStaff = model.IsStaff,
+                        IsAgreedToTerms = model.IsAgreedToTerms,
+                        Signature = model.Signature
+                    };
+
+                    db.Members.Add(member);
+                    db.SaveChanges();
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     

@@ -16,7 +16,7 @@ namespace KYHBPA.Models
         [DisplayName("Last Name")]
         public string LastName { get; set; }
         [DisplayName("Date Of Birth")]
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         [DisplayName("Member Date")]
         public DateTime MemberDate { get; set; }
 

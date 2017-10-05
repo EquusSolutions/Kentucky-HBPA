@@ -121,8 +121,8 @@ namespace KYHBPA.Controllers
 
             var documentModel = new Document
             {
-                MemberId = userId,
-                UploadedBy = member.FirstName + " " + member.LastName,
+                MemberId = 1,
+                //UploadedBy = member.FirstName + " " + member.LastName,
                 ContentLength = file.ContentLength,
                 ContentType = file.ContentType,
                 FileName = file.FileName,

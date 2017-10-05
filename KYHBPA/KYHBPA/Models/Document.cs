@@ -13,7 +13,7 @@ namespace KYHBPA.Models
         //[DisplayName("Member Id")]
         //public int MemberId { get; set; }
         [DisplayName("Member Id")]
-        public string MemberId { get; set; }
+        public int MemberId { get; set; }
         [DisplayName("File Bytes")]
         public byte[] FileBytes { get; set; }
         public int ContentLength { get; set; }
