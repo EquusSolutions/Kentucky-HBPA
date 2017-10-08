@@ -1,8 +1,6 @@
 ﻿@model KYHBPA.Models.Contact
 
-
-
-@using (Html.BeginForm("Create", "Contact")) 
+@using (Html.BeginForm("Contact", "Home"))
 {
     @Html.AntiForgeryToken()
     
@@ -40,9 +38,7 @@
                 @Html.ValidationMessageFor(model => model.Note, "", new { @class = "text-danger" })
             </div>
         </div>
-       
-        
-
+              
         <div class="col-md-offset-2">
             <p>
                 @using reCAPTCHA.MVC
@@ -56,16 +52,12 @@
             </p>
         </div>   
 
-
-
-
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Submit" class="btn btn-default" />
-                </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
             </div>
         </div>
+    </div>
 
 }
 

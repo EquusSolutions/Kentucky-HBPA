@@ -58,6 +58,12 @@ namespace KYHBPA.Controllers
             return View(contact);
         }
 
+        // Get: Contact/Success
+        public ActionResult Sucess()
+        {
+            return View("SuccessfulSubmission");
+        }
+
         // GET: Contact/Edit/5
         public ActionResult Edit(int? id)
         {

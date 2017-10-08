@@ -72,6 +72,9 @@ namespace KYHBPA.Controllers
             {
                 string Body = viewModel.Note;
 
+                db.Contacts.Add(viewModel);
+                db.SaveChanges();
+
                 MailMessage mail = new MailMessage();
                 mail.To.Add(toEmail);
                 mail.From = new MailAddress(viewModel.Email);
@@ -92,7 +95,7 @@ namespace KYHBPA.Controllers
                 {
                     return View("EmailError");
                 }
-                return View("Index");
+                return RedirectToAction("Sucess", "Contact");
             }
             else
             {

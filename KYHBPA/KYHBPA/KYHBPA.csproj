@@ -286,6 +286,10 @@
     <Compile Include="Migrations\201710050225337_RemovePropertyAppUser.Designer.cs">
       <DependentUpon>201710050225337_RemovePropertyAppUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710080221536_UpdateContactTableRequirements.cs" />
+    <Compile Include="Migrations\201710080221536_UpdateContactTableRequirements.Designer.cs">
+      <DependentUpon>201710080221536_UpdateContactTableRequirements.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
@@ -549,6 +553,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710050225337_RemovePropertyAppUser.resx">
       <DependentUpon>201710050225337_RemovePropertyAppUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710080221536_UpdateContactTableRequirements.resx">
+      <DependentUpon>201710080221536_UpdateContactTableRequirements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
