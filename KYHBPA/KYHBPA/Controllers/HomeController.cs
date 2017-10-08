@@ -1,4 +1,5 @@
 ﻿using KYHBPA.Models;
+using Microsoft.AspNet.Identity;
 using reCAPTCHA.MVC;
 using System;
 using System.Collections.Generic;
@@ -114,30 +115,38 @@ namespace KYHBPA.Controllers
         }
 
         [HttpPost]
-        public ActionResult UploadDocument(int memberId, HttpPostedFileBase file)
+        public ActionResult UploadDocument(DocumentDiscriminator discriminator, HttpPostedFileBase file)
         {
+            var userId = User.Identity.GetUserName();
+            if (userId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var username = User.Identity.GetUserName();
+            var member = db.Members.FirstOrDefault(m => String.Compare(m.Email, username) == 0);
+
+            if (member == null)
+            {
+                return HttpNotFound();
+            }
 
             byte[] uploadedFile = new byte[file.InputStream.Length];
             file.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
 
-            var member = db.Members.FirstOrDefault(doc => doc.Id == memberId);
-
-            if (member != null)
+            var documentModel = new Document
             {
-                var documentModel = new Document
-                {
-                    MemberId = 1,
-                    UploadedBy = HttpContext.User.Identity.Name,
-                    ContentLength = file.ContentLength,
-                    ContentType = file.ContentType,
-                    FileName = file.FileName,
-                    FileBytes = uploadedFile,
-                    UploadDate = DateTime.Now
-                };
+                MemberId = member.Id,
+                UploadedBy = HttpContext.User.Identity.Name,
+                ContentLength = file.ContentLength,
+                ContentType = file.ContentType,
+                FileName = file.FileName,
+                FileBytes = uploadedFile,
+                UploadDate = DateTime.Now,
+                Discriminator = discriminator
+            };
 
-                db.Documents.Add(documentModel);
-                db.SaveChanges();
-            }
+            db.Documents.Add(documentModel);
+            db.SaveChanges();
 
             return View("DocumentManagement");
         }

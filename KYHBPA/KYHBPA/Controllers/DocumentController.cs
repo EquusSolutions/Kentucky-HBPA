@@ -104,13 +104,14 @@ namespace KYHBPA.Controllers
         [HttpPost]
         public ActionResult UploadMemberCard(int? memberId, HttpPostedFileBase file)
         {
-            var userId = User.Identity.GetUserId<string>();
+            var userId = User.Identity.GetUserName();
             if (userId == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            var username = User.Identity.GetUserName();
 
-            var member = db.Users.FirstOrDefault(m => String.Compare(m.Id, userId) == 0);
+            var member = db.Members.FirstOrDefault(m => String.Compare(m.Email, username) == 0);
             if (member == null)
             {
                 return HttpNotFound();
@@ -121,8 +122,8 @@ namespace KYHBPA.Controllers
 
             var documentModel = new Document
             {
-                MemberId = 1,
-                //UploadedBy = member.FirstName + " " + member.LastName,
+                MemberId = member.Id,
+                UploadedBy = member.FirstName + " " + member.LastName,
                 ContentLength = file.ContentLength,
                 ContentType = file.ContentType,
                 FileName = file.FileName,
@@ -152,7 +153,17 @@ namespace KYHBPA.Controllers
 
         public ActionResult MemberCard()
         {
-            var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName, "Member Card.pdf") != 0);
+            var userId = User.Identity.GetUserName();
+            if (userId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var username = User.Identity.GetUserName();
+            var member = db.Members.FirstOrDefault(m => String.Compare(m.Email, username) == 0);
+
+            var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard && 
+                        string.Compare(d.FileName, "Member Card.pdf") != 0 &&
+                        d.MemberId == member.Id);
             var memberCard = memberCards.FirstOrDefault();
             if (memberCard != null)
                 return PartialView("_MemberCard", memberCard);
