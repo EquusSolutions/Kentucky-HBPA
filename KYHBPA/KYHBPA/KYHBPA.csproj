@@ -203,6 +203,7 @@
     <Compile Include="Controllers\MinutesController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PollController.cs" />
+    <Compile Include="Controllers\PollOptionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -475,6 +476,11 @@
     <Content Include="Views\CallToAction\Index.cshtml" />
     <Content Include="Views\Shared\_AcctPortal.cshtml" />
     <Content Include="Views\Account\List.cshtml" />
+    <Content Include="Views\PollOption\Create.cshtml" />
+    <Content Include="Views\PollOption\Delete.cshtml" />
+    <Content Include="Views\PollOption\Details.cshtml" />
+    <Content Include="Views\PollOption\Edit.cshtml" />
+    <Content Include="Views\PollOption\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -103,11 +103,16 @@ namespace KYHBPA.Controllers
             {
                 return HttpNotFound();
             }
+
             List<PollOption> pollOptions = db.PollOptions.Where(p => p.Poll.Id == poll.Id).ToList();
-            //List<PollOption> pollOptions = new List<PollOption>();
-            var viewModel = new PollViewModel()
+
+            var viewModel = new PollViewModel
             {
-                Poll = poll,
+                Id = poll.Id,
+                Name = poll.Name,
+                Question = poll.Question,
+                StartDate = poll.StartDate,
+                EndDate = poll.EndDate,
                 PollOptions = pollOptions
             };
             return View("PollForm", viewModel);
@@ -117,11 +122,17 @@ namespace KYHBPA.Controllers
         public ActionResult AddPollOption(Poll poll)
         {
             var newOption = new PollOption();
-            poll.PollOptions = new List<PollOption>();
+            //poll.PollOptions = new List<PollOption>();            
             Poll pollInDb = db.Polls.Find(poll.Id);
+
+
             if (pollInDb != null)
             {
-                pollInDb.PollOptions = new List<PollOption>();
+                var pollOptionsDb = db.PollOptions.Where(p => p.Poll.Id == poll.Id).ToList();
+
+                //pollInDb.PollOptions = new List<PollOption>();
+                pollInDb.PollOptions = pollOptionsDb;
+
                 newOption.Poll = pollInDb;
                 newOption.Title = "Enter Poll Option";
 
@@ -130,7 +141,11 @@ namespace KYHBPA.Controllers
 
                 var pollView = new PollViewModel()
                 {
-                    Poll = pollInDb,
+                    Id = pollInDb.Id,
+                    Name = pollInDb.Name,
+                    Question = pollInDb.Question,
+                    StartDate = pollInDb.StartDate,
+                    EndDate = pollInDb.EndDate,
                     PollOptions = pollInDb.PollOptions
                 };
                 return View("PollForm", pollView);
@@ -143,31 +158,43 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Save(PollViewModel pollView)
+        public ActionResult Save(PollViewModel pollViewModel)
         {
-            if (!ModelState.IsValid)
-            {
-                var viewModel = new PollViewModel()
-                {
-                    Poll = pollView.Poll,
-                    PollOptions = new List<PollOption>()
-                };
-                return View("PollForm", viewModel);
-            }
+            //https://stackoverflow.com/questions/17273272/my-list-will-be-empty-when-post-the-form
+            //https://stackoverflow.com/questions/16553287/list-count-empty-when-passing-from-view-to-model-in-asp-net-mvc
+
+            //if (!ModelState.IsValid)
+            //{
+            //    var viewModel = new PollViewModel()
+            //    {
+
+            //        PollOptions = new List<PollOption>()
+            //    };
+            //    return View("PollForm", pollViewModel);
+            //}
             // If the minutes Id is 0 it is a new customer
-            if (pollView.Poll.Id == 0)
+            if (pollViewModel.Id == 0)
             {
-                db.Polls.Add(pollView.Poll);
+                var poll = new Poll()
+                {
+                    Name = pollViewModel.Name,
+                    Question = pollViewModel.Question,
+                    StartDate = pollViewModel.StartDate,
+                    EndDate = pollViewModel.EndDate,
+                    PollOptions = pollViewModel.PollOptions
+                };
+                db.Polls.Add(poll);
             }
             else
             {
-                var pollInDb = db.Polls.Single(p => p.Id == pollView.Poll.Id);
-
-                pollInDb.Name = pollView.Poll.Name;
-                pollInDb.Question = pollView.Poll.Question;
-                pollInDb.StartDate = pollView.Poll.StartDate;
-                pollInDb.EndDate = pollView.Poll.EndDate;
-                pollInDb.PollOptions = pollView.PollOptions;
+                var pollInDb = db.Polls.Single(p => p.Id == pollViewModel.Id);
+                var pollOptionsDb = db.PollOptions.Where(p => p.Poll.Id == pollViewModel.Id).ToList();
+                
+                pollInDb.Name = pollViewModel.Name;
+                pollInDb.Question = pollViewModel.Question;
+                pollInDb.StartDate = pollViewModel.StartDate;
+                pollInDb.EndDate = pollViewModel.EndDate;
+                pollInDb.PollOptions = pollOptionsDb;
             }
 
             db.SaveChanges();

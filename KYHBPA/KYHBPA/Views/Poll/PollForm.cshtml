@@ -1,4 +1,6 @@
-﻿@using KYHBPA.Models
+﻿@using KYHBPA.Models.ViewModels
+@using KYHBPA.Models
+
 @model KYHBPA.Models.ViewModels.PollViewModel
 
 @{
@@ -9,7 +11,7 @@
 
 @*https://www.aspsnippets.com/Articles/Implement-Dynamic-TextBox-controls-with-Add-Remove-Button-in-ASPNet-MVC.aspx*@
 
-@using (Html.BeginForm("Save","Poll")) 
+@using (Html.BeginForm("Save","Poll", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
     
@@ -17,45 +19,64 @@
         <h4>Poll</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Poll.Id)
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => Model.PollOptions)    
+
         <div class="form-group">
-            @Html.LabelFor(model => model.Poll.Question, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Poll.Question, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Poll.Question, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Poll.StartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Question, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Poll.StartDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Poll.StartDate, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Question, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Question, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Poll.EndDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Poll.EndDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Poll.EndDate, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
             </div>
-        </div>         
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EndDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+            </div>
+        </div>               
+        
+        @Html.HiddenFor(model => model.PollOptions)    
+        
+        <h4>Poll Options:</h4>
+        
+
+        @foreach (PollOption p in Model.PollOptions)
+        {
+            @Html.Partial("_PollOption", p) 
+        }         
+        
+        <br />
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Add Poll Option", "AddPollOption", Model, new {@class = "btn btn-default" })
+            </div>
+        </div>
+                
+        <br />
         
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-default"/>
-            </div>
-        </div>
-        
-        @foreach (PollOption p in Model.PollOptions)
-        {
-            @Html.Partial("_PollOption", p)
-        }
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                @Html.ActionLink("Add Poll Option", "AddPollOption", Model.Poll, new {@class = "btn btn-default" })
             </div>
         </div>
     </div>
