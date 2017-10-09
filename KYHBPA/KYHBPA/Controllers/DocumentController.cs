@@ -130,7 +130,7 @@ namespace KYHBPA.Controllers
             db.Documents.Add(documentModel);
             db.SaveChanges();
 
-            return RedirectToAction("Profile","Member");
+            return RedirectToAction("MyProfile","Member");
         }
 
         public ActionResult DownloadMemberCard()

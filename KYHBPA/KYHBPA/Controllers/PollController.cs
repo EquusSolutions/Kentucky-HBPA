@@ -202,8 +202,18 @@ namespace KYHBPA.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Poll poll = db.Polls.Find(id);
-            db.Polls.Remove(poll);
-            db.SaveChanges();
+            if (poll != null)
+            {
+                var pollOptions = db.PollOptions.Where(p => p.PollId == id).ToList();
+
+                foreach (var option in pollOptions)
+                {
+                    db.PollOptions.Remove(option);
+                }
+
+                db.Polls.Remove(poll);
+                db.SaveChanges();
+            }
             return RedirectToAction("Index");
         }
 

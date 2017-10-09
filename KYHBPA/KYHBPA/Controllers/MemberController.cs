@@ -26,7 +26,7 @@ namespace KYHBPA.Controllers
 
         // GET: Member/Profile
         [Authorize]
-        public ActionResult Profile()
+        public ActionResult MyProfile()
         {
             var userId = User.Identity.GetUserName();// .GetUserId<string>();
             if (userId == null)
@@ -34,12 +34,12 @@ namespace KYHBPA.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             var username = User.Identity.GetUserName();
-            var member = db.Members.FirstOrDefault(m => String.Compare(m.Email, username) == 0);
+            var member = db.Members.FirstOrDefault(m => m.Email == username);
             if (member == null)
             {
                 return HttpNotFound();
             }
-            return View(member);
+            return View("Profile",member);
         }
 
         // GET: Member/Details/5
