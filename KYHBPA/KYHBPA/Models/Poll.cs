@@ -19,5 +19,10 @@ namespace KYHBPA.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime EndDate { get; set; }
         public List<PollOption> PollOptions { get; set; }
+
+        public Poll()
+        {
+            PollOptions = new List<PollOption>();
+        }
     }
 }

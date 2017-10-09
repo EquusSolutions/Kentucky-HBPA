@@ -58,6 +58,25 @@ namespace KYHBPA.Controllers
             return View(pollOption);
         }
 
+        public ActionResult Vote(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            PollOption pollOption = db.PollOptions.Find(id);
+            if (pollOption == null)
+            {
+                return HttpNotFound();
+            }
+            //TODO: Add Logic Check if already voted
+            pollOption.Votes++;
+            db.Entry(pollOption).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("DisplayPolls", "Poll");
+
+        }
+
         // GET: PollOption/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -87,6 +106,21 @@ namespace KYHBPA.Controllers
                 return RedirectToAction("Index");
             }
             return View(pollOption);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult UpdateOption(int? id, string title)
+        {
+            var pollOption = db.PollOptions.Find(id);
+            if (pollOption == null)
+            {
+                pollOption.Title = title;
+                db.Entry(pollOption).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Index");
         }
 
         // GET: PollOption/Delete/5

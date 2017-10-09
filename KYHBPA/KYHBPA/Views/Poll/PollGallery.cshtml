@@ -1,0 +1,13 @@
+﻿@model IEnumerable<KYHBPA.Models.Poll>
+
+@{
+    ViewBag.Title = "PollGallery";
+}
+
+<h2>PollGallery</h2>
+
+@foreach (var item in Model) {
+
+    Html.RenderAction("DisplayPoll", "Poll", new { id = item.Id });
+    //Html.RenderPartial("_PollWidget", item);
+}

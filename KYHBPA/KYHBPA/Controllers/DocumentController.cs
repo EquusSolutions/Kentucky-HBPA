@@ -104,14 +104,9 @@ namespace KYHBPA.Controllers
         [HttpPost]
         public ActionResult UploadMemberCard(int? memberId, HttpPostedFileBase file)
         {
-            var userId = User.Identity.GetUserName();
-            if (userId == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             var username = User.Identity.GetUserName();
 
-            var member = db.Members.FirstOrDefault(m => String.Compare(m.Email, username) == 0);
+            var member = db.Members.FirstOrDefault(m => m.Email == username);
             if (member == null)
             {
                 return HttpNotFound();
@@ -141,7 +136,7 @@ namespace KYHBPA.Controllers
         public ActionResult DownloadMemberCard()
         {
             //var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName, "Member Card.pdf") == 0);
-            var memberCard = db.Documents.FirstOrDefault(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName, "Member Card.pdf") == 0);
+            var memberCard = db.Documents.FirstOrDefault(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName.ToLower(), "member card.pdf") == 0);
 
             if (memberCard != null)
             {

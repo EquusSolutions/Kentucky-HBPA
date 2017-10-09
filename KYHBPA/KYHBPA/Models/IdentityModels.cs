@@ -32,6 +32,7 @@ namespace KYHBPA.Models
         public DbSet<Poll> Polls { get; set; }
         public DbSet<PollOption> PollOptions { get; set; }
         public DbSet<News> News { get; set; }
+        public DbSet<Vote> Votes { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

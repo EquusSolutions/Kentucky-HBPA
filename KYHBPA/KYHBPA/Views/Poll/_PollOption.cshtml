@@ -2,9 +2,7 @@
 @model KYHBPA.Models.PollOption
 
 @using (Html.BeginForm("Edit", "PollOption")) 
-{
-    @*@Html.AntiForgeryToken()*@
-    
+{   
     <div class="form-horizontal">
         <hr />
         @Html.HiddenFor(model => model.Id)
@@ -20,6 +18,7 @@
             </div>
             <div class="col-md-2">
                 @*<input type="button" value="Delete" class="btn btn-default" />*@
+                @*@Html.ActionLink("Update", "UpdateOption", "PollOption", new { id = Model.Id, title = Model.Title}, null) |*@
                 @Html.ActionLink("Edit","Edit","PollOption", new { id=Model.Id },null) |
                 @Html.ActionLink("Delete", "Delete", "PollOption", new { id=Model.Id },null)
             </div>

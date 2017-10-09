@@ -48,7 +48,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Question,StartDate,EndDate,PollOptions")] Poll poll)
+        public ActionResult Create(Poll poll)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +91,7 @@ namespace KYHBPA.Controllers
             return View(poll);
         }
 
-        // GET: Minutes/Save/5
+        // GET: Poll/Save/5
         public ActionResult Save(int? id)
         {
             if (id == null)
@@ -139,16 +139,16 @@ namespace KYHBPA.Controllers
                 pollInDb.PollOptions.Add(newOption);
                 db.SaveChanges();
 
-                var pollView = new PollViewModel()
-                {
-                    Id = pollInDb.Id,
-                    Name = pollInDb.Name,
-                    Question = pollInDb.Question,
-                    StartDate = pollInDb.StartDate,
-                    EndDate = pollInDb.EndDate,
-                    PollOptions = pollInDb.PollOptions
-                };
-                return View("PollForm", pollView);
+                //var pollView = new PollViewModel()
+                //{
+                //    Id = pollInDb.Id,
+                //    Name = pollInDb.Name,
+                //    Question = pollInDb.Question,
+                //    StartDate = pollInDb.StartDate,
+                //    EndDate = pollInDb.EndDate,
+                //    PollOptions = pollInDb.PollOptions
+                //};
+                return RedirectToAction("Save", "Poll", new {pollInDb.Id});
             }
             return View("Index");
         }
@@ -172,7 +172,7 @@ namespace KYHBPA.Controllers
             //    };
             //    return View("PollForm", pollViewModel);
             //}
-            // If the minutes Id is 0 it is a new customer
+            // If the poll Id is 0 it is a new customer
             if (pollViewModel.Id == 0)
             {
                 var poll = new Poll()
@@ -200,6 +200,37 @@ namespace KYHBPA.Controllers
             db.SaveChanges();
 
             return RedirectToAction("Index", "Poll");
+        }
+
+        public ActionResult DisplayPolls()
+        {
+            return View("PollGallery", db.Polls.ToList());
+        }
+
+        public ActionResult DisplayPoll(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Poll poll = db.Polls.Find(id);
+            if (poll == null)
+            {
+                return HttpNotFound();
+            }
+
+            List<PollOption> pollOptions = db.PollOptions.Where(p => p.Poll.Id == poll.Id).ToList();
+
+            var viewModel = new PollViewModel
+            {
+                Id = poll.Id,
+                Name = poll.Name,
+                Question = poll.Question,
+                StartDate = poll.StartDate,
+                EndDate = poll.EndDate,
+                PollOptions = pollOptions
+            };
+            return PartialView("_PollWidget", viewModel);
         }
 
         // GET: Poll/Delete/5

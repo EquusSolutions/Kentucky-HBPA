@@ -1,0 +1,19 @@
+﻿@using KYHBPA.Models
+@using KYHBPA.Models.ViewModels
+@model KYHBPA.Models.ViewModels.PollViewModel    
+
+<br/>
+<div>
+    <h3>@Model.Name </h3>
+    <hr />
+    
+    <h4>@Html.DisplayFor(model => model.Question)</h4>
+
+    @foreach (PollOption p in Model.PollOptions)
+    {
+        <p>@p.Title - @p.Votes
+            @Html.ActionLink("Vote", "Vote" ,"PollOption", new { id = p.Id }, new { @class = "btn btn-default" })
+        </p>
+        <br/>
+    }
+</div>
