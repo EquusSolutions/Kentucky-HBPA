@@ -8,7 +8,7 @@ namespace KYHBPA.Models
     public class Vote
     {
         public int Id { get; set; }
-        public Guid Voter { get; set; }
+        public string Voter { get; set; }
         public int PollId { get; set; }
     }
 }

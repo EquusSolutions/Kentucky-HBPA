@@ -60,37 +60,6 @@ namespace KYHBPA.Controllers
             return View(poll);
         }
 
-        // GET: Poll/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Poll poll = db.Polls.Find(id);
-            if (poll == null)
-            {
-                return HttpNotFound();
-            }
-            return View(poll);
-        }
-
-        // POST: Poll/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Question,StartDate,EndDate")] Poll poll)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(poll).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(poll);
-        }
-
         // GET: Poll/Save/5
         public ActionResult Save(int? id)
         {
@@ -122,15 +91,14 @@ namespace KYHBPA.Controllers
         public ActionResult AddPollOption(Poll poll)
         {
             var newOption = new PollOption();
-            //poll.PollOptions = new List<PollOption>();            
-            Poll pollInDb = db.Polls.Find(poll.Id);
+     
+            var pollInDb = db.Polls.Find(poll.Id);
 
 
             if (pollInDb != null)
             {
                 var pollOptionsDb = db.PollOptions.Where(p => p.Poll.Id == poll.Id).ToList();
 
-                //pollInDb.PollOptions = new List<PollOption>();
                 pollInDb.PollOptions = pollOptionsDb;
 
                 newOption.Poll = pollInDb;
@@ -139,15 +107,6 @@ namespace KYHBPA.Controllers
                 pollInDb.PollOptions.Add(newOption);
                 db.SaveChanges();
 
-                //var pollView = new PollViewModel()
-                //{
-                //    Id = pollInDb.Id,
-                //    Name = pollInDb.Name,
-                //    Question = pollInDb.Question,
-                //    StartDate = pollInDb.StartDate,
-                //    EndDate = pollInDb.EndDate,
-                //    PollOptions = pollInDb.PollOptions
-                //};
                 return RedirectToAction("Save", "Poll", new {pollInDb.Id});
             }
             return View("Index");
@@ -160,18 +119,6 @@ namespace KYHBPA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Save(PollViewModel pollViewModel)
         {
-            //https://stackoverflow.com/questions/17273272/my-list-will-be-empty-when-post-the-form
-            //https://stackoverflow.com/questions/16553287/list-count-empty-when-passing-from-view-to-model-in-asp-net-mvc
-
-            //if (!ModelState.IsValid)
-            //{
-            //    var viewModel = new PollViewModel()
-            //    {
-
-            //        PollOptions = new List<PollOption>()
-            //    };
-            //    return View("PollForm", pollViewModel);
-            //}
             // If the poll Id is 0 it is a new customer
             if (pollViewModel.Id == 0)
             {
@@ -204,7 +151,7 @@ namespace KYHBPA.Controllers
 
         public ActionResult DisplayPolls()
         {
-            return View("PollGallery", db.Polls.ToList());
+            return View("PollGallery", db.Polls.Where(p => DateTime.Compare(DateTime.Today,p.EndDate) <= 0).ToList());
         }
 
         public ActionResult DisplayPoll(int? id)
@@ -213,13 +160,14 @@ namespace KYHBPA.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Poll poll = db.Polls.Find(id);
+
+            var poll = db.Polls.Find(id);
             if (poll == null)
             {
                 return HttpNotFound();
             }
 
-            List<PollOption> pollOptions = db.PollOptions.Where(p => p.Poll.Id == poll.Id).ToList();
+            var pollOptions = db.PollOptions.Where(p => p.Poll.Id == poll.Id).ToList();
 
             var viewModel = new PollViewModel
             {

@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KYHBPA.Models;
+using Microsoft.AspNet.Identity;
 
 namespace KYHBPA.Controllers
 {
@@ -46,7 +47,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Votes,Title")] PollOption pollOption)
+        public ActionResult Create(PollOption pollOption)
         {
             if (ModelState.IsValid)
             {
@@ -64,17 +65,34 @@ namespace KYHBPA.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PollOption pollOption = db.PollOptions.Find(id);
+
+            var pollOption = db.PollOptions.Find(id);
             if (pollOption == null)
             {
                 return HttpNotFound();
             }
             //TODO: Add Logic Check if already voted
-            pollOption.Votes++;
-            db.Entry(pollOption).State = EntityState.Modified;
-            db.SaveChanges();
-            return RedirectToAction("DisplayPolls", "Poll");
+            var userId = User.Identity.GetUserId();
 
+            var voteInDb = db.Votes.FirstOrDefault(v => v.Voter == userId
+                && v.PollId == pollOption.PollId);
+
+            if (voteInDb == null)
+            {
+                var vote = new Vote
+                {
+                    Voter = userId,
+                    PollId = pollOption.PollId
+                };
+                db.Votes.Add(vote);
+                db.SaveChanges();
+
+                pollOption.Votes++;
+                db.Entry(pollOption).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("DisplayPolls", "Poll");
         }
 
         // GET: PollOption/Edit/5
@@ -97,13 +115,14 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Votes,Title")] PollOption pollOption)
+        public ActionResult Edit(PollOption pollOption)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(pollOption).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return RedirectToAction("Save", "Poll", new { id = pollOption.PollId });
             }
             return View(pollOption);
         }
@@ -143,10 +162,17 @@ namespace KYHBPA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            PollOption pollOption = db.PollOptions.Find(id);
-            db.PollOptions.Remove(pollOption);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            var pollOption = db.PollOptions.Find(id);
+            if (pollOption != null)
+            {
+                var pollId = pollOption.PollId;
+
+                db.PollOptions.Remove(pollOption);
+                db.SaveChanges();
+
+                return RedirectToAction("Save", "Poll", new {id = pollId});
+            }
+            return RedirectToAction("Index", "Poll");
         }
 
         protected override void Dispose(bool disposing)

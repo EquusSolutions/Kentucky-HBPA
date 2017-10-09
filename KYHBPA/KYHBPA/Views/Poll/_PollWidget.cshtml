@@ -3,17 +3,22 @@
 @model KYHBPA.Models.ViewModels.PollViewModel    
 
 <br/>
-<div>
-    <h3>@Model.Name </h3>
-    <hr />
-    
-    <h4>@Html.DisplayFor(model => model.Question)</h4>
+<div class="col-md-6">
+    <h2>@Model.Name </h2>
 
-    @foreach (PollOption p in Model.PollOptions)
-    {
-        <p>@p.Title - @p.Votes
-            @Html.ActionLink("Vote", "Vote" ,"PollOption", new { id = p.Id }, new { @class = "btn btn-default" })
-        </p>
-        <br/>
-    }
+    <table class="table">
+        <tr>
+            <td><h4>@Html.DisplayFor(model => model.Question)</h4></td>
+        </tr>
+
+        @foreach (PollOption p in Model.PollOptions)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink("+", "Vote", "PollOption", new { id = p.Id }, new { @class = "btn btn-default" })
+                    @p.Title
+                </td>
+            </tr>
+        }
+    </table>
 </div>

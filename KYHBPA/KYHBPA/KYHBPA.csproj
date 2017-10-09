@@ -295,6 +295,14 @@
     <Compile Include="Migrations\201710090115181_AddVoteTable.Designer.cs">
       <DependentUpon>201710090115181_AddVoteTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710090146586_UpdateVoterType.cs" />
+    <Compile Include="Migrations\201710090146586_UpdateVoterType.Designer.cs">
+      <DependentUpon>201710090146586_UpdateVoterType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090202239_AddPollOptionPollId.cs" />
+    <Compile Include="Migrations\201710090202239_AddPollOptionPollId.Designer.cs">
+      <DependentUpon>201710090202239_AddPollOptionPollId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
@@ -572,6 +580,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710090115181_AddVoteTable.resx">
       <DependentUpon>201710090115181_AddVoteTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090146586_UpdateVoterType.resx">
+      <DependentUpon>201710090146586_UpdateVoterType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090202239_AddPollOptionPollId.resx">
+      <DependentUpon>201710090202239_AddPollOptionPollId.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
