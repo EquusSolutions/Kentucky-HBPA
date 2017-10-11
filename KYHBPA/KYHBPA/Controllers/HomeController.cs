@@ -114,6 +114,11 @@ namespace KYHBPA.Controllers
             return View();
         }
 
+        public ActionResult JockeyProfile()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult UploadDocument(DocumentDiscriminator discriminator, HttpPostedFileBase file)
         {
