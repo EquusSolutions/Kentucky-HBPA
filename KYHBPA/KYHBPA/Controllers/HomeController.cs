@@ -69,7 +69,7 @@ namespace KYHBPA.Controllers
             releaseSmtpClient.Port = 25;
 
 
-            if (ModelState.IsValid || (ModelState.IsValid == false && IsDebug))
+            if (ModelState.IsValid)
             {
                 string Body = viewModel.Note;
 
@@ -100,7 +100,7 @@ namespace KYHBPA.Controllers
             }
             else
             {
-                return View("Index", viewModel);
+                return RedirectToAction("ErrorPage", "Contact");
             }
         }
 
