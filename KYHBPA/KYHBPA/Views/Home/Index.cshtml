@@ -2,51 +2,146 @@
     ViewBag.Title = "KYHBPA | Home";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-        <li data-target="#myCarousel" data-slide-to="5"></li>
-        <li data-target="#myCarousel" data-slide-to="6"></li>
-    </ol>
+@*<div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+        </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/Images/Image7.jpg" alt="Image7" />
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="~/Images/Image7.jpg" alt="Image7" />
+            </div>
+            <div class="item">
+                <img src="~/Images/Image2.jpg" alt="Image2" />
+            </div>
+            <div class="item">
+                <img src="~/Images/Image3.jpg" alt="Image3" />
+            </div>
+            <div class="item">
+                <img src="~/Images/Image4.jpg" alt="Image4" />
+            </div>
+            <div class="item">
+                <img src="~/Images/Image5.jpg" alt="Image5" />
+            </div>
+            <div class="item">
+                <img src="~/Images/Image6.jpg" alt="Image6" />
+            </div>
+            <div class="item">
+                <img src="~/Images/Image8.jpg" alt="Image8" />
+            </div>
         </div>
-        <div class="item">
-            <img src="~/Images/Image2.jpg" alt="Image2" />
-        </div>
-        <div class="item">
-            <img src="~/Images/Image3.jpg" alt="Image3" />
-        </div>
-        <div class="item">
-            <img src="~/Images/Image4.jpg" alt="Image4" />
-        </div>
-        <div class="item">
-            <img src="~/Images/Image5.jpg" alt="Image5" />
-        </div>
-        <div class="item">
-            <img src="~/Images/Image6.jpg" alt="Image6" />
-        </div>
-        <div class="item">
-            <img src="~/Images/Image8.jpg" alt="Image8" />
-        </div>
-    </div>
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>*@
+
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+            <div class="item active">
+                <img src="~/Images/Image7.jpg" alt="Image7">
+                <div class="carousel-caption">
+                    <h4><a href="#">Connect With Us on Social Media</a></h4>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+                    tempor invidunt ut labore et dolore magna aliquyam erat. 
+                    <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">
+                        Free Bootstrap Carousel Collection</a></p>
+                </div>
+            </div><!-- End Item -->
+
+            <div class="item">
+                <img src="http://placehold.it/760x400/999999/cccccc">
+                <div class="carousel-caption">
+                    <h4><a href="#">News Article 1</a></h4>
+                    <p>1: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+                    tempor invidunt ut labore et dolore magna aliquyam erat. 
+                    <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">
+                        Free Bootstrap Carousel Collection</a></p>
+                </div>
+            </div><!-- End Item -->
+
+            <div class="item">
+                <img src="http://placehold.it/760x400/dddddd/333333">
+                <div class="carousel-caption">
+                    <h4><a href="#">News Article 2</a></h4>
+                    <p>2: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+                    tempor invidunt ut labore et dolore magna aliquyam erat. 
+                    <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">
+                        Free Bootstrap Carousel Collection</a></p>
+                </div>
+            </div><!-- End Item -->
+
+            <div class="item">
+                <img src="http://placehold.it/760x400/999999/cccccc">
+                <div class="carousel-caption">
+                    <h4><a href="#">News Article 3</a></h4>
+                    <p>3: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+                    tempor invidunt ut labore et dolore magna aliquyam erat. 
+                    <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">
+                        Free Bootstrap Carousel Collection</a></p>
+                </div>
+            </div><!-- End Item -->
+
+            <div class="item">
+                <img src="http://placehold.it/760x400/dddddd/333333">
+                <div class="carousel-caption">
+                    <h4><a href="#">News Article 4</a></h4>
+                    <p>4: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+                    tempor invidunt ut labore et dolore magna aliquyam erat. 
+                    <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">
+                        Free Bootstrap Carousel Collection</a></p>
+                </div>
+            </div><!-- End Item -->
+
+        </div><!-- End Carousel Inner -->
+
+
+        <ul class="list-group col-sm-4">
+            <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Connect with us!</h4></li>
+            <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>News Article 1</h4></li>
+            <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>News Article 2</h4></li>
+            <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>News Article 3</h4></li>
+            <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>News Article 4</h4></li>
+        </ul>
+
+        <!-- Controls -->
+        <div class="carousel-controls">
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div><!-- End controls-->
+
+    </div><!-- End Carousel -->
 </div>
 
 <div class="jumbotron">
@@ -67,100 +162,102 @@
         </a>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-    <div class="col-md-4">
-        <h2>Kentucky HBPA Headlines</h2>
-        <table class="table">
-            <tr>
-                <td class="padCols"><img src="~/Images/2-Aug.png" height="69" width="91" /></td>
-                <td class="padCols">
-                    <a href="http://nationalhbpa.com/kentucky-downs-to-pay-record-750-for-sixth-through-last-place/" target="_blank">
-                        <h5 class="h5News">Kentucky Downs to Pay Record $750 for Sixth through Last Place</h5>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="padCols"><img src="~/Images/20-July.png" height="69" width="91" /></td>
-                <td class="padCols">
-                    <a href="http://nationalhbpa.com/kentucky-hbpa-teaming-with-ellis-park-for-college-day-fan-education/" target="_blank">
-                        <h5 class="h5News">Kentucky HBPA teaming with Ellis Park for College Day, fan education</h5>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="padCols"><img src="~/Images/1-May.png" height="69" width="91" /></td>
-                <td class="padCols">
-                    <a href="http://nationalhbpa.com/seattle-slew-specialty-license-plate-now-available-to-kentucky-drivers/" target="_blank">
-                        <h5 class="h5News">Seattle Slew Specialty License Plate Now Available to Kentucky Drivers</h5>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="padCols"><img src="~/Images/20-Apr.png" height="69" width="91" /></td>
-                <td class="padCols">
-                    <a href="http://nationalhbpa.com/north-american-racing-academy-looking-for-horses-to-adopt/" target="_blank">
-                        <h5 class="h5News">North American Racing Academy Looking for Horses to Adopt</h5>
-                    </a>
-                </td>
-            </tr>
-        </table>
-        <p><a class="btn btn-default" href="/Home/">See more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>National HBPA Headlines</h2>
-        <table class="table">
-            <tr>
-                <td class="padCols"><img src="~/Images/26-Sep.png" height="69" width="91" /></td>
-                <td class="padCols">
-                    <a href="http://nationalhbpa.com/national-hbpa-statement-new-tax-regulations-on-winning-bets-helps-entire-industry/" target="_blank">
-                        <h5 class="h5News">National HBPA Statement: New Tax Regulations on Winning Bets Helps Entire Industry</h5>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="padCols"><img src="~/Images/21-Sep.png" height="69" width="91" /></td>
-                <td class="padCols">
-                    <a href="http://nationalhbpa.com/the-interactive-electronic-edition-of-the-horsemens-journal-fall-2017-issue-is-now-available/" target="_blank">
-                        <h5 class="h5News">The Interactive, Electronic Edition of The Horsemen’s Journal Fall 2017 Issue is Now Available</h5>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="padCols"><img src="~/Images/17-Sep.png" height="69" width="91" /></td>
-                <td class="padCols">
-                    <a href="http://nationalhbpa.com/penny-chenery-first-lady-of-thoroughbred-racing-dies-at-95/" target="_blank">
-                        <h5 class="h5News">Penny Chenery, &#8220;First Lady of Thoroughbred Racing,&#8221; Dies at 95</h5>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="padCols"><img src="~/Images/12-Sep.png" height="69" width="91" /></td>
-                <td class="padCols">
-                    <a href="http://nationalhbpa.com/toba-honors-top-owners-and-breeders-at-32nd-annual-awards-dinner/" target="_blank">
-                        <h5 class="h5News">TOBA Honors Top Owners and Breeders at 32nd Annual Awards Dinner</h5>
-                    </a>
-                </td>
-            </tr>
-        </table>
-        <p><a class="btn btn-default" href="http://nationalhbpa.com/headlines" target="_blank">See more &raquo;</a></p>
-    </div>
 
-    <div class="col-md-4">
-        <h2>Get Involved</h2>
-        <table class="table">
-            <tr>
-                <td class="padCols"><img src="~/Images/Sports-betting-board.jpg" height="69" width="91" /></td>
-                <td class="padCols">
-                    <a href="http://www.lrc.ky.gov/record/16RS/HB155.htm" target="_blank">
-                        <h5 class="h5News">
-                            Click here to support HB155 to allow sports betting at tracks and off-track facilities
-                        </h5>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-        </table>
-        <p><a class="btn btn-default" href="/Home/">Learn more &raquo;</a></p>
-    </div>
+
+    @*<div class="col-md-4">
+            <h2>Kentucky HBPA Headlines</h2>
+            <table class="table">
+                <tr>
+                    <td class="padCols"><img src="~/Images/2-Aug.png" height="69" width="91" /></td>
+                    <td class="padCols">
+                        <a href="http://nationalhbpa.com/kentucky-downs-to-pay-record-750-for-sixth-through-last-place/" target="_blank">
+                            <h5 class="h5News">Kentucky Downs to Pay Record $750 for Sixth through Last Place</h5>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="padCols"><img src="~/Images/20-July.png" height="69" width="91" /></td>
+                    <td class="padCols">
+                        <a href="http://nationalhbpa.com/kentucky-hbpa-teaming-with-ellis-park-for-college-day-fan-education/" target="_blank">
+                            <h5 class="h5News">Kentucky HBPA teaming with Ellis Park for College Day, fan education</h5>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="padCols"><img src="~/Images/1-May.png" height="69" width="91" /></td>
+                    <td class="padCols">
+                        <a href="http://nationalhbpa.com/seattle-slew-specialty-license-plate-now-available-to-kentucky-drivers/" target="_blank">
+                            <h5 class="h5News">Seattle Slew Specialty License Plate Now Available to Kentucky Drivers</h5>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="padCols"><img src="~/Images/20-Apr.png" height="69" width="91" /></td>
+                    <td class="padCols">
+                        <a href="http://nationalhbpa.com/north-american-racing-academy-looking-for-horses-to-adopt/" target="_blank">
+                            <h5 class="h5News">North American Racing Academy Looking for Horses to Adopt</h5>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <p><a class="btn btn-default" href="/Home/">See more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>National HBPA Headlines</h2>
+            <table class="table">
+                <tr>
+                    <td class="padCols"><img src="~/Images/26-Sep.png" height="69" width="91" /></td>
+                    <td class="padCols">
+                        <a href="http://nationalhbpa.com/national-hbpa-statement-new-tax-regulations-on-winning-bets-helps-entire-industry/" target="_blank">
+                            <h5 class="h5News">National HBPA Statement: New Tax Regulations on Winning Bets Helps Entire Industry</h5>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="padCols"><img src="~/Images/21-Sep.png" height="69" width="91" /></td>
+                    <td class="padCols">
+                        <a href="http://nationalhbpa.com/the-interactive-electronic-edition-of-the-horsemens-journal-fall-2017-issue-is-now-available/" target="_blank">
+                            <h5 class="h5News">The Interactive, Electronic Edition of The Horsemen’s Journal Fall 2017 Issue is Now Available</h5>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="padCols"><img src="~/Images/17-Sep.png" height="69" width="91" /></td>
+                    <td class="padCols">
+                        <a href="http://nationalhbpa.com/penny-chenery-first-lady-of-thoroughbred-racing-dies-at-95/" target="_blank">
+                            <h5 class="h5News">Penny Chenery, &#8220;First Lady of Thoroughbred Racing,&#8221; Dies at 95</h5>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="padCols"><img src="~/Images/12-Sep.png" height="69" width="91" /></td>
+                    <td class="padCols">
+                        <a href="http://nationalhbpa.com/toba-honors-top-owners-and-breeders-at-32nd-annual-awards-dinner/" target="_blank">
+                            <h5 class="h5News">TOBA Honors Top Owners and Breeders at 32nd Annual Awards Dinner</h5>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <p><a class="btn btn-default" href="http://nationalhbpa.com/headlines" target="_blank">See more &raquo;</a></p>
+        </div>
+
+        <div class="col-md-4">
+            <h2>Get Involved</h2>
+            <table class="table">
+                <tr>
+                    <td class="padCols"><img src="~/Images/Sports-betting-board.jpg" height="69" width="91" /></td>
+                    <td class="padCols">
+                        <a href="http://www.lrc.ky.gov/record/16RS/HB155.htm" target="_blank">
+                            <h5 class="h5News">
+                                Click here to support HB155 to allow sports betting at tracks and off-track facilities
+                            </h5>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+            </table>
+            <p><a class="btn btn-default" href="/Home/">Learn more &raquo;</a></p>
+        </div>*@
 
     <div class="col-md-4">
         <h2>Latest Poll</h2>
@@ -211,3 +308,37 @@
             </td>
     </table>
 </div>
+
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        var clickEvent = false;
+        $('#myCarousel').carousel({
+            interval: 4000
+        }).on('click', '.list-group li', function () {
+            clickEvent = true;
+            $('.list-group li').removeClass('active');
+            $(this).addClass('active');
+        }).on('slid.bs.carousel', function (e) {
+            if (!clickEvent) {
+                var count = $('.list-group').children().length - 1;
+                var current = $('.list-group li.active');
+                current.removeClass('active').next().addClass('active');
+                var id = parseInt(current.data('slide-to'));
+                if (count == id) {
+                    $('.list-group li').first().addClass('active');
+                }
+            }
+            clickEvent = false;
+        });
+    })
+
+    $(window).load(function () {
+        var boxheight = $('#myCarousel .carousel-inner').innerHeight();
+        var itemlength = $('#myCarousel .item').length;
+        var triggerheight = Math.round(boxheight / itemlength + 1);
+        $('#myCarousel .list-group-item').outerHeight(triggerheight);
+    });
+</script>

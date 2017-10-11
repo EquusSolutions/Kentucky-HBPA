@@ -339,6 +339,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <None Include="Documents\Kentucky-HBPA-Membership-Card.pdf" />
+    <None Include="Properties\PublishProfiles\hawks.cis420.net - Web Deploy.pubxml" />
     <None Include="Resources\favicon.ico" />
     <None Include="Images\donate-btn.png" />
     <None Include="Images\2-Aug.png" />
@@ -499,7 +500,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
