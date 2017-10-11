@@ -129,5 +129,11 @@ namespace KYHBPA.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult ErrorPage()
+        {
+            return View();
+        }
+
     }
 }
