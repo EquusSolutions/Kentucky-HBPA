@@ -1,0 +1,13 @@
+﻿@using KYHBPA.Models
+@model IEnumerable<KYHBPA.Models.News>
+
+@{
+    ViewBag.Title = "NewsGallery";
+}
+
+<h2>NewsGallery</h2>
+
+@foreach (var item in Model)
+{
+    @Html.Partial("_NewsArticle", item)
+}
