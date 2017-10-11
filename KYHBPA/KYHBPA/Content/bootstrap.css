@@ -8318,7 +8318,7 @@ button.close {
 }
 
 /* Font Awesome icon formatting */
-/*.fa {
+.fa {
     padding: 20px;
     font-size: 30px;
     height: 35px;
