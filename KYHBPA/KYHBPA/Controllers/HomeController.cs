@@ -94,7 +94,7 @@ namespace KYHBPA.Controllers
                 }
                 catch (SmtpException)
                 {
-                    return View("EmailError");
+                    return RedirectToAction("ErrorPage", "Contact");
                 }
                 return RedirectToAction("Sucess", "Contact");
             }
