@@ -207,6 +207,106 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709132120433_AddMemberTable.cs" />
+    <Compile Include="Migrations\201709132120433_AddMemberTable.Designer.cs">
+      <DependentUpon>201709132120433_AddMemberTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709132206060_AddMinuteTable.cs" />
+    <Compile Include="Migrations\201709132206060_AddMinuteTable.Designer.cs">
+      <DependentUpon>201709132206060_AddMinuteTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709181749235_UpdateMinuteTypeToMinuteTable.cs" />
+    <Compile Include="Migrations\201709181749235_UpdateMinuteTypeToMinuteTable.Designer.cs">
+      <DependentUpon>201709181749235_UpdateMinuteTypeToMinuteTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709181945137_addContactTable.cs" />
+    <Compile Include="Migrations\201709181945137_addContactTable.Designer.cs">
+      <DependentUpon>201709181945137_addContactTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709181949295_addEventTable.cs" />
+    <Compile Include="Migrations\201709181949295_addEventTable.Designer.cs">
+      <DependentUpon>201709181949295_addEventTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709182019083_AddDocumentTable.cs" />
+    <Compile Include="Migrations\201709182019083_AddDocumentTable.Designer.cs">
+      <DependentUpon>201709182019083_AddDocumentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709182139524_UpdateMinuteTableName.cs" />
+    <Compile Include="Migrations\201709182139524_UpdateMinuteTableName.Designer.cs">
+      <DependentUpon>201709182139524_UpdateMinuteTableName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709201951003_UpdateDocumentTable.cs" />
+    <Compile Include="Migrations\201709201951003_UpdateDocumentTable.Designer.cs">
+      <DependentUpon>201709201951003_UpdateDocumentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709220155571_AddPollTables.cs" />
+    <Compile Include="Migrations\201709220155571_AddPollTables.Designer.cs">
+      <DependentUpon>201709220155571_AddPollTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709232222084_AddNameToPollTable.cs" />
+    <Compile Include="Migrations\201709232222084_AddNameToPollTable.Designer.cs">
+      <DependentUpon>201709232222084_AddNameToPollTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709272039528_UpdateEventDates.cs" />
+    <Compile Include="Migrations\201709272039528_UpdateEventDates.Designer.cs">
+      <DependentUpon>201709272039528_UpdateEventDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709280123524_AddNewsTable.cs" />
+    <Compile Include="Migrations\201709280123524_AddNewsTable.Designer.cs">
+      <DependentUpon>201709280123524_AddNewsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709280211183_SeedUsers.cs" />
+    <Compile Include="Migrations\201709280211183_SeedUsers.Designer.cs">
+      <DependentUpon>201709280211183_SeedUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710030123532_AddMemberDataToApplicationUser.cs" />
+    <Compile Include="Migrations\201710030123532_AddMemberDataToApplicationUser.Designer.cs">
+      <DependentUpon>201710030123532_AddMemberDataToApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710031556199_AddCallToAction.cs" />
+    <Compile Include="Migrations\201710031556199_AddCallToAction.Designer.cs">
+      <DependentUpon>201710031556199_AddCallToAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710041655579_UpdateDocumentMemberId.cs" />
+    <Compile Include="Migrations\201710041655579_UpdateDocumentMemberId.Designer.cs">
+      <DependentUpon>201710041655579_UpdateDocumentMemberId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710042012351_AddMemberIdAppUser.cs" />
+    <Compile Include="Migrations\201710042012351_AddMemberIdAppUser.Designer.cs">
+      <DependentUpon>201710042012351_AddMemberIdAppUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710042152454_TryUpdateDocumentMemberId.cs" />
+    <Compile Include="Migrations\201710042152454_TryUpdateDocumentMemberId.Designer.cs">
+      <DependentUpon>201710042152454_TryUpdateDocumentMemberId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710050218406_UpdateMemberDoBNullable.cs" />
+    <Compile Include="Migrations\201710050218406_UpdateMemberDoBNullable.Designer.cs">
+      <DependentUpon>201710050218406_UpdateMemberDoBNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710050225337_RemovePropertyAppUser.cs" />
+    <Compile Include="Migrations\201710050225337_RemovePropertyAppUser.Designer.cs">
+      <DependentUpon>201710050225337_RemovePropertyAppUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710080221536_UpdateContactTableRequirements.cs" />
+    <Compile Include="Migrations\201710080221536_UpdateContactTableRequirements.Designer.cs">
+      <DependentUpon>201710080221536_UpdateContactTableRequirements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090115181_AddVoteTable.cs" />
+    <Compile Include="Migrations\201710090115181_AddVoteTable.Designer.cs">
+      <DependentUpon>201710090115181_AddVoteTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090146586_UpdateVoterType.cs" />
+    <Compile Include="Migrations\201710090146586_UpdateVoterType.Designer.cs">
+      <DependentUpon>201710090146586_UpdateVoterType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710090202239_AddPollOptionPollId.cs" />
+    <Compile Include="Migrations\201710090202239_AddPollOptionPollId.Designer.cs">
+      <DependentUpon>201710090202239_AddPollOptionPollId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710121458114_UpdateContactStringLength.cs" />
+    <Compile Include="Migrations\201710121458114_UpdateContactStringLength.Designer.cs">
+      <DependentUpon>201710121458114_UpdateContactStringLength.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
@@ -430,6 +530,81 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709132120433_AddMemberTable.resx">
+      <DependentUpon>201709132120433_AddMemberTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709132206060_AddMinuteTable.resx">
+      <DependentUpon>201709132206060_AddMinuteTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709181749235_UpdateMinuteTypeToMinuteTable.resx">
+      <DependentUpon>201709181749235_UpdateMinuteTypeToMinuteTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709181945137_addContactTable.resx">
+      <DependentUpon>201709181945137_addContactTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709181949295_addEventTable.resx">
+      <DependentUpon>201709181949295_addEventTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709182019083_AddDocumentTable.resx">
+      <DependentUpon>201709182019083_AddDocumentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709182139524_UpdateMinuteTableName.resx">
+      <DependentUpon>201709182139524_UpdateMinuteTableName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709201951003_UpdateDocumentTable.resx">
+      <DependentUpon>201709201951003_UpdateDocumentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709220155571_AddPollTables.resx">
+      <DependentUpon>201709220155571_AddPollTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709232222084_AddNameToPollTable.resx">
+      <DependentUpon>201709232222084_AddNameToPollTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709272039528_UpdateEventDates.resx">
+      <DependentUpon>201709272039528_UpdateEventDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709280123524_AddNewsTable.resx">
+      <DependentUpon>201709280123524_AddNewsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709280211183_SeedUsers.resx">
+      <DependentUpon>201709280211183_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710030123532_AddMemberDataToApplicationUser.resx">
+      <DependentUpon>201710030123532_AddMemberDataToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710031556199_AddCallToAction.resx">
+      <DependentUpon>201710031556199_AddCallToAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710041655579_UpdateDocumentMemberId.resx">
+      <DependentUpon>201710041655579_UpdateDocumentMemberId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710042012351_AddMemberIdAppUser.resx">
+      <DependentUpon>201710042012351_AddMemberIdAppUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710042152454_TryUpdateDocumentMemberId.resx">
+      <DependentUpon>201710042152454_TryUpdateDocumentMemberId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710050218406_UpdateMemberDoBNullable.resx">
+      <DependentUpon>201710050218406_UpdateMemberDoBNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710050225337_RemovePropertyAppUser.resx">
+      <DependentUpon>201710050225337_RemovePropertyAppUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710080221536_UpdateContactTableRequirements.resx">
+      <DependentUpon>201710080221536_UpdateContactTableRequirements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090115181_AddVoteTable.resx">
+      <DependentUpon>201710090115181_AddVoteTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090146586_UpdateVoterType.resx">
+      <DependentUpon>201710090146586_UpdateVoterType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710090202239_AddPollOptionPollId.resx">
+      <DependentUpon>201710090202239_AddPollOptionPollId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710121458114_UpdateContactStringLength.resx">
+      <DependentUpon>201710121458114_UpdateContactStringLength.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
