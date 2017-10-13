@@ -11,20 +11,26 @@ namespace KYHBPA.Models
     public class Contact
     {
         public int Id { get; set; }
+
         [Required]
-        [StringLength(50, MinimumLength = 1)]
         [DisplayName("First Name")]
+        [StringLength(50, MinimumLength=1, ErrorMessage = "Minimum string length is 1.")]
         public string FirstName { get; set; }
+
+        [Required]
         [DisplayName("Last Name")]
-        [StringLength(50, MinimumLength = 1)]
-        [Required]
+        [StringLength(50, MinimumLength = 1, ErrorMessage = "Minimum string length is 1.")]
         public string LastName { get; set; }
+
         [Required]
-        [StringLength(50, MinimumLength = 5)]
         [EmailAddress]
+        [StringLength(50, MinimumLength = 5, ErrorMessage = "Minimum string length is 5.")]
         public string Email { get; set; }
-        [StringLength(50, MinimumLength = 5)]
+
         [Required]
+        [DataType(DataType.MultilineText)]
+        [StringLength(300, MinimumLength = 5, ErrorMessage = "Minimum string length is 5.")]
         public string Note { get; set; }
+
     }
 }
