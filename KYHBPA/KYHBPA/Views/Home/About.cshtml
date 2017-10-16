@@ -1,59 +1,108 @@
-﻿@{
-    ViewBag.Title = "The HBPA is You";
+﻿<style>
+    body {
+        background: url("mybackgroundimage.gif") repeat;
+    }
+
+    #banner {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+        height: 300px;
+        z-index: -1;
+    }
+</style>
+<body>
+    <img id="banner" src="~/Images/banner1.png" alt="Banner Image" />
+</body>
+
+
+@{
+    ViewBag.Title = "THE HBPA IS YOU";
 }
-
-<h2>@ViewBag.Title</h2>
+<br />
+<center><h2>@ViewBag.Title</h2></center>
 @*<p style="color:darkcyan"><strong>@ViewBag.Message</strong></p>*@
+<hr />
+<center><img alt="About Us banner" src="~/Images/ellis1.jpg" style="width:550px;height:400px;" /></center>
+<br />
+    <p>
+        The HBPA, established in 1940, is an organization of Owners and Trainers,
+        approximately 40,000 nationally in 23 states and Canada, and over 6,000 in
+        Kentucky. The association is governed by a <a href="/kentucky-hbpa/board-of-directors/">Board of Directors</a>
+        consisting of Owners and Trainers volunteering their time and elected by
+        the membership every three years. The HBPA is committed to working for
+        the betterment of racing on all levels.
+    </p>
 
-<center><img alt="About Us banner" src="~/Images/staff-photo.jpg" style="width:800px;height:400px;" /></center>
-<p></p>
-<div style="background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;" data-bg-url="">
-
-    <p>The HBPA, established in 1940, is an organization of Owners and Trainers, 
-    approximately 40,000 nationally in 23 states and Canada, and over 6,000 in 
-    Kentucky. The association is governed by a <a href="/kentucky-hbpa/board-of-directors/">Board of Directors</a> 
-    consisting of Owners and Trainers volunteering their time and elected by 
-    the membership every three years. The HBPA is committed to working for 
-    the betterment of racing on all levels.</p>
     <p>The HBPA represents owners and trainers on several fronts:</p>
     <ul>
-        <li><em>In negotiating sessions with each race track regarding purse 
-            structure, equitable share of simulcast revenues, overall track 
-            safety, sanitation and security.</em></li>
-        <li><em>The HBPA provides benevolence to horsemen in need, education 
-            and recreation programs to the backstretch, various insurance 
-            packages which include &#8211; free of charge to members &#8211; 
-            <a href="http://hbpa.wpengine.com/kentucky-hbpa/fire-disaster-and-vanning-insurance/"target="_blank">
-            Fire and Disaster Insurance</a> and <a href="http://hbpa.wpengine.com/kentucky-hbpa/claiming-insurance/" target="_blank">
-            Claiming Insurance</a>. Visit one of the fully staffed HBPA 
-            offices at the currently running race track in Kentucky for 
-            details.</em></li>
-        <li><em>The HBPA works in conjunction with the Chaplaincy Program , 
-            and the <a href="http://www.kyracinghealth.com/" target="_blank">
-            Kentucky Racing Health and Welfare Fund</a> to provide support and 
-            benefits for Horsemen.</em></li>
-        <li><em>The HBPA supports scientific research and marketing initiatives 
-            on a regional and national level to help promote interest in 
-            Thoroughbred racing.</em></li>
-        <li><em>The HBPA is at the forefront in litigation and legislation on 
-            issues involving Horsemen&#8217;s rights with regards to Interstate 
-            Simulcasting, Proprietary Rights, Casino Gambling, Therapeutic 
-            Medication, Sports Betting and many other areas of concern to Horsemen.</em></li>
+        <li>
+            <em>
+                In negotiating sessions with each race track regarding purse
+                structure, equitable share of simulcast revenues, overall track
+                safety, sanitation and security.
+            </em>
+        </li>
+        <li>
+            <em>
+                The HBPA provides benevolence to horsemen in need, education
+                and recreation programs to the backstretch, various insurance
+                packages which include &#8211; free of charge to members &#8211;
+                <a href="http://hbpa.wpengine.com/kentucky-hbpa/fire-disaster-and-vanning-insurance/" target="_blank">
+                    Fire and Disaster Insurance
+                </a> and <a href="http://hbpa.wpengine.com/kentucky-hbpa/claiming-insurance/" target="_blank">
+                    Claiming Insurance
+                </a>. Visit one of the fully staffed HBPA
+                offices at the currently running race track in Kentucky for
+                details.
+            </em>
+        </li>
+        <li>
+            <em>
+                The HBPA works in conjunction with the Chaplaincy Program ,
+                and the <a href="http://www.kyracinghealth.com/" target="_blank">
+                    Kentucky Racing Health and Welfare Fund
+                </a> to provide support and
+                benefits for Horsemen.
+            </em>
+        </li>
+        <li>
+            <em>
+                The HBPA supports scientific research and marketing initiatives
+                on a regional and national level to help promote interest in
+                Thoroughbred racing.
+            </em>
+        </li>
+        <li>
+            <em>
+                The HBPA is at the forefront in litigation and legislation on
+                issues involving Horsemen&#8217;s rights with regards to Interstate
+                Simulcasting, Proprietary Rights, Casino Gambling, Therapeutic
+                Medication, Sports Betting and many other areas of concern to Horsemen.
+            </em>
+        </li>
     </ul>
     <p style="text-align: center;"><strong>HOW CAN I JOIN ?</strong></p>
-    <p>You are invited to drop into the HBPA office to meet the staff and learn 
-    more about current projects and how you can get involved in helping to 
-    improve the industry. There are no membership fees. Remember &#8211; This is 
-    your organization. Become an active participant and one of the 
-    <strong>&#8220;<em>HORSEMEN HELPING HORSEMEN</em>&#8220;</strong></p>
+    <p>
+        You are invited to drop into the HBPA office to meet the staff and learn
+        more about current projects and how you can get involved in helping to
+        improve the industry. There are no membership fees. Remember &#8211; This is
+        your organization. Become an active participant and one of the
+        <strong>&#8220;<em>HORSEMEN HELPING HORSEMEN</em>&#8220;</strong>
+    </p>
 
     <p style="text-align: center;">
         PLEASE TAKE A MOMENT TO<br />
         <a href="~/Documents/Kentucky-HBPA-Membership-Card.pdf" target="_blank">
-        Print, Sign, &amp; Fax or Mail our Membership Card</a><br />
+            Print, Sign, &amp; Fax or Mail our Membership Card
+        </a><br />
         APPOINTING THE HBPA AS YOUR HORSEMEN&#8217;S ORGANIZATION.
 
     </p>
     <div class="fusion-clearfix"></div>
 
 </div>
+        </div>
+    </div>
