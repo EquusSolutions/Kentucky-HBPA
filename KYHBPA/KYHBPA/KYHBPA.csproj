@@ -307,6 +307,10 @@
     <Compile Include="Migrations\201710121458114_UpdateContactStringLength.Designer.cs">
       <DependentUpon>201710121458114_UpdateContactStringLength.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710161730337_UpdateContactNoteLength.cs" />
+    <Compile Include="Migrations\201710161730337_UpdateContactNoteLength.Designer.cs">
+      <DependentUpon>201710161730337_UpdateContactNoteLength.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
@@ -604,6 +608,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710121458114_UpdateContactStringLength.resx">
       <DependentUpon>201710121458114_UpdateContactStringLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710161730337_UpdateContactNoteLength.resx">
+      <DependentUpon>201710161730337_UpdateContactNoteLength.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
