@@ -393,6 +393,8 @@
     <Content Include="Images\ellis %288%29.jpg" />
     <Content Include="Images\ellis %289%29.jpg" />
     <Content Include="Images\ellis1.jpg" />
+    <Content Include="Images\Archive\Model2.png" />
+    <Content Include="Images\Archive\Model3.png" />
     <Content Include="Images\EquusSolutions-logo.png" />
     <Content Include="Images\HBPAhighres141-1.png" />
     <None Include="Images\kyhbpa-logo.png" />

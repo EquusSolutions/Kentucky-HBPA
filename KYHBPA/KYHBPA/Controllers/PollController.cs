@@ -65,12 +65,13 @@ namespace KYHBPA.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return View("PollForm", new PollViewModel());
             }
             Poll poll = db.Polls.Find(id);
             if (poll == null)
             {
-                return HttpNotFound();
+                return HttpNotFound();                
             }
 
             List<PollOption> pollOptions = db.PollOptions.Where(p => p.Poll.Id == poll.Id).ToList();
@@ -90,7 +91,23 @@ namespace KYHBPA.Controllers
         // https://stackoverflow.com/questions/38513599/asp-net-mvc-how-to-dynamically-add-items-to-an-object-and-bind-it-to-the-contr
         public ActionResult AddPollOption(Poll poll)
         {
+            /* 
+             ToDo - Check if poll has not been saved to db already
+                    if it has not been saved save it
+                    if it has works
+            */
             var newOption = new PollOption();
+
+            if (poll.Id == 0 && ModelState.IsValid)
+            {
+                // ToDo - create new poll                
+                db.Polls.Add(poll);
+                db.SaveChanges();
+            }
+            else
+            {
+                RedirectToAction("Save", "Poll", new {poll.Id});
+            }
      
             var pollInDb = db.Polls.Find(poll.Id);
 
@@ -109,7 +126,7 @@ namespace KYHBPA.Controllers
 
                 return RedirectToAction("Save", "Poll", new {pollInDb.Id});
             }
-            return View("Index");
+            return RedirectToAction("Index");
         }
 
         // POST: Minutes/Save/5
