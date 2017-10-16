@@ -196,6 +196,7 @@
     <Compile Include="Controllers\CallToActionController.cs" />
     <Compile Include="Controllers\DocumentController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\EmailBlastController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -311,11 +312,16 @@
     <Compile Include="Migrations\201710161730337_UpdateContactNoteLength.Designer.cs">
       <DependentUpon>201710161730337_UpdateContactNoteLength.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710162007054_AddEmailBlastTable.cs" />
+    <Compile Include="Migrations\201710162007054_AddEmailBlastTable.Designer.cs">
+      <DependentUpon>201710162007054_AddEmailBlastTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
     <Compile Include="Models\CallToAction.cs" />
     <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\EmailBlast.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -364,6 +370,31 @@
     <None Include="Images\carousel-4.jpg" />
     <None Include="Images\carousel-5.jpg" />
     <None Include="Images\carousel-6.jpg" />
+    <Content Include="Images\churchill %281%29.jpg" />
+    <Content Include="Images\churchill %2810%29.jpg" />
+    <Content Include="Images\churchill %2811%29.jpg" />
+    <Content Include="Images\churchill %2812%29.jpg" />
+    <Content Include="Images\churchill %282%29.jpg" />
+    <Content Include="Images\churchill %283%29.jpg" />
+    <Content Include="Images\churchill %284%29.jpg" />
+    <Content Include="Images\churchill %285%29.jpg" />
+    <Content Include="Images\churchill %286%29.jpg" />
+    <Content Include="Images\churchill %287%29.jpg" />
+    <Content Include="Images\churchill %288%29.jpg" />
+    <Content Include="Images\churchill %289%29.jpg" />
+    <Content Include="Images\ellis %281%29.jpg" />
+    <Content Include="Images\ellis %2810%29.jpg" />
+    <Content Include="Images\ellis %282%29.jpg" />
+    <Content Include="Images\ellis %283%29.jpg" />
+    <Content Include="Images\ellis %284%29.jpg" />
+    <Content Include="Images\ellis %285%29.jpg" />
+    <Content Include="Images\ellis %286%29.jpg" />
+    <Content Include="Images\ellis %287%29.jpg" />
+    <Content Include="Images\ellis %288%29.jpg" />
+    <Content Include="Images\ellis %289%29.jpg" />
+    <Content Include="Images\ellis1.jpg" />
+    <Content Include="Images\Archive\Model2.png" />
+    <Content Include="Images\Archive\Model3.png" />
     <Content Include="Images\EquusSolutions-logo.png" />
     <Content Include="Images\HBPAhighres141-1.png" />
     <None Include="Images\kyhbpa-logo.png" />
@@ -378,8 +409,6 @@
     <None Include="Images\Image6.jpg" />
     <None Include="Images\Image7.jpg" />
     <None Include="Images\Image8.jpg" />
-    <None Include="Images\Model1.png" />
-    <None Include="Images\Modle2.png" />
     <None Include="Images\partners-ChurchillDowns.png" />
     <None Include="Images\partners-EllisPark.png" />
     <None Include="Images\partners-Keeneland.png" />
@@ -387,9 +416,12 @@
     <None Include="Images\partners-Turfway.png" />
     <None Include="Images\Horse-Racing-Background.jpg" />
     <None Include="Images\Horse-Racing-Background-33.jpg" />
-    <None Include="Images\Model2.png" />
-    <None Include="Images\Model3.png" />
     <None Include="Images\social-media-logos.png" />
+    <None Include="Images\SocialMedia\social-media-logos.png" />
+    <Content Include="Images\jockey14.jpg" />
+    <Content Include="Images\jockey2.jpg" />
+    <Content Include="Images\jockey3.jpg" />
+    <Content Include="Images\jockey4.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -516,6 +548,11 @@
     <Content Include="Views\Contact\ErrorPage.cshtml" />
     <Content Include="Views\News\NewsGallery.cshtml" />
     <Content Include="Views\News\_NewsArticle.cshtml" />
+    <Content Include="Views\EmailBlast\Create.cshtml" />
+    <Content Include="Views\EmailBlast\Delete.cshtml" />
+    <Content Include="Views\EmailBlast\Details.cshtml" />
+    <Content Include="Views\EmailBlast\Edit.cshtml" />
+    <Content Include="Views\EmailBlast\Index.cshtml" />
     <Content Include="Views\Document\PhotoGallery.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -612,6 +649,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710161730337_UpdateContactNoteLength.resx">
       <DependentUpon>201710161730337_UpdateContactNoteLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710162007054_AddEmailBlastTable.resx">
+      <DependentUpon>201710162007054_AddEmailBlastTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
