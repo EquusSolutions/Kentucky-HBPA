@@ -16,7 +16,7 @@
             <tr>
                 <td>
                     @Html.ActionLink("+", "Vote", "PollOption", new { id = p.Id }, new { @class = "btn btn-default" })
-                    @p.Title
+                    @p.Title - (@p.Votes)
                 </td>
             </tr>
         }

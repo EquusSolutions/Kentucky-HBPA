@@ -364,6 +364,8 @@
     <None Include="Images\carousel-4.jpg" />
     <None Include="Images\carousel-5.jpg" />
     <None Include="Images\carousel-6.jpg" />
+    <Content Include="Images\Archive\Model2.png" />
+    <Content Include="Images\Archive\Model3.png" />
     <Content Include="Images\EquusSolutions-logo.png" />
     <Content Include="Images\HBPAhighres141-1.png" />
     <None Include="Images\kyhbpa-logo.png" />
@@ -390,6 +392,18 @@
     <None Include="Images\Model2.png" />
     <None Include="Images\Model3.png" />
     <None Include="Images\social-media-logos.png" />
+    <Content Include="Images\jockey14.jpg" />
+    <Content Include="Images\jockey2.jpg" />
+    <Content Include="Images\jockey3.jpg" />
+    <Content Include="Images\jockey4.jpg" />
+    <Content Include="Images\SocialMedia\connect-with-needs-edit.jpg" />
+    <Content Include="Images\SocialMedia\connect-with-us.jpg" />
+    <Content Include="Images\SocialMedia\ConnectWithUs.gif" />
+    <Content Include="Images\SocialMedia\LetsGetSocial.png" />
+    <Content Include="Images\SocialMedia\social-media-icons.png" />
+    <Content Include="Images\SocialMedia\social-media-logos.png" />
+    <Content Include="Images\SocialMedia\Social-Media.jpg" />
+    <Content Include="Images\SocialMedia\twitter-instagram-facebook.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
