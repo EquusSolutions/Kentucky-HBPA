@@ -339,11 +339,6 @@
     <Compile Include="Models\ViewModels\PollViewModel.cs" />
     <Compile Include="Models\Vote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -409,8 +404,6 @@
     <None Include="Images\Image6.jpg" />
     <None Include="Images\Image7.jpg" />
     <None Include="Images\Image8.jpg" />
-    <None Include="Images\Model1.png" />
-    <None Include="Images\Modle2.png" />
     <None Include="Images\partners-ChurchillDowns.png" />
     <None Include="Images\partners-EllisPark.png" />
     <None Include="Images\partners-Keeneland.png" />
@@ -418,49 +411,12 @@
     <None Include="Images\partners-Turfway.png" />
     <None Include="Images\Horse-Racing-Background.jpg" />
     <None Include="Images\Horse-Racing-Background-33.jpg" />
-    <None Include="Images\Model2.png" />
-    <None Include="Images\Model3.png" />
     <None Include="Images\social-media-logos.png" />
+    <None Include="Images\SocialMedia\social-media-logos.png" />
     <Content Include="Images\jockey14.jpg" />
     <Content Include="Images\jockey2.jpg" />
     <Content Include="Images\jockey3.jpg" />
     <Content Include="Images\jockey4.jpg" />
-    <Content Include="Images\keeneland %281%29.jpg" />
-    <Content Include="Images\keeneland %2810%29.jpg" />
-    <Content Include="Images\keeneland %2811%29.jpg" />
-    <Content Include="Images\keeneland %282%29.jpg" />
-    <Content Include="Images\keeneland %283%29.jpg" />
-    <Content Include="Images\keeneland %284%29.jpg" />
-    <Content Include="Images\keeneland %285%29.jpg" />
-    <Content Include="Images\keeneland %286%29.jpg" />
-    <Content Include="Images\keeneland %287%29.jpg" />
-    <Content Include="Images\keeneland %288%29.jpg" />
-    <Content Include="Images\keeneland %289%29.jpg" />
-    <Content Include="Images\turfway %281%29.jpg" />
-    <Content Include="Images\turfway %2810%29.jpg" />
-    <Content Include="Images\turfway %2811%29.jpg" />
-    <Content Include="Images\turfway %2812%29.jpg" />
-    <Content Include="Images\turfway %2813%29.jpg" />
-    <Content Include="Images\turfway %282%29.jpg" />
-    <Content Include="Images\turfway %283%29.jpg" />
-    <Content Include="Images\turfway %284%29.jpg" />
-    <Content Include="Images\turfway %285%29.jpg" />
-    <Content Include="Images\turfway %286%29.JPG" />
-    <Content Include="Images\turfway %287%29.jpg" />
-    <Content Include="Images\turfway %288%29.jpg" />
-    <Content Include="Images\turfway %289%29.jpg" />
-    <Content Include="Images\jockey14.jpg" />
-    <Content Include="Images\jockey2.jpg" />
-    <Content Include="Images\jockey3.jpg" />
-    <Content Include="Images\jockey4.jpg" />
-    <Content Include="Images\SocialMedia\connect-with-needs-edit.jpg" />
-    <Content Include="Images\SocialMedia\connect-with-us.jpg" />
-    <Content Include="Images\SocialMedia\ConnectWithUs.gif" />
-    <Content Include="Images\SocialMedia\LetsGetSocial.png" />
-    <Content Include="Images\SocialMedia\social-media-icons.png" />
-    <Content Include="Images\SocialMedia\social-media-logos.png" />
-    <Content Include="Images\SocialMedia\Social-Media.jpg" />
-    <Content Include="Images\SocialMedia\twitter-instagram-facebook.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -585,7 +541,6 @@
     <Content Include="Views\Poll\_PollWidget.cshtml" />
     <Content Include="Views\Home\JockeyProfile.cshtml" />
     <Content Include="Views\Contact\ErrorPage.cshtml" />
-    <Content Include="Views\NewsGallery.cshtml" />
     <Content Include="Views\News\NewsGallery.cshtml" />
     <Content Include="Views\News\_NewsArticle.cshtml" />
     <Content Include="Views\EmailBlast\Create.cshtml" />
@@ -694,7 +649,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
