@@ -196,6 +196,7 @@
     <Compile Include="Controllers\CallToActionController.cs" />
     <Compile Include="Controllers\DocumentController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\EmailBlastController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -311,11 +312,16 @@
     <Compile Include="Migrations\201710161730337_UpdateContactNoteLength.Designer.cs">
       <DependentUpon>201710161730337_UpdateContactNoteLength.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710162007054_AddEmailBlastTable.cs" />
+    <Compile Include="Migrations\201710162007054_AddEmailBlastTable.Designer.cs">
+      <DependentUpon>201710162007054_AddEmailBlastTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
     <Compile Include="Models\CallToAction.cs" />
     <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\EmailBlast.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -512,6 +518,11 @@
     <Content Include="Views\Contact\ErrorPage.cshtml" />
     <Content Include="Views\News\NewsGallery.cshtml" />
     <Content Include="Views\News\_NewsArticle.cshtml" />
+    <Content Include="Views\EmailBlast\Create.cshtml" />
+    <Content Include="Views\EmailBlast\Delete.cshtml" />
+    <Content Include="Views\EmailBlast\Details.cshtml" />
+    <Content Include="Views\EmailBlast\Edit.cshtml" />
+    <Content Include="Views\EmailBlast\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -607,6 +618,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710161730337_UpdateContactNoteLength.resx">
       <DependentUpon>201710161730337_UpdateContactNoteLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710162007054_AddEmailBlastTable.resx">
+      <DependentUpon>201710162007054_AddEmailBlastTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
