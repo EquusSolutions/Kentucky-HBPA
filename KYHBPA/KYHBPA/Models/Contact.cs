@@ -23,7 +23,7 @@ namespace KYHBPA.Models
         [StringLength(50, MinimumLength = 5)]
         [EmailAddress]
         public string Email { get; set; }
-        [StringLength(50, MinimumLength = 5)]
+        [StringLength(300, MinimumLength = 5)]
         [Required]
         public string Note { get; set; }
     }
