@@ -45,5 +45,7 @@ namespace KYHBPA.Models
         }
 
         public System.Data.Entity.DbSet<KYHBPA.Models.CallToAction> CallToActions { get; set; }
+
+        public System.Data.Entity.DbSet<KYHBPA.Models.EmailBlast> EmailBlasts { get; set; }
     }
 }
