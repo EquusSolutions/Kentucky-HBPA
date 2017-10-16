@@ -15,6 +15,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace KYHBPA.Models
 {
+    //add something to say the difference between local and national
     public class News
     {
         public int Id { get; set; }
