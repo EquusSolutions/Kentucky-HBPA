@@ -514,9 +514,9 @@
     <Content Include="Views\Poll\_PollWidget.cshtml" />
     <Content Include="Views\Home\JockeyProfile.cshtml" />
     <Content Include="Views\Contact\ErrorPage.cshtml" />
-    <Content Include="Views\NewsGallery.cshtml" />
     <Content Include="Views\News\NewsGallery.cshtml" />
     <Content Include="Views\News\_NewsArticle.cshtml" />
+    <Content Include="Views\Document\PhotoGallery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
