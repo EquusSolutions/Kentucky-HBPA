@@ -1,9 +1,6 @@
 ﻿@model IEnumerable<KYHBPA.Models.CallToAction>
 @*@model KYHBPA.Models.CallToAction*@
 
-@*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
 <table class="table">
     <tr>
         <th>
@@ -41,11 +38,6 @@
         <td>
             @Html.DisplayFor(modelItem => item.Date)
         </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>*@
     </tr>
 }
 
