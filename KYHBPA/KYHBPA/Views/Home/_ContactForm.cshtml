@@ -61,6 +61,39 @@
 
 }
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+@*//start google maps api*@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #map {
+                height: 200px;
+                width: 50%;
+            }
+        </style>
+    </head>
+<body>
+    <h3>Maps:</h3>
+    <div id="map"></div>
+    <script>
+       
+        function initMap() {
+            var uluru = { lat: 38.202535, lng: -85.765684 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeq4yfNZ_fehjzMm6rurr0kQzFh2ZWOos&callback=initMap">
+    </script>
+</body>
+</html>
+
+<p></p>
