@@ -17,6 +17,9 @@ namespace KYHBPA.Models
         [DisplayName("Call to Action Type")]
         public ActionType TypeOfAction { get; set; }
         public Document Image { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime Date { get; set; }
     }
 
     public enum ActionType

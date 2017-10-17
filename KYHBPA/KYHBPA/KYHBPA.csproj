@@ -316,6 +316,10 @@
     <Compile Include="Migrations\201710162007054_AddEmailBlastTable.Designer.cs">
       <DependentUpon>201710162007054_AddEmailBlastTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710171826281_AddDateToCallToActionTable.cs" />
+    <Compile Include="Migrations\201710171826281_AddDateToCallToActionTable.Designer.cs">
+      <DependentUpon>201710171826281_AddDateToCallToActionTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardOfDirectors.cs" />
@@ -554,6 +558,8 @@
     <Content Include="Views\EmailBlast\Edit.cshtml" />
     <Content Include="Views\EmailBlast\Index.cshtml" />
     <Content Include="Views\Document\PhotoGallery.cshtml" />
+    <Content Include="Views\CallToAction\CallToActionGallery.cshtml" />
+    <Content Include="Views\CallToAction\_CallToAction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -652,6 +658,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710162007054_AddEmailBlastTable.resx">
       <DependentUpon>201710162007054_AddEmailBlastTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710171826281_AddDateToCallToActionTable.resx">
+      <DependentUpon>201710171826281_AddDateToCallToActionTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

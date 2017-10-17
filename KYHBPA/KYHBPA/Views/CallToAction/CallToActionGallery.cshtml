@@ -1,0 +1,28 @@
+﻿@using KYHBPA.Models
+@model IEnumerable<KYHBPA.Models.CallToAction>
+
+@{
+    ViewBag.Title = "Calls To Action";
+}
+
+<h2>Calls To Action to Support</h2>
+
+<div>
+    <h4>Legislation to Consider</h4>
+
+    <table class="table">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.Partial("_CallsToAction", item)
+                </td>
+                @*<td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                    </td>*@
+            </tr>
+        }
+    </table>
+</div>

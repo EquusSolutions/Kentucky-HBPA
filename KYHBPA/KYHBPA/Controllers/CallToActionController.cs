@@ -115,6 +115,14 @@ namespace KYHBPA.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult CallToActionGallery()
+        {
+            var news = db.CallToActions.ToList();
+
+            return View(news);
+        }
+
+    
         protected override void Dispose(bool disposing)
         {
             if (disposing)
