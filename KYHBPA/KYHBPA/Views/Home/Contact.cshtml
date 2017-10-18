@@ -1,26 +1,16 @@
-﻿<style>
-    #banner {
-        position: absolute;
-        top: 30px;
-        left: 200px;
-        right: 0px;
-        width: 80%;
-        height: 250px;
-        z-index: -1;
-    }
-</style>
-<body>
-    <img id="banner" src="~/Images/banner3.jpg" alt="Banner Image" />
-</body>
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+﻿<br />
+<p><center><img class="size-medium wp-image-1901 aligncenter" src="~/Images/ellis (3).jpg" alt="office" width="300" height="225" sizes="(max-width: 400px) 100vw, 400px" /></center></p>
+
 @{
-    ViewBag.Title = "CONTACT US";
+    ViewBag.Title = "Contact Us";
 }
-<center><h2 style="font-family:Garamond; color:white;">@ViewBag.Title</h2></center>
+<center><h2>@ViewBag.Title</h2></center>
 <hr />
 
 <center>
-    <p style="font-family:'Segoe UI'; font-size: 20px; color: white;">Kentucky HBPA welcomes inquiries from our members and the general public on matters of concern to the Thoroughbred Industry. Please do not hesitate to contact us or use the form below to send us any questions or comments about our services. We would like to hear from you!</center>
+    <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><b>Kentucky HBPA welcomes inquiries from our members and the general public on matters of concern to the Thoroughbred Industry.</b></p>
+    <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><b>Our contact information is listed below, or please use the form at the bottom of the page to send us your comments directly through this web site.</b></p>
+</center>
 <br />
 
 @Html.Partial("_ContactForm")
