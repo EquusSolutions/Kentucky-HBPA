@@ -1,0 +1,14 @@
+﻿@using KYHBPA.Models
+@model IEnumerable<KYHBPA.Models.Post>
+
+@{
+    ViewBag.Title = "Blog";
+}
+
+<h2>Blog</h2>
+
+@foreach (var post in Model)
+{
+    <h4>Post</h4>
+}
+

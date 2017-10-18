@@ -112,8 +112,7 @@ namespace KYHBPA.Controllers
             var newOption = new PollOption();
 
             if (poll.Id == 0 && ModelState.IsValid)
-            {
-                // ToDo - create new poll                
+            {               
                 db.Polls.Add(poll);
                 db.SaveChanges();
             }
@@ -123,7 +122,6 @@ namespace KYHBPA.Controllers
             }
      
             var pollInDb = db.Polls.Find(poll.Id);
-
 
             if (pollInDb != null)
             {
@@ -149,7 +147,7 @@ namespace KYHBPA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Save(PollViewModel pollViewModel)
         {
-            // If the poll Id is 0 it is a new customer
+            // If the poll Id is 0 it is a new poll
             if (pollViewModel.Id == 0)
             {
                 var poll = new Poll()
