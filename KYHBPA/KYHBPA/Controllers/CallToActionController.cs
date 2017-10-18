@@ -118,9 +118,20 @@ namespace KYHBPA.Controllers
 
         public ActionResult CallToActionGallery()
         {
-            var news = db.CallToActions.ToList();
-
-            return View(news);
+            var callToAction = db.News.ToList();
+            var images = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Image);
+            foreach (var image in images)
+            {
+                for (int i = 0; i < callToAction.Count; i++)
+                {
+                    if (image.Id == callToAction[i].PictureId)
+                    {
+                        callToAction[i].Picture = image;
+                        break;
+                    }
+                }
+            }
+            return View(callToAction);
         }
 
     
