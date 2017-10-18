@@ -50,6 +50,7 @@ namespace KYHBPA.Controllers
         {
             if (ModelState.IsValid)
             {
+                callToAction.Date = DateTime.Now;
                 db.CallToActions.Add(callToAction);
                 db.SaveChanges();
                 return RedirectToAction("Index");
