@@ -1,0 +1,23 @@
+﻿@using KYHBPA.Models
+@model IEnumerable<KYHBPA.Models.CallToAction>
+
+@{
+    ViewBag.Title = "Calls To Action";
+}
+
+<h2>Calls To Action</h2>
+
+<div>
+    <h4>Legislation to Consider</h4>
+
+    <table class="table">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.Partial("_CallsToAction", item)
+                </td>
+            </tr>
+        }
+    </table>
+</div>

@@ -82,11 +82,6 @@ namespace KYHBPA.Controllers
 
                 var toEmails = String.Join(", ", emails);
 
-
-                //  foreach (var member in members)
-                //    toEmails += member.Email + ", ";
-
-
                 emailBlast.To = toEmails;
                 emailBlast.From = fromEmail;
 

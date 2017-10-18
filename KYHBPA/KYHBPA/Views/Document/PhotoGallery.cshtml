@@ -1,0 +1,11 @@
+﻿@using KYHBPA.Models
+@model IEnumerable<KYHBPA.Models.Document>
+
+@{
+    ViewBag.Title = "PhotoGallery";
+}
+
+@foreach(var photo in Model)
+{
+    @Html.Partial("_FetchImage", photo)
+}

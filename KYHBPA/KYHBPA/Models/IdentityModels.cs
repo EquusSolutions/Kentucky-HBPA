@@ -33,6 +33,10 @@ namespace KYHBPA.Models
         public DbSet<PollOption> PollOptions { get; set; }
         public DbSet<News> News { get; set; }
         public DbSet<Vote> Votes { get; set; }
+        public DbSet<CallToAction> CallToActions { get; set; }
+        public DbSet<EmailBlast> EmailBlasts { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -43,9 +47,5 @@ namespace KYHBPA.Models
         {
             return new ApplicationDbContext();
         }
-
-        public System.Data.Entity.DbSet<KYHBPA.Models.CallToAction> CallToActions { get; set; }
-
-        public System.Data.Entity.DbSet<KYHBPA.Models.EmailBlast> EmailBlasts { get; set; }
     }
 }

@@ -133,6 +133,13 @@ namespace KYHBPA.Controllers
             return RedirectToAction("MyProfile","Member");
         }
 
+        public ActionResult PhotoGallery()
+        {
+            var photos = db.Documents.Where(i => i.Discriminator == DocumentDiscriminator.Image).ToList();
+
+                return View(photos);
+        }
+
         public ActionResult DownloadMemberCard()
         {
             //var memberCards = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.MemberCard && string.Compare(d.FileName, "Member Card.pdf") == 0);

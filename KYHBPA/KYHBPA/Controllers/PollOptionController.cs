@@ -71,7 +71,7 @@ namespace KYHBPA.Controllers
             {
                 return HttpNotFound();
             }
-            //TODO: Add Logic Check if already voted
+
             var userId = User.Identity.GetUserId();
 
             var voteInDb = db.Votes.FirstOrDefault(v => v.Voter == userId

@@ -1,4 +1,4 @@
-﻿@model KYHBPA.Models.Poll
+﻿@model KYHBPA.Models.ViewModels.PollViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -10,6 +10,15 @@
     <h4>Poll</h4>
     <hr />
     <dl class="dl-horizontal">
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Question)
         </dt>
@@ -34,9 +43,14 @@
             @Html.DisplayFor(model => model.EndDate)
         </dd>
 
+        <dt>Poll Options:</dt>        
+        @foreach (var option in Model.PollOptions)
+        {
+            <dd>@option.Title (@option.Votes)</dd>
+        }
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Edit", "Save", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
