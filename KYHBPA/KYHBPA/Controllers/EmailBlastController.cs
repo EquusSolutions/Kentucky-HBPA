@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using KYHBPA.Models;
 using System.Net.Mail;
+using System.Net.Mime;
+using System.IO;
 
 namespace KYHBPA.Controllers
 {
@@ -47,7 +49,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,To,From,Subject,Body")] EmailBlast emailBlast)
+        public ActionResult Create(EmailBlast emailBlast, HttpPostedFileBase file)
         {
             var IsDebug = false;
 
@@ -95,6 +97,21 @@ namespace KYHBPA.Controllers
                 mail.Body = emailBlast.Body;
                 mail.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
+
+                //from class
+                //var image = db.Documents.FirstOrDefault();
+
+                byte[] uploadedFile = new byte[file.InputStream.Length];
+                file.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
+
+                Attachment attachment = new Attachment(new MemoryStream(uploadedFile), file.FileName);
+
+                mail.Attachments.Add(attachment); 
+
+
+
+
+
 #if DEBUG
                 smtp = debugSmtpClient;
 #else
@@ -115,6 +132,8 @@ namespace KYHBPA.Controllers
                 return RedirectToAction("ErrorPage", "Contact");
             }
         }
+
+
 
         // GET: EmailBlast/Edit/5
         public ActionResult Edit(int? id)
