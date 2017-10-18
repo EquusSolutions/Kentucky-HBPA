@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KYHBPA.Models;
+using Microsoft.AspNet.Identity;
 
 namespace KYHBPA.Controllers
 {
@@ -46,17 +47,63 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Headline,Summary,URL,Date")] News news)
+        public ActionResult Create(News news, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
+
+                var userId = User.Identity.GetUserName();
+            if (userId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var username = User.Identity.GetUserName();
+            var member = db.Members.FirstOrDefault(m => String.Compare(m.Email, username) == 0);
+
+            if (member == null)
+            {
+                return HttpNotFound();
+            }
+
+            byte[] uploadedFile = new byte[file.InputStream.Length];
+            file.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
+
+            var documentModel = new Document
+            {
+                MemberId = member.Id,
+                UploadedBy = HttpContext.User.Identity.Name,
+                ContentLength = file.ContentLength,
+                ContentType = file.ContentType,
+                FileName = file.FileName,
+                FileBytes = uploadedFile,
+                UploadDate = DateTime.Now,
+                Discriminator = DocumentDiscriminator.Image
+            };
+
+            db.Documents.Add(documentModel);
+            db.SaveChanges();
+
+                news.Picture = documentModel;
+                news.PictureId = documentModel.Id;
+
                 db.News.Add(news);
                 db.SaveChanges();
                 return RedirectToAction("Index");
-            }
+        }
 
             return View(news);
         }
+
+        //I think I need to do something like this so that i can hold the images that are uploaded
+        //But then I need to figure out how to keep the image with the article it is uploaded with
+        //Need to figure out how to display the image with the article it goes with
+
+        //public ActionResult NewsPhoto()
+        //{
+        //    var photos = db.Documents.Where(i => i.Discriminator == DocumentDiscriminator.Image).ToList();
+
+        //    return View(photos);
+        //}
 
         // GET: News/Edit/5
         public ActionResult Edit(int? id)
@@ -76,6 +123,20 @@ namespace KYHBPA.Controllers
         public ActionResult NewsGallery()
         {
             var news = db.News.ToList();
+            var pictures = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Image);
+            foreach(var picture in pictures)
+            {
+                for (int i = 0; i < news.Count; i++)
+                {
+                    if(picture.Id == news[i].PictureId)
+                    {
+                        news[i].Picture = picture;
+                        break;
+                    }
+                }
+            }
+
+            
 
             return View(news);
         }
