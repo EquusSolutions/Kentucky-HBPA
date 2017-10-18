@@ -398,6 +398,7 @@
     <Content Include="Images\churchill %287%29.jpg" />
     <Content Include="Images\churchill %288%29.jpg" />
     <Content Include="Images\churchill %289%29.jpg" />
+    <None Include="Images\churchilldowns-news.jpg" />
     <Content Include="Images\ellis %281%29.jpg" />
     <Content Include="Images\ellis %2810%29.jpg" />
     <Content Include="Images\ellis %282%29.jpg" />
