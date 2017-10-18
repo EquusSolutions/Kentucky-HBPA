@@ -34,7 +34,20 @@ namespace KYHBPA.Controllers
             {
                 return HttpNotFound();
             }
-            return View(poll);
+
+            List<PollOption> pollOptions = db.PollOptions.Where(p => p.Poll.Id == poll.Id).ToList();
+
+            var viewModel = new PollViewModel
+            {
+                Id = poll.Id,
+                Name = poll.Name,
+                Question = poll.Question,
+                StartDate = poll.StartDate,
+                EndDate = poll.EndDate,
+                PollOptions = pollOptions
+            };
+
+            return View(viewModel);
         }
 
         // GET: Poll/Create
