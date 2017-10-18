@@ -370,6 +370,8 @@
     <None Include="Images\carousel-4.jpg" />
     <None Include="Images\carousel-5.jpg" />
     <None Include="Images\carousel-6.jpg" />
+    <Content Include="Images\banner.png" />
+    <Content Include="Images\banner3.jpg" />
     <Content Include="Images\churchill %281%29.jpg" />
     <Content Include="Images\churchill %2810%29.jpg" />
     <Content Include="Images\churchill %2811%29.jpg" />
@@ -382,6 +384,7 @@
     <Content Include="Images\churchill %287%29.jpg" />
     <Content Include="Images\churchill %288%29.jpg" />
     <Content Include="Images\churchill %289%29.jpg" />
+    <Content Include="Images\churchillbanner2.jpg" />
     <Content Include="Images\ellis %281%29.jpg" />
     <Content Include="Images\ellis %2810%29.jpg" />
     <Content Include="Images\ellis %282%29.jpg" />
@@ -579,6 +582,7 @@
     <Content Include="Views\EmailBlast\Details.cshtml" />
     <Content Include="Views\EmailBlast\Edit.cshtml" />
     <Content Include="Views\EmailBlast\Index.cshtml" />
+    <Content Include="Views\Home\_Maps.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
