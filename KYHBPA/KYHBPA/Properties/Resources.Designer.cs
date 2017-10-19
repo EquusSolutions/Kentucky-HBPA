@@ -333,6 +333,16 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Seattle_Slew_Plate_news {
+            get {
+                object obj = ResourceManager.GetObject("Seattle_Slew_Plate_news", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap social_media_logos {
             get {
                 object obj = ResourceManager.GetObject("social_media_logos", resourceCulture);

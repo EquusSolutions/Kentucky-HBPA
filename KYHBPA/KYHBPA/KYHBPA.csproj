@@ -385,14 +385,6 @@
     <None Include="Properties\PublishProfiles\hawks.cis420.net - Web Deploy.pubxml" />
     <None Include="Resources\favicon.ico" />
     <None Include="Images\donate-btn.png" />
-    <None Include="Images\2-Aug.png" />
-    <None Include="Images\20-July.png" />
-    <None Include="Images\1-May.png" />
-    <None Include="Images\12-Sep.png" />
-    <None Include="Images\17-Sep.png" />
-    <None Include="Images\20-Apr.png" />
-    <None Include="Images\21-Sep.png" />
-    <None Include="Images\26-Sep.png" />
     <None Include="Images\carousel-2.JPG" />
     <None Include="Images\carousel-3.jpg" />
     <None Include="Images\carousel-4.jpg" />
@@ -432,8 +424,6 @@
     <Content Include="Images\ellis %288%29.jpg" />
     <Content Include="Images\ellis %289%29.jpg" />
     <Content Include="Images\ellis1.jpg" />
-    <Content Include="Images\Archive\Model2.png" />
-    <Content Include="Images\Archive\Model3.png" />
     <Content Include="Images\EquusSolutions-logo.png" />
     <Content Include="Images\GUN RUNNER - The Stephen Foster Handicap Gr l - 36th Running - 06-17-17 - R08 - CD - Paddock 1.jpg" />
     <Content Include="Images\Gun Runner 2017 Foster.jpg" />
@@ -458,7 +448,6 @@
     <None Include="Images\Horse-Racing-Background.jpg" />
     <None Include="Images\Horse-Racing-Background-33.jpg" />
     <None Include="Images\social-media-logos.png" />
-    <None Include="Images\SocialMedia\social-media-logos.png" />
     <Content Include="Images\jockey14.jpg" />
     <Content Include="Images\jockey2.jpg" />
     <Content Include="Images\jockey3.jpg" />
@@ -474,7 +463,9 @@
     <Content Include="Images\keeneland %287%29.jpg" />
     <Content Include="Images\keeneland %288%29.jpg" />
     <Content Include="Images\keeneland %289%29.jpg" />
+    <None Include="Images\Kentucky-Downs-news.jpg" />
     <Content Include="Images\Scenics - Purple Twin Spires - CD - 042616-002.jpg" />
+    <None Include="Images\Seattle-Slew-Plate-news.jpg" />
     <Content Include="Images\turfway %281%29.jpg" />
     <Content Include="Images\turfway %2810%29.jpg" />
     <Content Include="Images\turfway %2811%29.jpg" />
@@ -495,7 +486,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\carousel.js" />
+    <Content Include="Scripts\facebook.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
