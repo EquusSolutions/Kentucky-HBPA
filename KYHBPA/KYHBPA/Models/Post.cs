@@ -13,6 +13,7 @@ namespace KYHBPA.Models
         public int Id { get; set; }
         public string Title { get; set; }
         [DisplayName("Short Description")]
+        [StringLength(50, MinimumLength = 1)]
         public string ShortDescription { get; set; }
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }

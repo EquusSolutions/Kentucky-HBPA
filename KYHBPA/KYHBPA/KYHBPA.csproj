@@ -337,6 +337,10 @@
     <Compile Include="Migrations\201710182239482_AddImageIDToCallToAction.Designer.cs">
       <DependentUpon>201710182239482_AddImageIDToCallToAction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710190148201_UpdatePostShortDescLength.cs" />
+    <Compile Include="Migrations\201710190148201_UpdatePostShortDescLength.Designer.cs">
+      <DependentUpon>201710190148201_UpdatePostShortDescLength.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Post.cs" />
@@ -744,6 +748,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710182239482_AddImageIDToCallToAction.resx">
       <DependentUpon>201710182239482_AddImageIDToCallToAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710190148201_UpdatePostShortDescLength.resx">
+      <DependentUpon>201710190148201_UpdatePostShortDescLength.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

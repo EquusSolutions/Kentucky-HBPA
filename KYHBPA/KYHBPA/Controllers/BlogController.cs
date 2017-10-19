@@ -25,7 +25,7 @@ namespace KYHBPA.Controllers
         // GET: Blog/Blog
         public ActionResult Blog()
         {
-            return View(db.Posts.ToList());
+            return View(db.Posts.Where(p => p.Published).ToList());
         }
 
         // GET: Blog/Post
@@ -136,7 +136,6 @@ namespace KYHBPA.Controllers
             }
 
             var comments = db.Comments.Where(c => c.PostId == post.Id).ToList();
-
             post.Comments = comments;
 
             return View(post);
