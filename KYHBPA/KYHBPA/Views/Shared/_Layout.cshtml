@@ -45,7 +45,7 @@
                             <li>@Html.ActionLink("Blog", "Blog", "Blog")</li>
                             <li>@Html.ActionLink("Events Calendar", "Index", "Home")</li>
                             <li>@Html.ActionLink("Polls", "DisplayPolls", "Poll")</li>
-                            <li>@Html.ActionLink("Jockey Profile", "JockeyProfile")</li>
+                            <li>@Html.ActionLink("Jockey Profile", "Index", "Home")</li>
                             <li>@Html.ActionLink("Photo Gallery", "PhotoGallery", "Document") </li>
                         </ul>
                     </li>
@@ -74,12 +74,10 @@
 
                 <ul class="nav navbar-nav navbar-right">
 
-                    <li>
-                       <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
-                    </li>
+                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
 
-                    <li>
-                        <a href="https://www.paypal.com/us/webapps/mpp/donations" target="_blank">
+                    <li style="height: 60px">
+                        <a href="https://www.paypal.com/us/webapps/mpp/donations" target="_blank" style="height: 60px">
                             <img src="~/Images/donate-btn.png" alt="Donate through PayPal" height="30" width="128" />
                         </a>
                     </li>
