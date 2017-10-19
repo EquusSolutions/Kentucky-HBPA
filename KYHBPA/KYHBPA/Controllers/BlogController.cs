@@ -7,9 +7,11 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KYHBPA.Models.ViewModels;
+using Microsoft.AspNet.Identity;
 
 namespace KYHBPA.Controllers
 {
+    [Authorize]
     public class BlogController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -58,6 +60,41 @@ namespace KYHBPA.Controllers
             };
 
             return View(viewModel);
+        }
+
+        // POST: Poll/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Post(PostViewModel viewModel)
+        {
+
+            var username = User.Identity.GetUserName();
+            var member = db.Members.FirstOrDefault(i => i.Email == username);
+
+            if (member == null)
+            {
+                return HttpNotFound();
+            }
+
+            var post = db.Posts.Find(viewModel.Id);
+
+            if (post == null)
+            {
+                return HttpNotFound();
+            }
+
+
+            if (!string.IsNullOrEmpty(viewModel.Comment.Text))
+            {
+                viewModel.Comment.MemberId = member.Id;
+                viewModel.Comment.Post = post;
+                viewModel.Comment.PostId = post.Id;
+                viewModel.Comment.Posted = DateTime.Now;
+                db.Comments.Add(viewModel.Comment);
+                db.SaveChanges();
+            }          
+
+            return  RedirectToAction("Post",viewModel.Id);
         }
 
         // GET: Blog/Create
@@ -120,7 +157,7 @@ namespace KYHBPA.Controllers
             return View(post);
         }
 
-        // GET: Poll/Delete/5
+        // GET: Blog/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -135,7 +172,7 @@ namespace KYHBPA.Controllers
             return View(post);
         }
 
-        // POST: Poll/Delete/5
+        // POST: Blog/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -156,10 +193,25 @@ namespace KYHBPA.Controllers
             return RedirectToAction("Index");
         }
 
-        // POST: Blog/DeleteComment/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        // GET: Blog/DeleteComment/5
         public ActionResult DeleteComment(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var comment = db.Comments.Find(id);
+            if (comment == null)
+            {
+                return HttpNotFound();
+            }
+            return View(comment);
+        }
+
+        // POST: Blog/DeleteCommentConfirmed/5
+        [HttpPost, ActionName("DeleteComment")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteCommentConfirmed(int id)
         {
             var comment = db.Comments.Find(id);
             if (comment != null)
@@ -182,7 +234,7 @@ namespace KYHBPA.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         //[Route("blog/addcomment/{id}/{comment}")]
-        public ActionResult AddComment(int? id, int s)
+        public ActionResult AddComment(int? id)
         {
             if (id == null)
             {
@@ -204,5 +256,13 @@ namespace KYHBPA.Controllers
             return RedirectToAction("Post", id);
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
     }
 }

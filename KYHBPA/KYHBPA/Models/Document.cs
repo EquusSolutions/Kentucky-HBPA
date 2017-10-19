@@ -34,6 +34,9 @@ namespace KYHBPA.Models
         Newsletter,
         MemberCard,
         Letter,
+        NewsImage,
+        ActionImage,
+        BlogImage,
         Other
     }
 }

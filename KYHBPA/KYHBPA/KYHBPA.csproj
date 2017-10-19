@@ -582,6 +582,9 @@
     <Content Include="Views\Blog\Blog.cshtml" />
     <Content Include="Views\Blog\Post.cshtml" />
     <Content Include="Views\Blog\_DisplayComment.cshtml" />
+    <Content Include="Views\Blog\AddComment.cshtml" />
+    <Content Include="Views\Blog\DeleteComment.cshtml" />
+    <Content Include="Views\Blog\_PostSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
