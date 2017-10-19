@@ -385,11 +385,9 @@
     <None Include="Properties\PublishProfiles\hawks.cis420.net - Web Deploy.pubxml" />
     <None Include="Resources\favicon.ico" />
     <None Include="Images\donate-btn.png" />
-    <None Include="Images\carousel-2.JPG" />
     <None Include="Images\carousel-3.jpg" />
     <None Include="Images\carousel-4.jpg" />
     <None Include="Images\carousel-5.jpg" />
-    <None Include="Images\carousel-6.jpg" />
     <Content Include="Images\ABEL TASMAN - under rail finish Ky Oaks.jpg" />
     <Content Include="Images\ALWAYS DREAMING  - The Kentucky Derby Gr 1 - 143rd Running - 05-06-17 - R12 - CD - Head Shot - Horse 1.jpg" />
     <Content Include="Images\ATHENA - Blasi The Roxelana Overnight Stakes - 7th Running - 06-25-16 - R10 - CD - Scenic 01.jpg" />
@@ -432,14 +430,6 @@
     <None Include="Images\office.jpg" />
     <None Include="Images\staff-photo.jpg" />
     <None Include="Images\Sports-betting-board.jpg" />
-    <None Include="Images\Image1.jpg" />
-    <None Include="Images\Image2.jpg" />
-    <None Include="Images\Image3.jpg" />
-    <None Include="Images\Image4.jpg" />
-    <None Include="Images\Image5.jpg" />
-    <None Include="Images\Image6.jpg" />
-    <None Include="Images\Image7.jpg" />
-    <None Include="Images\Image8.jpg" />
     <None Include="Images\partners-ChurchillDowns.png" />
     <None Include="Images\partners-EllisPark.png" />
     <None Include="Images\partners-Keeneland.png" />
