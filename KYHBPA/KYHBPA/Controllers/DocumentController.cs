@@ -135,7 +135,7 @@ namespace KYHBPA.Controllers
 
         public ActionResult PhotoGallery()
         {
-            var photos = db.Documents.Where(i => i.Discriminator == DocumentDiscriminator.Image).ToList();
+            var photos = db.Documents.Where(i => i.Discriminator == DocumentDiscriminator.Gallery).ToList();
 
                 return View(photos);
         }
