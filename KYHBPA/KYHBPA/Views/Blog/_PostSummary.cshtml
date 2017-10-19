@@ -1,0 +1,24 @@
+﻿@model KYHBPA.Models.Post
+
+<div class="col-md-6" style="height: 150px">
+    <table>
+        <tr>
+            @*<td rowspan="5" style="padding-right: 15px">Image Here</td>*@
+            <td style="font-weight: bold">@Model.Title</td>
+        </tr>
+        <tr>
+            <td>@Model.ShortDescription</td>
+        </tr>
+        <tr>
+            <td>@Model.Posted</td>
+        </tr>
+        <tr>
+            <td>@Model.PostType</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.ActionLink(">> Read the Full Post", "Post", new { id = Model.Id }, new { @class = "btn btn-info btn-sm" })
+            </td>
+        </tr>
+    </table>
+</div>

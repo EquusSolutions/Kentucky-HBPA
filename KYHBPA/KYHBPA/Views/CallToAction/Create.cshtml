@@ -6,10 +6,10 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create", "CallToAction", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>CallToAction</h4>
         <hr />
@@ -45,6 +45,12 @@
                 @Html.ValidationMessageFor(model => model.TypeOfAction, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        <div>
+            <label for="file">Upload Related Image</label>
+            <input type="file" name="file" id="file" />
+        </div>
+        <br />
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

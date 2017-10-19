@@ -51,37 +51,36 @@ namespace KYHBPA.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 var userId = User.Identity.GetUserName();
-            if (userId == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var username = User.Identity.GetUserName();
-            var member = db.Members.FirstOrDefault(m => String.Compare(m.Email, username) == 0);
+                if (userId == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                var username = User.Identity.GetUserName();
+                var member = db.Members.FirstOrDefault(m => m.Email == username);
 
-            if (member == null)
-            {
-                return HttpNotFound();
-            }
+                if (member == null)
+                {
+                    return HttpNotFound();
+                }
 
-            byte[] uploadedFile = new byte[file.InputStream.Length];
-            file.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
+                byte[] uploadedFile = new byte[file.InputStream.Length];
+                file.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
 
-            var documentModel = new Document
-            {
-                MemberId = member.Id,
-                UploadedBy = HttpContext.User.Identity.Name,
-                ContentLength = file.ContentLength,
-                ContentType = file.ContentType,
-                FileName = file.FileName,
-                FileBytes = uploadedFile,
-                UploadDate = DateTime.Now,
-                Discriminator = DocumentDiscriminator.Image
-            };
+                var documentModel = new Document
+                {
+                    MemberId = member.Id,
+                    UploadedBy = HttpContext.User.Identity.Name,
+                    ContentLength = file.ContentLength,
+                    ContentType = file.ContentType,
+                    FileName = file.FileName,
+                    FileBytes = uploadedFile,
+                    UploadDate = DateTime.Now,
+                    Discriminator = DocumentDiscriminator.Image
+                };
 
-            db.Documents.Add(documentModel);
-            db.SaveChanges();
+                db.Documents.Add(documentModel);
+                db.SaveChanges();
 
                 news.Picture = documentModel;
                 news.PictureId = documentModel.Id;
@@ -89,7 +88,7 @@ namespace KYHBPA.Controllers
                 db.News.Add(news);
                 db.SaveChanges();
                 return RedirectToAction("Index");
-        }
+            }
 
             return View(news);
         }

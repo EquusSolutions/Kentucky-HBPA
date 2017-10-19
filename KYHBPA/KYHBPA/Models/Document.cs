@@ -33,7 +33,8 @@ namespace KYHBPA.Models
         Image,
         Newsletter,
         MemberCard,
-        Letter,
+        Letter,        
+        Gallery,
         Other
     }
 }

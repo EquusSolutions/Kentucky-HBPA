@@ -6,9 +6,9 @@
 }
 
 <h2>Blog</h2>
+<br/>
 
 @foreach (var post in Model)
 {
-    <h4>Post</h4>
+    @Html.Partial("_PostSummary", post)
 }
-

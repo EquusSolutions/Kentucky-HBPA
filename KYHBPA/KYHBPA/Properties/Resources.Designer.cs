@@ -193,16 +193,6 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap churchilldowns_news {
-            get {
-                object obj = ResourceManager.GetObject("churchilldowns_news", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap donate_btn {
             get {
                 object obj = ResourceManager.GetObject("donate_btn", resourceCulture);
@@ -326,6 +316,16 @@ namespace KYHBPA.Properties {
         public static System.Drawing.Bitmap Image8 {
             get {
                 object obj = ResourceManager.GetObject("Image8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Kentucky_Downs_news {
+            get {
+                object obj = ResourceManager.GetObject("Kentucky_Downs_news", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
