@@ -329,6 +329,14 @@
     <Compile Include="Migrations\201710180042504_UpdateBlogDates.Designer.cs">
       <DependentUpon>201710180042504_UpdateBlogDates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710182005219_AddPictureIdNews.cs" />
+    <Compile Include="Migrations\201710182005219_AddPictureIdNews.Designer.cs">
+      <DependentUpon>201710182005219_AddPictureIdNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710182239482_AddImageIDToCallToAction.cs" />
+    <Compile Include="Migrations\201710182239482_AddImageIDToCallToAction.Designer.cs">
+      <DependentUpon>201710182239482_AddImageIDToCallToAction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Post.cs" />
@@ -386,6 +394,13 @@
     <None Include="Images\carousel-4.jpg" />
     <None Include="Images\carousel-5.jpg" />
     <None Include="Images\carousel-6.jpg" />
+    <Content Include="Images\ABEL TASMAN - under rail finish Ky Oaks.jpg" />
+    <Content Include="Images\ALWAYS DREAMING  - The Kentucky Derby Gr 1 - 143rd Running - 05-06-17 - R12 - CD - Head Shot - Horse 1.jpg" />
+    <Content Include="Images\ATHENA - Blasi The Roxelana Overnight Stakes - 7th Running - 06-25-16 - R10 - CD - Scenic 01.jpg" />
+    <Content Include="Images\banner1.jpg" />
+    <Content Include="Images\CD scenic twin spires spring.jpg" />
+    <Content Include="Images\CD scenics crowd by paddock.jpg" />
+    <Content Include="Images\CD scenics SM horse training.jpg" />
     <Content Include="Images\churchill %281%29.jpg" />
     <Content Include="Images\churchill %2810%29.jpg" />
     <Content Include="Images\churchill %2811%29.jpg" />
@@ -398,6 +413,9 @@
     <Content Include="Images\churchill %287%29.jpg" />
     <Content Include="Images\churchill %288%29.jpg" />
     <Content Include="Images\churchill %289%29.jpg" />
+    <None Include="Images\churchilldowns-news.jpg" />
+    <Content Include="Images\Dale Romans - 700 Churchill Downs Wins - 09-17-17-001.jpg" />
+    <Content Include="Images\Dale Romans as jockey.jpg" />
     <Content Include="Images\ellis %281%29.jpg" />
     <Content Include="Images\ellis %2810%29.jpg" />
     <Content Include="Images\ellis %282%29.jpg" />
@@ -412,6 +430,8 @@
     <Content Include="Images\Archive\Model2.png" />
     <Content Include="Images\Archive\Model3.png" />
     <Content Include="Images\EquusSolutions-logo.png" />
+    <Content Include="Images\GUN RUNNER - The Stephen Foster Handicap Gr l - 36th Running - 06-17-17 - R08 - CD - Paddock 1.jpg" />
+    <Content Include="Images\Gun Runner 2017 Foster.jpg" />
     <Content Include="Images\HBPAhighres141-1.png" />
     <None Include="Images\kyhbpa-logo.png" />
     <None Include="Images\office.jpg" />
@@ -438,6 +458,32 @@
     <Content Include="Images\jockey2.jpg" />
     <Content Include="Images\jockey3.jpg" />
     <Content Include="Images\jockey4.jpg" />
+    <Content Include="Images\keeneland %281%29.jpg" />
+    <Content Include="Images\keeneland %2810%29.jpg" />
+    <Content Include="Images\keeneland %2811%29.jpg" />
+    <Content Include="Images\keeneland %282%29.jpg" />
+    <Content Include="Images\keeneland %283%29.jpg" />
+    <Content Include="Images\keeneland %284%29.jpg" />
+    <Content Include="Images\keeneland %285%29.jpg" />
+    <Content Include="Images\keeneland %286%29.jpg" />
+    <Content Include="Images\keeneland %287%29.jpg" />
+    <Content Include="Images\keeneland %288%29.jpg" />
+    <Content Include="Images\keeneland %289%29.jpg" />
+    <Content Include="Images\Scenics - Purple Twin Spires - CD - 042616-002.jpg" />
+    <Content Include="Images\turfway %281%29.jpg" />
+    <Content Include="Images\turfway %2810%29.jpg" />
+    <Content Include="Images\turfway %2811%29.jpg" />
+    <Content Include="Images\turfway %2812%29.jpg" />
+    <Content Include="Images\turfway %2813%29.jpg" />
+    <Content Include="Images\turfway %282%29.jpg" />
+    <Content Include="Images\turfway %283%29.jpg" />
+    <Content Include="Images\turfway %284%29.jpg" />
+    <Content Include="Images\turfway %285%29.jpg" />
+    <Content Include="Images\turfway %286%29.JPG" />
+    <Content Include="Images\turfway %287%29.jpg" />
+    <Content Include="Images\turfway %288%29.jpg" />
+    <Content Include="Images\turfway %289%29.jpg" />
+    <Content Include="Images\UNCONTESTED - 09-17-17 - R09 - CD - Finish 2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -692,6 +738,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710180042504_UpdateBlogDates.resx">
       <DependentUpon>201710180042504_UpdateBlogDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710182005219_AddPictureIdNews.resx">
+      <DependentUpon>201710182005219_AddPictureIdNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710182239482_AddImageIDToCallToAction.resx">
+      <DependentUpon>201710182239482_AddImageIDToCallToAction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
