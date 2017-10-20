@@ -1,13 +1,13 @@
 ﻿body {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    /*padding-left: 2px;
-    padding-right: 2px;*/
-    width:100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*width:100%;*/
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -34,8 +34,6 @@ textarea {
     margin: 0 !important;
     padding: 0 !important;
 }
-
-
 
 /*Social Media Button Formatting*/
 .btn-social {
