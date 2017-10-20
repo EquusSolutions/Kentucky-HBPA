@@ -1,44 +1,44 @@
-﻿@model IEnumerable<KYHBPA.Models.CallToAction>
-@*@model KYHBPA.Models.CallToAction*@
+﻿@*@model IEnumerable<KYHBPA.Models.CallToAction>*@
+@model KYHBPA.Models.CallToAction
 
-<table class="table">
-    <tr>
-        <th>
+<div>
+    <h4>CallToAction</h4>
+    <hr />
+    <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.Image.FileBytes)))" />
+    <dl class="dl-horizontal">
+        <dt>
             @Html.DisplayNameFor(model => model.URL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Headline)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Summary)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TypeOfAction)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Date)
-        </th>
-        <th></th>
-    </tr>
+        </dt>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.URL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Headline)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Summary)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TypeOfAction)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-    </tr>
-}
+        <dd>
+            @Html.DisplayFor(model => model.URL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Headline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Headline)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Summary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Summary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfAction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfAction)
+        </dd>
+
+    </dl>
+</div>
 
 </table>
