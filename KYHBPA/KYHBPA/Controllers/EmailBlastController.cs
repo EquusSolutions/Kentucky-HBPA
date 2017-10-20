@@ -60,22 +60,22 @@ namespace KYHBPA.Controllers
             var fromEmail = "equus.web.solutions@gmail.com";
             var fromEmailPassword = "!23Password";
 
+            //Setup credentials to login to our sender email address("UserName", "Password")
+            NetworkCredential credentials = new NetworkCredential(fromEmail, fromEmailPassword);
+
             //Debug SMTP Settings
             var debugSmtpClient = new SmtpClient();
             debugSmtpClient.Host = "smtp.gmail.com";
             debugSmtpClient.Port = 587;
             debugSmtpClient.EnableSsl = true;
-            //Setup credentials to login to our sender email address("UserName", "Password")
-            NetworkCredential credentials = new NetworkCredential(fromEmail, fromEmailPassword);
             debugSmtpClient.UseDefaultCredentials = false;
             debugSmtpClient.Credentials = credentials;
 
             //Release SMTP Settings
-            var releaseSmtpClient = new SmtpClient();
-            releaseSmtpClient.EnableSsl = false;
+            var releaseSmtpClient = new SmtpClient();            
             releaseSmtpClient.Host = "relay-hosting.secureserver.net";
             releaseSmtpClient.Port = 25;
-
+            releaseSmtpClient.EnableSsl = false;
 
             if (ModelState.IsValid)
             {
@@ -106,11 +106,7 @@ namespace KYHBPA.Controllers
 
                 Attachment attachment = new Attachment(new MemoryStream(uploadedFile), file.FileName);
 
-                mail.Attachments.Add(attachment); 
-
-
-
-
+                mail.Attachments.Add(attachment);
 
 #if DEBUG
                 smtp = debugSmtpClient;
