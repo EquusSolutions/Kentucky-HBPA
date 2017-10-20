@@ -114,7 +114,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,URL,Headline,Summary,TypeOfAction")] CallToAction callToAction)
+        public ActionResult Edit(CallToAction callToAction)
         {
             if (ModelState.IsValid)
             {

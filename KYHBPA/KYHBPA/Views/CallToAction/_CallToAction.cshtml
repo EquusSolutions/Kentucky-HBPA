@@ -1,5 +1,4 @@
-﻿@*@model IEnumerable<KYHBPA.Models.CallToAction>*@
-@model KYHBPA.Models.CallToAction
+﻿@model KYHBPA.Models.CallToAction
 
 <div>
     <h4>CallToAction</h4>
@@ -7,11 +6,11 @@
     <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.Image.FileBytes)))" />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.URL)
+             @Html.DisplayNameFor(model => model.URL)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.URL)
+            <a href="@Model.URL">@Html.DisplayFor(model => model.URL)</a>
         </dd>
 
         <dt>
@@ -40,5 +39,3 @@
 
     </dl>
 </div>
-
-</table>

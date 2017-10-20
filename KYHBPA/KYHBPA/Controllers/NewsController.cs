@@ -123,20 +123,17 @@ namespace KYHBPA.Controllers
         {
             var news = db.News.ToList();
             var pictures = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Image);
-            foreach(var picture in pictures)
+            foreach (var picture in pictures)
             {
                 for (int i = 0; i < news.Count; i++)
                 {
-                    if(picture.Id == news[i].PictureId)
+                    if (picture.Id == news[i].PictureId)
                     {
                         news[i].Picture = picture;
                         break;
                     }
                 }
             }
-
-            
-
             return View(news);
         }
 
@@ -145,7 +142,7 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Headline,Summary,URL,Date")] News news)
+        public ActionResult Edit(News news)
         {
             if (ModelState.IsValid)
             {
