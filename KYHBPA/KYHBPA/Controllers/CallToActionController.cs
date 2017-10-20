@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KYHBPA.Models;
+using Microsoft.AspNet.Identity;
 
 namespace KYHBPA.Controllers
 {
@@ -46,11 +47,45 @@ namespace KYHBPA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,URL,Headline,Summary,TypeOfAction")] CallToAction callToAction)
+        public ActionResult Create(CallToAction callToAction, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
+                var userId = User.Identity.GetUserName();
+                if (userId == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                var username = User.Identity.GetUserName();
+                var member = db.Members.FirstOrDefault(m => m.Email == username);
+
+                if (member == null)
+                {
+                    return HttpNotFound();
+                }
+
+                byte[] uploadedFile = new byte[file.InputStream.Length];
+                file.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
+
+                var documentModel = new Document
+                {
+                    MemberId = member.Id,
+                    UploadedBy = HttpContext.User.Identity.Name,
+                    ContentLength = file.ContentLength,
+                    ContentType = file.ContentType,
+                    FileName = file.FileName,
+                    FileBytes = uploadedFile,
+                    UploadDate = DateTime.Now,
+                    Discriminator = DocumentDiscriminator.Image
+                };
+
+                db.Documents.Add(documentModel);
+                db.SaveChanges();
+                
+                callToAction.Image = documentModel;
+                callToAction.ImageId = documentModel.Id;
                 callToAction.Date = DateTime.Now;
+
                 db.CallToActions.Add(callToAction);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -118,15 +153,15 @@ namespace KYHBPA.Controllers
 
         public ActionResult CallToActionGallery()
         {
-            var callToAction = db.News.ToList();
+            var callToAction = db.CallToActions.ToList();
             var images = db.Documents.Where(d => d.Discriminator == DocumentDiscriminator.Image);
             foreach (var image in images)
             {
                 for (int i = 0; i < callToAction.Count; i++)
                 {
-                    if (image.Id == callToAction[i].PictureId)
+                    if (image.Id == callToAction[i].ImageId)
                     {
-                        callToAction[i].Picture = image;
+                        callToAction[i].Image = image;
                         break;
                     }
                 }
