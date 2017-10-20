@@ -333,7 +333,7 @@ body-slider {
             margin: 0;
             padding: 0;
             overflow: hidden;
-            /* Set 3D perspective since we're using 3D transforms */
+            /* Set 3D perspective since we're using 3D transforms
             transform-style: preserve-3d;
             -webkit-transform-style: preserve-3d;
             -webkit-perspective: 600px;
