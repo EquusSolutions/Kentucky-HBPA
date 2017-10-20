@@ -45,7 +45,7 @@
                             <li>@Html.ActionLink("Blog", "Blog", "Blog")</li>
                             <li>@Html.ActionLink("Events Calendar", "Index", "Event")</li>
                             <li>@Html.ActionLink("Polls", "DisplayPolls", "Poll")</li>
-                            <li>@Html.ActionLink("Jockey Profile", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Jockey Profile", "JockeyProfile", "Home")</li>
                             <li>@Html.ActionLink("Photo Gallery", "PhotoGallery", "Document") </li>
                         </ul>
                     </li>
@@ -56,7 +56,6 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Benefits of Membership", "Benefits", "Member")</li>
-                            <li>@Html.ActionLink("Benevolence", "Index", "Home")</li>
                             <li>@Html.ActionLink("Become a Member", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
                             <li>@Html.ActionLink("Download Member Card", "DownloadMemberCard", "Document")</li>
                         </ul>
@@ -70,7 +69,7 @@
                     }
                 </ul>
 
-               
+
 
                 <ul class="nav navbar-nav navbar-right">
 
@@ -100,11 +99,17 @@
         <footer>
             <!-- Add icon library -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <table style="border-style:none" width="100%">
+
+            <table style="border-style:none" class="col-lg-12">
                 <tr>
                     <td>&copy; @DateTime.Now.Year - Kentucky Horsemen’s Benevolent and Protective Association, Inc.</td>
                     <td align="center" valign="middle">
                         Connect with us
+                    </td>
+                    <td>
+                        <a href="https://www.paypal.com/us/webapps/mpp/donations" target="_blank" style="height: 60px">
+                            <img src="~/Images/donate-btn.png" alt="Donate through PayPal" height="30" width="128" />
+                            </a>
                     </td>
                 </tr>
                 <tr>
