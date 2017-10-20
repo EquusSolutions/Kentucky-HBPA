@@ -1,100 +1,101 @@
 ﻿@model KYHBPA.Models.Contact
 
-@using (Html.BeginForm("Contact", "Home"))
-{
-    @Html.AntiForgeryToken()
+<br/>
+<div class="row">
+    @using (Html.BeginForm("Contact", "Home"))
+    {
+        <div class="form-horizontal col-md-4">
+            <br/>
+            <br />
+            @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+            <div class="form-group">
+                @Html.LabelFor(model => model.FirstName, htmlAttributes: new {@class = "control-label col-md-2"})
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.FirstName, new {htmlAttributes = new {@class = "form-control"}})
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new {@class = "text-danger"})
+                </div>
+            </div>
 
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastName, htmlAttributes: new {@class = "control-label col-md-2"})
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LastName, new {htmlAttributes = new {@class = "form-control"}})
+                    @Html.ValidationMessageFor(model => model.LastName, "", new {@class = "text-danger"})
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new {@class = "control-label col-md-2"})
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new {htmlAttributes = new {@class = "form-control"}})
+                    @Html.ValidationMessageFor(model => model.Email, "", new {@class = "text-danger"})
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Note, htmlAttributes: new {@class = "control-label col-md-2"})
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Note, new {htmlAttributes = new {@class = "form-control"}})
+                    @Html.ValidationMessageFor(model => model.Note, "", new {@class = "text-danger"})
+                </div>
+            </div>
+
+            <div class="col-md-offset-2">
+                <p>
+                    @using reCAPTCHA.MVC
+                    @using (Html.BeginForm())
+
+                    {
+                        @Html.Recaptcha()
+                        @Html.ValidationMessage("ReCaptcha")
+
+                    }
+                </p>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-4">
+                    <input type="submit" value="Submit" class="btn btn-default"/>
+                </div>
             </div>
         </div>
+    }
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
-            </div>
-        </div>
+    @*//start google maps api*@
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Note, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Note, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Note, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="col-md-offset-2">
-            <p>
-                @using reCAPTCHA.MVC
-                @using (Html.BeginForm())
-
-                {
-                    @Html.Recaptcha()
-                    @Html.ValidationMessage("ReCaptcha")
-
-                }
-            </p>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Submit" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-
-}
-
-@*//start google maps api*@
-
-<!DOCTYPE html>
-<html>
-<head>
     <style>
         #map {
-            height: 200px;
-            width: 50%;
+            height: 300px;
+            width: 100%;
         }
     </style>
-</head>
-<body style="margin:0 auto;">
-    <h3 align="center">Our Office Location</h3>
-    <div id="map" style="margin:0 auto;">
+    <div class="col-md-6">
+        <h3 align="center" style="font-family:Garamond; color:black;">Our Office Location</h3>
+            <div id="map" style="margin: 0 auto;">
+                <script>
+                    function initMap() {
+                        var uluru = { lat: 38.202535, lng: -85.765684 };
+                        var map = new google.maps.Map(document.getElementById('map'),
+                            {
+                                zoom: 13,
+                                center: uluru
+                            });
+                        var marker = new google.maps.Marker({
+                            position: uluru,
+                            map: map
+                        });
+                    }
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeq4yfNZ_fehjzMm6rurr0kQzFh2ZWOos&callback=initMap">
+                </script>
+            </div>
+</div>
+</div>
 
-        <script>
-            function initMap() {
-                var uluru = { lat: 38.202535, lng: -85.765684 };
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 13,
-                    center: uluru
-                });
-                var marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map
-                });
-            }
-        </script>
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeq4yfNZ_fehjzMm6rurr0kQzFh2ZWOos&callback=initMap">
-        </script>
-    </div>
-</body>
-</html>
+
 
 <p></p>
