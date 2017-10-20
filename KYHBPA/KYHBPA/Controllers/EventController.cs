@@ -12,120 +12,141 @@ namespace KYHBPA.Controllers
 {
     public class EventController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        //Refer to this link in order to set up the Calendar.
+        //http://scheduler-net.com/docs/simple-.net-mvc-application-with-scheduler.html#step_2_add_the_scheduler_reference
 
-        // GET: Event
+        public readonly ApplicationDbContext db = new ApplicationDbContext();
+
         public ActionResult Index()
         {
-            if (User.IsInRole(RoleName.Administrator) || User.IsInRole(RoleName.Staff))
-                return View(db.Events.ToList());
-                return View("ReadOnlyList", db.Events.ToList());
-            //return View(db.Events.ToList());
+            //try { 
+            //var scheduler = new DHXScheduler(this); //initializes dhtmlxScheduler
+            //scheduler.LoadData = true;// allows loading data
+            //scheduler.EnableDataprocessor = true;// enables DataProcessor in order to enable implementation CRUD operations
+
+            //    return View(scheduler);
+            //}
+            //catch (Exception ex)
+            //{
+            //    if (ex != null)
+            //    {
+            //        return RedirectToAction("Index", "Home");
+            //    }                
+            //}
+
+            //return RedirectToAction("Index", "Home");
+            return View("Calendar");
         }
 
-        // GET: Event/Details/5
-        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
-        public ActionResult Details(int? id)
+        public JsonResult Data()
         {
-            if (id == null)
+            //Using Dxhtml JavaScript Edition (open source)
+            var events = db.Events;
+
+            var formatedEvents = new List<object>();
+            foreach (var ev in events)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                var formattingEvent = new
+                {
+                    id = ev.Id,
+                    start_date = ev.StartDate.ToString(),
+                    end_date = ev.EndDate.ToString(),
+                    text = ev.Description
+                };
+                formatedEvents.Add(formattingEvent);
             }
-            Event @event = db.Events.Find(id);
-            if (@event == null)
-            {
-                return HttpNotFound();
-            }
-            return View(@event);
+
+
+
+            return Json(formatedEvents, JsonRequestBehavior.AllowGet);
+
+            //Using Dxhtml MVC Scheduler Edition (free trial)
+            //events for loading to scheduler
+            //return new SchedulerAjaxData(_db.Events);
         }
 
-        // GET: Event/Create
-        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
-        public ActionResult Create()
+        public ActionResult Save(string id, string text, string start_date, string end_date)
         {
-            return View();
-        }
 
-        // POST: Event/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
-        public ActionResult Create([Bind(Include = "Id,Description,StartDate,EndDate,Time,Title,Location")] Event @event)
-        {
-            if (ModelState.IsValid)
+            var existingEvent = db.Events.FirstOrDefault(e => e.Id.ToString() == id);
+            var newStartDate = Convert.ToDateTime(start_date);
+            var newEndDate = Convert.ToDateTime(end_date);
+
+
+            if (existingEvent != null)
             {
-                db.Events.Add(@event);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                existingEvent.StartDate = newStartDate;
+                existingEvent.EndDate = newEndDate;
+                existingEvent.Description = text;
+            }
+            else
+            {
+
+                var newEvent = new Event()
+                {
+                    StartDate = newStartDate,
+                    EndDate = newEndDate,
+                    Description = text
+                };
+                db.Events.Add(newEvent);
             }
 
-            return View(@event);
-        }
-
-        // GET: Event/Edit/5
-        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Event @event = db.Events.Find(id);
-            if (@event == null)
-            {
-                return HttpNotFound();
-            }
-            return View(@event);
-        }
-
-        // POST: Event/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
-        public ActionResult Edit([Bind(Include = "Id,Description,StartDate,EndDate,Time,Title,Location")] Event @event)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(@event).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(@event);
-        }
-
-        // GET: Event/Delete/5
-        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Event @event = db.Events.Find(id);
-            if (@event == null)
-            {
-                return HttpNotFound();
-            }
-            return View(@event);
-        }
-
-        // POST: Event/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        [Authorize(Roles = RoleName.Administrator + "," + RoleName.Staff)]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Event @event = db.Events.Find(id);
-            db.Events.Remove(@event);
             db.SaveChanges();
-            return RedirectToAction("Index");
+
+
+
+            return View("Calendar");
         }
 
-        protected override void Dispose(bool disposing)
+        public ActionResult Delete(string id, string text, string start_date, string end_date)
+        {
+
+            var existingEvent = db.Events.FirstOrDefault(e => e.Id.ToString() == id);
+            var newStartDate = Convert.ToDateTime(start_date);
+            var newEndDate = Convert.ToDateTime(end_date);
+
+            if (existingEvent != null)
+            {
+                db.Events.Remove(existingEvent);
+                db.SaveChanges();
+            }
+
+            return View("Calendar");
+        }
+
+
+        //public ActionResult Save(Event updatedEvent, FormCollection formData)
+        //{
+        //    var action = new DataAction(formData);
+
+        //    try
+        //    {
+        //        switch (action.Type)
+        //        {
+        //            case DataActionTypes.Insert: // your Insert logic
+        //                _db.Events.Add(updatedEvent);
+        //                break;
+        //            case DataActionTypes.Delete: // your Delete logic
+        //                updatedEvent = _db.Events.SingleOrDefault(ev => ev.id == updatedEvent.id);
+        //                _db.Events.Remove(updatedEvent);
+        //                break;
+        //            default:// "update" // your Update logic
+        //                updatedEvent = _db.Events.SingleOrDefault(
+        //                ev => ev.id == updatedEvent.id);
+        //                UpdateModel(updatedEvent);
+        //                break;
+        //        }
+        //        _db.SaveChanges();
+        //        action.TargetId = updatedEvent.id;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        action.Type = DataActionTypes.Error;
+        //    }
+        //    return (new AjaxSaveResponse(action));
+        //}
+
+    protected override void Dispose(bool disposing)
         {
             if (disposing)
             {

@@ -19,10 +19,5 @@ namespace KYHBPA.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime EndDate { get; set; }
-        [DataType(DataType.Time)]
-        [DisplayFormat(DataFormatString = "{0:t}", ApplyFormatInEditMode = true)]
-        public DateTime Time { get; set; }
-        public string Title { get; set; }
-        public string Location { get; set; }
     }
 }
