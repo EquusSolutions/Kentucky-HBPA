@@ -151,7 +151,7 @@
 @*What We Do Section*@
 <div class="body-content-padded">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12" style="background-color:white; padding-bottom:2.5%">
             <div class="boxed">
                 <center><h2>What We Do</h2></center>
             </div>
@@ -191,7 +191,7 @@
     </div>
 
     @*Calls to Action Section*@
-    <div class="row">
+    <div class="row" style="padding-top:2.5%; padding-bottom:2.5%">
         <div class="col-md-12">
             <div class="boxed">
                 <center><h2>Get Involved</h2></center>
@@ -252,10 +252,34 @@
         </div>
     </div>
 
+    @*Connect with Us Section*@
+    <div class="row" id="social-media" style="padding-top:2.5%; padding-bottom:2.5%; background-color:white;">
+        <div class="boxed">
+            <center><h2>Connect With Us</h2></center>
+        </div>
+        <div class="col-md-3">
+            <center><h4>Facebook</h4><hr /></center>
+            <div class="fb-page" data-href="https://www.facebook.com/KYhbpa/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-height="939px" data-width="900"><blockquote cite="https://www.facebook.com/KYhbpa/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/KYhbpa/">Kentucky HBPA</a></blockquote></div>
+        </div>
+
+        <div class="col-md-5">
+            <center><h4>Instagram</h4><hr /></center>
+            <iframe src="//users.instush.com/collage/?cols=7&rows=9&sl=true&user_id=6245001207&username=equussolutions&sid=-1&susername=-1&tag=-1&stype=mine&bg=transparent&space=true&rd=true&grd=false&gpd=6&drp=false&pin=true&t=999999OYIw7-dhQQ-lNRLWiXHT1IG8u85CgU8AB-mBXKTW_PMeVmLro4OEBgvsmIDck8LxxCAHywz3ZoQ" allowtransparency="true" frameborder="0" scrolling="no" style="display:block;width:733px;height:939px;border:none;overflow:visible;"></iframe>
+        </div>
+
+        <div class="col-md-4">
+            <center><h4>Twitter</h4><hr /></center>
+            <a class="twitter-timeline" href="https://twitter.com/KyHBPA?ref_src=twsrc%5Etfw" data-height="939px">
+                Tweets by @@KyHBPA
+            </a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+
     @*Polls Section*@
     <hr />
 
-    <div class="col-md-12">
+    <div class="col-md-12" style="padding-top:2.5%; padding-bottom:2.5%">
         <div class="boxed">
             <center><h2>Latest Polls</h2></center>
         </div>
@@ -308,33 +332,9 @@
 
     <center><p><a class="btn btn-default" href="/Poll/DisplayPolls/">See All Polls &raquo;</a></p></center>
 
-    @*Connect with Us Section*@
-    <div class="row" id="social-media">
-        <div class="boxed">
-            <center><h2>Connect With Us</h2></center>
-        </div>
-        <div class="col-md-3">
-            <center><h4>Facebook</h4><hr /></center>
-            <div class="fb-page" data-href="https://www.facebook.com/KYhbpa/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-height="939px" data-width="900"><blockquote cite="https://www.facebook.com/KYhbpa/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/KYhbpa/">Kentucky HBPA</a></blockquote></div>
-        </div>
-
-        <div class="col-md-5">
-            <center><h4>Instagram</h4><hr /></center>
-            <iframe src="//users.instush.com/collage/?cols=7&rows=9&sl=true&user_id=6245001207&username=equussolutions&sid=-1&susername=-1&tag=-1&stype=mine&bg=transparent&space=true&rd=true&grd=false&gpd=6&drp=false&pin=true&t=999999OYIw7-dhQQ-lNRLWiXHT1IG8u85CgU8AB-mBXKTW_PMeVmLro4OEBgvsmIDck8LxxCAHywz3ZoQ" allowtransparency="true" frameborder="0" scrolling="no" style="display:block;width:733px;height:939px;border:none;overflow:visible;"></iframe>
-        </div>
-
-        <div class="col-md-4">
-            <center><h4>Twitter</h4><hr /></center>
-            <a class="twitter-timeline" href="https://twitter.com/KyHBPA?ref_src=twsrc%5Etfw" data-height="939px">
-                Tweets by @@KyHBPA
-            </a>
-            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-    </div>
-
     @*Sponsors Section*@
     <hr />
-    <div class="row" style="background-color:white">
+    <div class="row" style="background-color:white; padding-top:5%; padding-bottom:5%">
         <p><h2 align="center">Meet Our Partners</h2></p>
         <table style="border-style:none" class="col-md-12">
             <tr>
@@ -373,29 +373,15 @@
 
     @*Contact Us Section*@
     <hr />
-    <p><h2>Contact Us</h2></p>
-    <div class="row">
-        <div class="col-md-12">
-            @Html.Partial("_ContactForm")
+    <div style="padding-top:2.5%; padding-bottom:2.5%">
+        <p><h2>Contact Us</h2></p>
+        <div class="row">
+            <div class="col-md-12">
+                @Html.Partial("_ContactForm")
+            </div>
         </div>
     </div>
 </div>
 
-@*<div id="fb-root"></div>*@
-@*<script>
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>*@
-
-@*<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>*@
-@*<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>*@
 <script src="~/Content/Site.css" rel="stylesheet"></script>
 <script src="~/Scripts/facebook.js"></script>
