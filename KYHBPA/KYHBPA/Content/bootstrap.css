@@ -1421,7 +1421,7 @@ body {
     /*background-image: url('../Images/Horse-Racing-Background-33.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;*/
-    background-color: #ffffff;
+    background-color: #E5E4E2; /*HomePage Background Color: Platinum*/
 }
 
 input,
@@ -3677,7 +3677,7 @@ select[multiple].input-lg {
         width: auto;
         vertical-align: middle;
     }
-
+    /**/
     .form-inline .form-control-static {
         display: inline-block;
     }
@@ -3771,6 +3771,15 @@ select[multiple].input-lg {
     }
 }
 
+.boxed {
+    border: 50px ;
+    background-color: darkgray;
+    margin-top: 30px;
+    height: 45px;
+    opacity: 0.7;
+}
+
+
 .btn {
     display: inline-block;
     margin-bottom: 0;
@@ -3835,15 +3844,15 @@ fieldset[disabled] a.btn {
 
 .btn-default {
     color: #ffffff;
-    background-color: #98635b;
-    border-color: #90632d;
+    background-color: #368BC1;
+    border-color: dodgerblue;
 }
 
     .btn-default:focus,
     .btn-default.focus {
         color: #ffffff;
-        background-color: #808080;
-        border-color: #595959;
+        background-color: #368BC1;
+        border-color: dodgerblue;
     }
 
     .btn-default:hover {
@@ -3900,29 +3909,29 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
     color: #ffffff;
-    background-color: #98635b;
-    border-color: #90632d;
+    background-color: #368BC1;
+    border-color: dodgerblue;
 }
 
     .btn-primary:focus,
     .btn-primary.focus {
         color: #ffffff;
-        background-color: #98635b;
-        border-color: #b81c18;
+        background-color: #C7A317;
+        border-color: goldenrod;
     }
 
     .btn-primary:hover {
         color: #ffffff;
-        background-color: #98635b;
-        border-color: #e4332e;
+        background-color: #808080;
+        border-color: #7a7a7a;
     }
 
     .btn-primary:active,
     .btn-primary.active,
     .open > .dropdown-toggle.btn-primary {
         color: #ffffff;
-        background-color: #98635b;
-        border-color: #e4332e;
+        background-color: #808080;
+        border-color: #7a7a7a;
     }
 
         .btn-primary:active:hover,
@@ -5646,7 +5655,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     }
 
 .navbar-inverse {
-    background-color: #90632d;
+    background-color: #0B2774; /* Navigation Bar Color: Blue*/
     border-color: #98635b;
 }
 
@@ -5657,7 +5666,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         .navbar-inverse .navbar-brand:hover,
         .navbar-inverse .navbar-brand:focus {
             color: #ffffff;
-            background-color: #61431f;
+            background-color: #C7A317; /*Hover Color: Cookie Brown*/
         }
 
     .navbar-inverse .navbar-text {
@@ -5671,14 +5680,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         .navbar-inverse .navbar-nav > li > a:hover,
         .navbar-inverse .navbar-nav > li > a:focus {
             color: #ffffff;
-            background-color: #61431f;
+            background-color: #C7A317; /*Hover Color: Cookie Brown*/
         }
 
     .navbar-inverse .navbar-nav > .active > a,
     .navbar-inverse .navbar-nav > .active > a:hover,
     .navbar-inverse .navbar-nav > .active > a:focus {
         color: #ffffff;
-        background-color: #61431f;
+        background-color: #C7A317; /*Hover Color: Cookie Brown*/
     }
 
     .navbar-inverse .navbar-nav > .disabled > a,
@@ -5709,7 +5718,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     .navbar-inverse .navbar-nav > .open > a,
     .navbar-inverse .navbar-nav > .open > a:hover,
     .navbar-inverse .navbar-nav > .open > a:focus {
-        background-color: #61431f;
+        background-color: #C7A317; /*Hover Color: Cookie Brown*/
         color: #ffffff;
     }
 
@@ -6091,8 +6100,9 @@ a.badge:focus {
     padding-bottom: 30px;
     margin-bottom: 30px;
     color: inherit;
-    background-color: #fcfbe3;
+    background-color: #F3E5AB;
     max-height: 200px;
+    opacity: 0.8;
 }
 
 

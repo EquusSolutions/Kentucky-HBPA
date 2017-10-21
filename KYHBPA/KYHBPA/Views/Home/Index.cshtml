@@ -139,21 +139,21 @@
 
             <p class="lead">
                 The Kentucky Horsemen's Benevolent and Protective Association (HBPA) provides benevolence to horsemen in need, education
-                and recreation programs to the backstretch, and various insurance packages. We are Horsemen helping Horsemen.
-                <a href="/Home/About" class="btn btn-primary btn-lg" style="float:right">Learn more &raquo;</a>
+                and recreation programs to the backstretch, and various insurance packages. <i>We are Horsemen helping Horsemen.</i>
+                <a href="/Home/About" class="btn btn-primary btn-lg" style="float:right; margin-top:6px;">Learn More &raquo;</a>
             </p>
         </div>
     </div>
 
-<div class="container body-content" style="width:100%;">
-
     @*What We Do Section*@
-    <hr />
     <div class="row">
         <div class="col-lg-12">
-            <h3>What We Do</h3>
+            <div class="boxed">
+                <center><h2>What We Do</h2></center>
+            </div>
             <p>
-                <img src="~/Images/staff-photo.jpg" style="float:right; height:200px; width:350px" />
+                <br />
+                <img src="~/Images/staff-photo.jpg" style="float:right; padding: 10px; height:230px; width:400px" />
                 The HBPA represents owners and trainers on several fronts. We negotiate with
                 each race track regarding purse structure, equitable share of simulcast
                 revenues, overall track safety, sanitation and security. The HBPA provides
@@ -182,71 +182,150 @@
                 Simulcasting, Proprietary Rights, Casino Gambling, Therapeutic
                 Medication, Sports Betting and many other areas of concern to Horsemen.
             </p>
-            <p><a class="btn btn-default" href="~/Home/About">Learn more about us &raquo;</a></p>
+            <p><a class="btn btn-default" href="~/Home/About" style="float:unset;">Learn More &raquo;</a></p>
         </div>
     </div>
 
     @*Calls to Action Section*@
-    <hr />
+
     <div class="row">
         <div class="col-md-12">
-            <h2>Get Involved</h2>
-            <table class="table">
-                <tr>
-                    <td class="padCols"><img src="~/Images/Sports-betting-board.jpg" height="69" width="91" /></td>
-                    <td class="padCols">
-                        <a href="http://www.lrc.ky.gov/record/16RS/HB155.htm" target="_blank">
-                            <h5 class="h5News">
-                                Click here to support HB155 to allow sports betting at tracks and off-track facilities
-                            </h5>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-            </table>
-            <p><a class="btn btn-default" href="/Home/">Learn more &raquo;</a></p>
+            <div class="boxed">
+                <center><h2>Get Involved</h2></center>
+            </div>
+            <br />
+            <center>
+                <p><i>You are invited to meet the KYHBPA staff and learn more about our current projects and how you can get involved in helping to improve the industry. There are no membership fees.</i></p>
+                <p><i>Remember – This is your organization. Become an active participant and one of the “HORSEMEN HELPING HORSEMEN”.</i></p>
+            </center>
+            <center>
+                <br />
+                <div class="col-sm-3">
+                    <img src="~/Images/member_gi.gif" alt="" data-mh="bottomTextStyle" style="height: 180px; width: 200px;">
+                    <div class="table">
+                        <div class="cell" data-mh="bottomTextStyle" style="height: 50px"><br />
+                            <p><a class="btn btn-default" href="~/Account/Register" style="float:unset;">Become A Member &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                <img src="~/Images/donate_gi.gif" alt="" data-mh="bottomTextStyle" style="height: 180px; width: 200px;">
+                <div class="table">
+                    <div class="cell" data-mh="bottomTextStyle" style="height: 50px"><br />
+                        <p><a class="btn btn-default" href="https://www.paypal.com/us/webapps/mpp/donations" style="float:unset;">Make A Donation &raquo;</a></p>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="~/Images/event_gi.gif" alt="" data-mh="bottomTextStyle" style="height: 180px; width: 200px;">
+                    <div class="table">
+                        <div class="cell" data-mh="bottomTextStyle" style="height: 50px"><br />
+                            <p><a class="btn btn-default" href="~/Event" style="float:unset;">Event Calendar &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img src="~/Images/blog_gi.gif" alt="" data-mh="bottomTextStyle" style="height: 180px; width: 200px;">
+                    <div class="table">
+                        <div class="cell" data-mh="bottomTextStyle" style="height: 50px"><br />
+                            <p><a class="btn btn-default" href="~/Blog/Blog" style="float:unset;">Blog &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+            </center>
         </div>
-    </div>
+        </div>
+    @*<table class="table">
+        <tr>
+            <td class="padCols"><img src="~/Images/Sports-betting-board.jpg" height="69" width="91" /></td>
+            <td class="padCols">
+                <a href="http://www.lrc.ky.gov/record/16RS/HB155.htm" target="_blank">
+                    <h5 class="h5News">
+                        Click here to support HB155 to allow sports betting at tracks and off-track facilities
+                    </h5>
+                </a>
+            </td>
+        </tr>
+        <tr>
+    </table>
+        <p><a class="btn btn-default" href="/Home/">Learn more &raquo;</a></p>
+    </div>*@
+
     @*Polls Section*@
     <hr />
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Latest Polls</h2>
 
-            <table class="table">
-                <tr>
-                    <td>
-                        <h4>What color should we paint the office?</h4>
-                        <input id="RadioBLue" type="radio" /> Blue <br>
-                        <input id="RadioGreen" type="radio" /> Green<br>
-                        <input id="RadioYellow" type="radio" /> Yellow<br>
-                        <input id="RadioOther" type="radio" /> Other<br>
-                        <input id="SubmitPoll" type="submit" value="Submit" />
-                    </td>
-                </tr>
-            </table>
-            <p><a class="btn btn-default" href="/Poll/DisplayPolls/">See All Polls &raquo;</a></p>
-        </div>
-    </div>
+        <div class="col-md-12">
+            <div class="boxed">
+                <center><h2>Latest Polls</h2></center>
+            </div>
+                <div class="col-md-4">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <h4>What color should we paint the office?</h4>
+                                <input id="RadioBLue" type="radio" /> Blue <br>
+                                <input id="RadioGreen" type="radio" /> Green<br>
+                                <input id="RadioYellow" type="radio" /> Yellow<br>
+                                <input id="RadioOther" type="radio" /> Other<br>
+                                <input id="SubmitPoll" type="submit" value="Submit" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="col-md-4">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <h4>What's your favorite social network?</h4>
+                                <input id="RadioFb" type="radio" /> Facebook <br>
+                                <input id="RadioTwitter" type="radio" /> Twitter<br>
+                                <input id="RadioInstagram" type="radio" /> Instagram<br>
+                                <input id="RadioOther" type="radio" /> Other<br>
+                                <input id="SubmitPoll" type="submit" value="Submit" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="col-md-4">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <h4>What's your favorite hobbie?</h4>
+                                <input id="RadioCooking" type="radio" /> Cooking <br>
+                                <input id="RadioDance" type="radio" /> Dance <br>
+                                <input id="RadioReading" type="radio" /> Reading<br>
+                                <input id="RadioOther" type="radio" /> Other<br>
+                                <input id="SubmitPoll" type="submit" value="Submit" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+</div>
+
+
+    <center><p><a class="btn btn-default" href="/Poll/DisplayPolls/">See All Polls &raquo;</a></p></center>
 
     @*Connect with Us Section*@
-    <hr />
     <div class="row" id="social-media">
-        <h2>Connect with Us on:</h2>
+        <div class="boxed">
+            <center><h2>Connect With Us</h2></center>
+        </div>
         <div class="col-md-3">
-            <h4>Facebook</h4><hr />
+            <center><h4>Facebook</h4><hr /></center>
             <div class="fb-page" data-href="https://www.facebook.com/KYhbpa/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-height="939px" data-width="900"><blockquote cite="https://www.facebook.com/KYhbpa/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/KYhbpa/">Kentucky HBPA</a></blockquote></div>
         </div>
 
         <div class="col-md-5">
-            <h4>Instagram</h4><hr />
+            <center><h4>Instagram</h4><hr /></center>
             @*<iframe src="//users.instush.com/collage/?cols=5&rows=9&sl=true&user_id=6245001207&username=equussolutions&sid=-1&susername=-1&tag=-1&stype=mine&bg=transparent&space=true&rd=false&grd=false&gpd=6&drp=false&pin=true&t=999999OYIw7-dhQQ-lNRLWiXHT1IG8u85CgU8AB-mBXKTW_PMeVmLro4OEBgvsmIDck8LxxCAHywz3ZoQ" allowtransparency="true" frameborder="0" scrolling="no" style="display:block;width:527px;height:939px;border:none;overflow:visible;"></iframe>*@
             @*<iframe src="//users.instush.com/bee-gallery-v2/?cols=4&rows=6&size=medium&border=6&round=true&space=4&sl=true&bg=transparent&brd=true&na=false&pin=true&hc=e72476&ltc=3f3f3f&lpc=ffffff&fc=ffffff&user_id=6245001207&username=equussolutions&sid=-1&susername=-1&tag=-1&stype=mine&t=999999OYIw7-dhQQ-lNRLWiXHT1IG8u85CgU8AB-mBXKTW_PMeVmLro4OEBgvsmIDck8LxxCAHywz3ZoQ" allowtransparency="true" frameborder="0" scrolling="no" style="display:block;width:640px;height:956px;border:none;overflow:visible;"></iframe>*@
             <iframe src="//users.instush.com/collage/?cols=7&rows=9&sl=true&user_id=6245001207&username=equussolutions&sid=-1&susername=-1&tag=-1&stype=mine&bg=transparent&space=true&rd=true&grd=false&gpd=6&drp=false&pin=true&t=999999OYIw7-dhQQ-lNRLWiXHT1IG8u85CgU8AB-mBXKTW_PMeVmLro4OEBgvsmIDck8LxxCAHywz3ZoQ" allowtransparency="true" frameborder="0" scrolling="no" style="display:block;width:733px;height:939px;border:none;overflow:visible;"></iframe>
         </div>
 
         <div class="col-md-4">
-            <h4>Twitter</h4><hr />
+            <center><h4>Twitter</h4><hr /></center>
             <a class="twitter-timeline" href="https://twitter.com/KyHBPA?ref_src=twsrc%5Etfw" data-height="939px">
                 Tweets by @@KyHBPA
             </a>
@@ -354,7 +433,6 @@
             @Html.Partial("_ContactForm")
         </div>
     </div>
-</div>
 
 @*<div id="fb-root"></div>*@
 @*<script>

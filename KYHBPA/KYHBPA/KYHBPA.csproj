@@ -403,6 +403,7 @@
     <Content Include="Images\ATHENA - Blasi The Roxelana Overnight Stakes - 7th Running - 06-25-16 - R10 - CD - Scenic 01.jpg" />
     <Content Include="Images\banneraboutus.png" />
     <Content Include="Images\bannercontactus.jpg" />
+    <Content Include="Images\blog_gi.gif" />
     <Content Include="Images\CD scenic twin spires spring.jpg" />
     <Content Include="Images\CD scenics crowd by paddock.jpg" />
     <Content Include="Images\CD scenics SM horse training.jpg" />
@@ -421,6 +422,7 @@
     <None Include="Images\churchilldowns-news.jpg" />
     <Content Include="Images\Dale Romans - 700 Churchill Downs Wins - 09-17-17-001.jpg" />
     <Content Include="Images\Dale Romans as jockey.jpg" />
+    <Content Include="Images\donate_gi.gif" />
     <Content Include="Images\ellis %281%29.jpg" />
     <Content Include="Images\ellis %2810%29.jpg" />
     <Content Include="Images\ellis %282%29.jpg" />
@@ -433,6 +435,7 @@
     <Content Include="Images\ellis %289%29.jpg" />
     <Content Include="Images\ellis1.jpg" />
     <Content Include="Images\EquusSolutions-logo.png" />
+    <Content Include="Images\event_gi.gif" />
     <Content Include="Images\GUN RUNNER - The Stephen Foster Handicap Gr l - 36th Running - 06-17-17 - R08 - CD - Paddock 1.jpg" />
     <Content Include="Images\Gun Runner 2017 Foster.jpg" />
     <Content Include="Images\HBPAhighres141-1.png" />
@@ -466,10 +469,12 @@
     <None Include="Images\Kentucky-Downs-news.jpg" />
     <None Include="Images\partners-KentuckyDowns.png" />
     <Content Include="Images\Kentucky-Downs-Start.jpg" />
+    <Content Include="Images\member_gi.gif" />
     <Content Include="Images\Racing_at_Arlington_Park.jpg" />
     <Content Include="Images\Scenics - Purple Twin Spires - CD - 042616-002.jpg" />
     <None Include="Images\Seattle-Slew-Plate-news.jpg" />
     <Content Include="Images\seattle-slew.jpg" />
+    <Content Include="Images\textdivider.png" />
     <Content Include="Images\turfway %281%29.jpg" />
     <Content Include="Images\turfway %2810%29.jpg" />
     <Content Include="Images\turfway %2811%29.jpg" />
