@@ -2,10 +2,12 @@
 @model IEnumerable<KYHBPA.Models.Document>
 
 @{
-    ViewBag.Title = "PhotoGallery";
+    ViewBag.Title = "PhotoGallery | KYHBPA";
 }
 
-@foreach(var photo in Model)
+<div class="body-content-padded">
+    @foreach (var photo in Model)
 {
     @Html.Partial("_FetchImage", photo)
 }
+</div>

@@ -1,54 +1,57 @@
 ﻿@model IEnumerable<KYHBPA.Models.Document>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "File Manager | KYHBPA";
 }
 
-<h2>File Manager</h2>
+<div class="body-content-padded">
+    <h2>File Manager</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.MemberId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ContentLength)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ContentType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FileName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UploadedBy)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model) {
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MemberId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ContentLength)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ContentType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FileName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UploadedBy)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.MemberId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContentLength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UploadedBy)
+            </th>
+            <th></th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MemberId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContentLength)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContentType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UploadedBy)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

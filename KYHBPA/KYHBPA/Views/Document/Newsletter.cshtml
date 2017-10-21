@@ -1,20 +1,22 @@
 ﻿@model KYHBPA.Models.Document
 
 @{
-    ViewBag.Title = "Newsletter";
+    ViewBag.Title = "Newsletter | KYHBPA";
 }
 
-<h2>Newsletter</h2>
-@if (Model != null)
-{
-    <iframe src="@string.Format("data:application/pdf;base64,{0}", Convert.ToBase64String(Model.FileBytes))" style="width: 100%"; height="600"> </iframe>
-    <div>
-        <h4>Download Newsletter</h4>
+<div class="body-content-padded">
+    <h2>Newsletter</h2>
+    @if (Model != null)
+    {
+        <iframe src="@string.Format("data:application/pdf;base64,{0}", Convert.ToBase64String(Model.FileBytes))" style="width: 100%" ; height="600"> </iframe>
+        <div>
+            <h4>Download Newsletter</h4>
 
-        @Html.ActionLink(Model.FileName, "GetNewsletter")
-    </div>
-}
-else
-{
-    <h4>No Newsletters uploaded.</h4>
-}
+            @Html.ActionLink(Model.FileName, "GetNewsletter")
+        </div>
+    }
+    else
+    {
+        <h4>No Newsletters uploaded.</h4>
+    }
+</div>
