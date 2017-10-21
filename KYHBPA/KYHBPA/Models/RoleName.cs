@@ -10,4 +10,11 @@ namespace KYHBPA.Models
         public const string Administrator = "Administrator";
         public const string Staff = "Staff";
     }
+
+    public enum Role
+    {
+        Administrator,
+        Staff,
+        Member
+    }
 }

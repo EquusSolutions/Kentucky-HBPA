@@ -148,4 +148,10 @@ namespace KYHBPA.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
+
+    public class ManagerViewModel
+    {
+        public ApplicationUser User { get; set; } 
+        public Role Role { get; set; }
+    }
 }

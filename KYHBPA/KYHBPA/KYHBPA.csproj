@@ -835,6 +835,8 @@
     <Content Include="Views\Blog\DeleteComment.cshtml" />
     <Content Include="Views\Blog\_PostSummary.cshtml" />
     <Content Include="Views\Event\Data.cshtml" />
+    <Content Include="Views\Account\Manager.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
