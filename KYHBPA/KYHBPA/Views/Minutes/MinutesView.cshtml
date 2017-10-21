@@ -3,28 +3,30 @@
 @{
     ViewBag.Title = "MinutesView";
 }
-<div>
-    <br/>
-    <h2>Meeting Minutes:</h2>
-</div>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Note)
-        </th>
-    </tr>
-    @foreach (var item in Model)
-    {
+<div class="body-content-padded">
+    <div>
+        <br />
+        <h2>Meeting Minutes:</h2>
+    </div>
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Note)
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Note)
+            </th>
         </tr>
-    }
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Note)
+                </td>
+            </tr>
+        }
+    </table>
+</div>

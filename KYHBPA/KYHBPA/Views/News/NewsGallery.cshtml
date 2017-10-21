@@ -5,9 +5,11 @@
     ViewBag.Title = "News Gallery | KYHBPA";
 }
 
-<h2>News</h2>
+<div class="body-content-padded">
+    <h2>News</h2>
 
-@foreach (var item in Model)
-{
-    @Html.Partial("_NewsArticle", item)
-}
+    @foreach (var item in Model)
+    {
+        @Html.Partial("_NewsArticle", item)
+    }
+</div>
