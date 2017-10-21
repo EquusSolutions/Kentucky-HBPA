@@ -2,7 +2,6 @@
     ViewBag.Title = "Home | KYHBPA";
 }
 
-<div class="container body-content" style="width:100%;">
     <div class="row">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -12,15 +11,13 @@
                 <li data-target="#myCarousel" data-slide-to="2"></li>
                 <li data-target="#myCarousel" data-slide-to="3"></li>
                 <li data-target="#myCarousel" data-slide-to="4"></li>
-                <li data-target="#myCarousel" data-slide-to="5"></li>
-                <li data-target="#myCarousel" data-slide-to="6"></li>
             </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <a href="~/CallToAction/CallToActionGallery">
-                        <img src="~/Images/social-media-logos.png" alt="Social Media Logos" style="height:1000px" />
+                    <a href="#social-media">
+                        <img src="~/Images/Test.png" alt="Social Media Logos"/>
                     </a>
                     <div class="carousel-caption">
                         <h4><a href="~/CallToAction/CallToActionGallery">Connect With Us on Social Media</a></h4>
@@ -148,6 +145,7 @@
         </div>
     </div>
 
+<div class="container body-content" style="width:100%;">
 
     @*What We Do Section*@
     <hr />
@@ -213,7 +211,8 @@
     <hr />
     <div class="row">
         <div class="col-md-12">
-            <h2>Latest Poll</h2>
+            <h2>Latest Polls</h2>
+
             <table class="table">
                 <tr>
                     <td>
@@ -232,7 +231,7 @@
 
     @*Connect with Us Section*@
     <hr />
-    <div class="row">
+    <div class="row" id="social-media">
         <h2>Connect with Us on:</h2>
         <div class="col-md-3">
             <h4>Facebook</h4><hr />
@@ -349,6 +348,7 @@
 
     @*Contact Us Section*@
     <hr />
+    <p><h2>Contact Us</h2></p>
     <div class="row">
         <div class="col-md-12">
             @Html.Partial("_ContactForm")
