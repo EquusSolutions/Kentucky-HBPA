@@ -83,26 +83,6 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap carousel_3 {
-            get {
-                object obj = ResourceManager.GetObject("carousel_3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap carousel_5 {
-            get {
-                object obj = ResourceManager.GetObject("carousel_5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap donate_btn {
             get {
                 object obj = ResourceManager.GetObject("donate_btn", resourceCulture);
@@ -113,9 +93,9 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ellis__1_ {
+        public static System.Drawing.Bitmap ellis1 {
             get {
-                object obj = ResourceManager.GetObject("ellis__1_", resourceCulture);
+                object obj = ResourceManager.GetObject("ellis1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +153,16 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap gi_legislation {
+            get {
+                object obj = ResourceManager.GetObject("gi_legislation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap gi_member {
             get {
                 object obj = ResourceManager.GetObject("gi_member", resourceCulture);
@@ -196,16 +186,6 @@ namespace KYHBPA.Properties {
         public static System.Drawing.Bitmap HBPAhighres141_11 {
             get {
                 object obj = ResourceManager.GetObject("HBPAhighres141_11", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Horse_Racing_Background_33 {
-            get {
-                object obj = ResourceManager.GetObject("Horse_Racing_Background_33", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

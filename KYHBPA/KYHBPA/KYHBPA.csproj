@@ -395,16 +395,16 @@
     <None Include="Properties\PublishProfiles\hawks.cis420.net - Web Deploy.pubxml" />
     <None Include="Resources\favicon.ico" />
     <None Include="Images\donate-btn.png" />
-    <None Include="Images\carousel-3.jpg" />
-    <None Include="Images\carousel-5.jpg" />
     <Content Include="Images\banneraboutus.png" />
     <Content Include="Images\bannercontactus.jpg" />
     <None Include="Images\ellis %281%29.jpg" />
+    <None Include="Images\ellis1.jpg" />
     <Content Include="Images\EquusSolutions-logo.png" />
     <None Include="Images\gi_blog.gif" />
     <None Include="Images\gi_donate.gif" />
     <None Include="Images\gi_event.gif" />
     <None Include="Images\gi_member.gif" />
+    <None Include="Images\gi_legislation.gif" />
     <Content Include="Images\HBPAhighres141-1.png" />
     <None Include="Images\kyhbpa-logo.png" />
     <None Include="Images\office.jpg" />
@@ -415,7 +415,6 @@
     <None Include="Images\partners-Keeneland.png" />
     <None Include="Images\partners-Thoroughbred.png" />
     <None Include="Images\partners-Turfway.png" />
-    <None Include="Images\Horse-Racing-Background-33.jpg" />
     <None Include="Images\Kentucky-Downs-news.jpg" />
     <None Include="Images\partners-KentuckyDowns.png" />
     <None Include="Images\Seattle-Slew-Plate-news.jpg" />
@@ -424,7 +423,6 @@
     <None Include="Images\news-Seattle-Slew-Plate.jpg" />
     <None Include="Images\news-social-media-logos.png" />
     <None Include="Images\news-kentucky-downs.jpg" />
-    <Content Include="Images\textdivider.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">

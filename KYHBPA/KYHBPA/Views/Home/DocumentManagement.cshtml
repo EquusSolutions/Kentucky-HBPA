@@ -5,34 +5,36 @@
     ViewBag.Title = "DocumentManagement";
 }
 
-<h2>Upload Files</h2>
+<div class="body-content-padded">
+    <h2>Upload Files</h2>
 
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        <h4>Upload Documents</h4>
-    </div>
-    <div class="panel-body">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4>Upload Documents</h4>
+        </div>
+        <div class="panel-body">
 
-        @using (Html.BeginForm("UploadDocument", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
-        {
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.Discriminator, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EnumDropDownListFor(model => model.Discriminator, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.Discriminator, "", new { @class = "text-danger" })
+            @using (Html.BeginForm("UploadDocument", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Discriminator, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EnumDropDownListFor(model => model.Discriminator, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Discriminator, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <br/>
-            <br/>
-            <br/>
-            <div>
-                <label for="file">Upload Form</label>
-                <input type="file" name="file" id="file" />    
-            </div>
-            <br/>
-            <input type="submit" />
-        }
+                <br />
+                <br />
+                <br />
+                <div>
+                    <label for="file">Upload Form</label>
+                    <input type="file" name="file" id="file" />
+                </div>
+                <br />
+                <input type="submit" />
+            }
 
+        </div>
     </div>
 </div>
