@@ -78,6 +78,15 @@ textarea {
     text-overflow: ellipsis
 }
 
+/*Photo Gallery size and padding*/
+.photo-gallery {
+    width: 225px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
     .btn-social > :first-child {
         position: absolute;
         left: 0;
