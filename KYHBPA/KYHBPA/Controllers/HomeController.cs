@@ -33,13 +33,12 @@ namespace KYHBPA.Controllers
 
             return View();
         }
-
     
         [HttpPost]
-        //[CaptchaValidator(
-        //   PrivateKey = "6LetNjMUAAAAAD59qvyXAymsz6rL7gaJeha99xwb",
-        //   ErrorMessage = "Invalid input captcha.",
-        //   RequiredMessage = "The captcha field is required.")]
+        [CaptchaValidator(
+           PrivateKey = "6LetNjMUAAAAAD59qvyXAymsz6rL7gaJeha99xwb",
+           ErrorMessage = "Invalid input captcha.",
+           RequiredMessage = "The captcha field is required.")]
         public ActionResult Contact(Contact viewModel)
         {
 

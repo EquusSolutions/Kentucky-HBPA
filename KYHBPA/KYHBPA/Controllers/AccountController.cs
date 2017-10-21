@@ -141,6 +141,69 @@ namespace KYHBPA.Controllers
         }
 
         //
+        // GET: /Account/Manager
+        public ActionResult AccountManager()
+        {
+            var users = db.Users.ToList();
+
+            var viewModels = new List<ManagerViewModel>();
+
+            foreach (var user in users)
+            {
+                var viewModel = new ManagerViewModel
+                {
+                    User = user
+                };
+
+                viewModels.Add(viewModel);
+            }
+
+            return View("Manager", viewModels);
+        }
+
+        // GET: /Account/Manager
+        public ActionResult EditAccountRole(string id)
+        {
+            var user = db.Users.FirstOrDefault(u => u.Id == id);       
+            var role = UserManager.GetRoles(user.Id);
+
+            Role roleName;
+
+            if (role.Count == 0)
+                roleName = Role.Member;
+            else
+            {
+                string firstRole = role[0];
+                roleName = (Role)Enum.Parse(typeof(Role), firstRole);
+            }
+
+            var viewModel = new ManagerViewModel
+            {
+                User = user,
+                Role = roleName
+            };
+
+            return View("Edit", viewModel);
+        }
+
+        //
+        // POST: /Account/Manager
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> AccountManager(string email, Role role)
+        {
+            var user = db.Users.FirstOrDefault(u => u.Email == email);
+            var roles = await UserManager.GetRolesAsync(user.Id);
+            await UserManager.RemoveFromRolesAsync(user.Id, roles.ToArray());
+
+            if (role == Role.Administrator || role == Role.Staff)
+            {
+                await UserManager.AddToRoleAsync(user.Id, role.ToString());
+            }
+            return RedirectToAction("AccountManager");
+        }
+
+        //
         // GET: /Account/Register
         [AllowAnonymous]
         public ActionResult Register()
