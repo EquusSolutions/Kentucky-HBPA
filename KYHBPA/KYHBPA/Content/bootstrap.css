@@ -3967,8 +3967,8 @@ fieldset[disabled] a.btn {
     .btn-primary.disabled.focus,
     .btn-primary[disabled].focus,
     fieldset[disabled] .btn-primary.focus {
-        background-color: #98635b;
-        border-color: #90632d;
+        background-color: #a18413;
+        border-color: #a18413;
     }
 
     .btn-primary .badge {
@@ -4425,7 +4425,7 @@ tbody.collapse.in {
         .dropdown-menu > li > a:focus {
             text-decoration: none;
             color: #ffffff;
-            background-color: #90632d;
+            background-color: #a18413;
         }
 
     .dropdown-menu > .active > a,
@@ -4434,7 +4434,7 @@ tbody.collapse.in {
         color: #ffffff;
         text-decoration: none;
         outline: 0;
-        background-color: #90632d;
+        background-color: #a18413;
     }
 
     .dropdown-menu > .disabled > a,
@@ -4952,7 +4952,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     .nav .open > a:hover,
     .nav .open > a:focus {
         background-color: #eeeeee;
-        border-color: #90632d;
+        border-color: #a18413;
     }
 
     .nav .nav-divider {
@@ -5066,7 +5066,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     .nav-pills > li.active > a:hover,
     .nav-pills > li.active > a:focus {
         color: #ffffff;
-        background-color: #90632d;
+        background-color: #a18413;
     }
 
 .nav-stacked > li {
@@ -5660,7 +5660,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse {
     background-color: #0B2774; /* Navigation Bar Color: Blue*/
-    border-color: #98635b;
+    border-color: #0B2774;
 }
 
     .navbar-inverse .navbar-brand {
@@ -6083,7 +6083,7 @@ a.badge:focus {
 
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-    color: #90632d;
+    color: #a18413;
     background-color: #ffffff;
 }
 
@@ -6525,8 +6525,8 @@ button.list-group-item {
 .list-group-item.active:focus {
     z-index: 2;
     color: #ffffff;
-    background-color: #98635b;
-    border-color: #90632d;
+    background-color: #a18413;
+    border-color: #a18413;
 }
 
     .list-group-item.active .list-group-item-heading,
@@ -8243,7 +8243,7 @@ button.close {
 
 .navbar-inverse .badge {
     background-color: #fff;
-    color: #90632d;
+    color: #a18413;
 }
 
 .navbar-brand {
@@ -8287,7 +8287,7 @@ button.close {
 
 .has-error .form-control,
 .has-error .form-control:focus {
-    border-color: #90632d;
+    border-color: #a18413;
 }
 
 .has-success .help-block,
