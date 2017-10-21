@@ -2,13 +2,16 @@
 @model IEnumerable<KYHBPA.Models.Post>
 
 @{
-    ViewBag.Title = "Blog";
+    ViewBag.Title = "Blog | KYHBPA";
 }
 
-<h2>Blog</h2>
-<br/>
 
-@foreach (var post in Model)
-{
-    @Html.Partial("_PostSummary", post)
-}
+<div class="body-content-padded">
+    <h2>Blog</h2>
+    <br />
+
+    @foreach (var post in Model)
+    {
+        @Html.Partial("_PostSummary", post)
+    }
+</div>

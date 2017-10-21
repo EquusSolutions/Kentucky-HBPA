@@ -4,30 +4,33 @@
     ViewBag.Title = "Manager";
 }
 
-<h2>Account Manager</h2>
-<br />
-<br />
-<table>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.User.Email)
-        </th>
-        <th></th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td style="width: 250px">@item.User.Email</td>
-            <td>@Html.ActionLink("Edit", "EditAccountRole", new {id = item.User.Id})</td>
-        </tr>
-    }
-</table>
-<br />
-<br />
-<br />
 
-<div>
-    @Html.ActionLink("Home", "Index", "Home")
+<div class="body-content-padded">
+    <h2>Account Manager</h2>
+    <br />
+    <br />
+    <table>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.User.Email)
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="width: 250px">@item.User.Email</td>
+                <td>@Html.ActionLink("Edit", "EditAccountRole", new { id = item.User.Id })</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <br />
+    <br />
+
+    <div>
+        @Html.ActionLink("Home", "Index", "Home")
+    </div>
 </div>
 
 @section Scripts {

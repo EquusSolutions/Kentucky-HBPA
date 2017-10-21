@@ -35,6 +35,10 @@ textarea {
     background-attachment: fixed;
 }
 
+.carousel-title {
+    color: #C7A317;
+}
+
 /*Remove all margins*/
 .remove-all-margin {
     margin: 0 !important;

@@ -4,47 +4,49 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="body-content-padded">
+    <h2>Details</h2>
 
-<div>
-    <h4>CallToAction</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.URL)
-        </dt>
+    <div>
+        <h4>CallToAction</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.URL)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.URL)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.URL)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Headline)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Headline)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Headline)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Headline)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Summary)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Summary)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Summary)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Summary)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TypeOfAction)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.TypeOfAction)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TypeOfAction)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.TypeOfAction)
+            </dd>
 
-    </dl>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
