@@ -377,11 +377,6 @@
     <Compile Include="Models\ViewModels\PostViewModel.cs" />
     <Compile Include="Models\Vote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -397,7 +392,6 @@
     <None Include="Images\donate-btn.png" />
     <Content Include="Images\banneraboutus.png" />
     <Content Include="Images\bannercontactus.jpg" />
-    <None Include="Images\ellis %281%29.jpg" />
     <None Include="Images\ellis1.jpg" />
     <Content Include="Images\EquusSolutions-logo.png" />
     <None Include="Images\gi_blog.gif" />
@@ -409,15 +403,12 @@
     <None Include="Images\kyhbpa-logo.png" />
     <None Include="Images\office.jpg" />
     <None Include="Images\staff-photo.jpg" />
-    <None Include="Images\Sports-betting-board.jpg" />
     <None Include="Images\partners-ChurchillDowns.png" />
     <None Include="Images\partners-EllisPark.png" />
     <None Include="Images\partners-Keeneland.png" />
     <None Include="Images\partners-Thoroughbred.png" />
     <None Include="Images\partners-Turfway.png" />
-    <None Include="Images\Kentucky-Downs-news.jpg" />
     <None Include="Images\partners-KentuckyDowns.png" />
-    <None Include="Images\Seattle-Slew-Plate-news.jpg" />
     <None Include="Images\news-ellis-park.jpg" />
     <None Include="Images\news-keeneland.jpg" />
     <None Include="Images\news-Seattle-Slew-Plate.jpg" />
@@ -900,7 +891,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
