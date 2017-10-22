@@ -387,7 +387,6 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\PhotoGallery.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -398,7 +397,6 @@
     <None Include="Images\donate-btn.png" />
     <Content Include="Images\banneraboutus.png" />
     <Content Include="Images\bannercontactus.jpg" />
-    <None Include="Images\ellis %281%29.jpg" />
     <None Include="Images\ellis1.jpg" />
     <Content Include="Images\EquusSolutions-logo.png" />
     <None Include="Images\gi_blog.gif" />
@@ -410,15 +408,12 @@
     <None Include="Images\kyhbpa-logo.png" />
     <None Include="Images\office.jpg" />
     <None Include="Images\staff-photo.jpg" />
-    <None Include="Images\Sports-betting-board.jpg" />
     <None Include="Images\partners-ChurchillDowns.png" />
     <None Include="Images\partners-EllisPark.png" />
     <None Include="Images\partners-Keeneland.png" />
     <None Include="Images\partners-Thoroughbred.png" />
     <None Include="Images\partners-Turfway.png" />
-    <None Include="Images\Kentucky-Downs-news.jpg" />
     <None Include="Images\partners-KentuckyDowns.png" />
-    <None Include="Images\Seattle-Slew-Plate-news.jpg" />
     <None Include="Images\news-ellis-park.jpg" />
     <None Include="Images\news-keeneland.jpg" />
     <None Include="Images\news-Seattle-Slew-Plate.jpg" />
@@ -902,6 +897,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
