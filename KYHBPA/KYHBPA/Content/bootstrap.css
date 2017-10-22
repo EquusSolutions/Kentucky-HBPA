@@ -1533,10 +1533,10 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+    font-family: Lato;
     font-weight: 700;
     line-height: 1.1;
-    color: #000000;
+    color: darkblue;
 }
 
     h1 small,
@@ -1723,7 +1723,7 @@ mark,
 
 a.text-primary:hover,
 a.text-primary:focus {
-    color: #98635b;
+    color: darkgoldenrod;
 }
 
 .text-success {
@@ -1769,7 +1769,7 @@ a.text-danger:focus {
 
 a.bg-primary:hover,
 a.bg-primary:focus {
-    background-color: #98635b;
+    background-color: darkgoldenrod;
 }
 
 .bg-success {
@@ -3772,13 +3772,13 @@ select[multiple].input-lg {
 }
 
 .boxed {
-    border: 50px;
-    background-color: #a18413;
+    border: 60px;
+    background-color: goldenrod;
     margin-top: 30px;
     height: 45px;
-    opacity: 0.7;
-}
+    opacity: 0.9;
 
+}
 
 .btn {
     display: inline-block;
@@ -3815,7 +3815,7 @@ select[multiple].input-lg {
     .btn:hover,
     .btn:focus,
     .btn.focus {
-        color: #ffffff;
+        color: darkgoldenrod;
         text-decoration: none;
     }
 
@@ -3908,15 +3908,15 @@ fieldset[disabled] a.btn {
     }
 
 .btn-primary {
-    color: #ffffff;
-    background-color: #368BC1;
-    border-color: dodgerblue;
+    color: darkgoldenrod;
+    background-color: darkgoldenrod;
+    border-color: goldenrod;
 }
 
     .btn-primary:focus,
     .btn-primary.focus {
         color: #ffffff;
-        background-color: #C7A317;
+        background-color: darkgoldenrod;
         border-color: goldenrod;
     }
 
@@ -3968,8 +3968,8 @@ fieldset[disabled] a.btn {
     }
 
     .btn-primary .badge {
-        color: #98635b;
-        background-color: #ffffff;
+        color: darkgoldenrod;
+        background-color: darkgoldenrod;
     }
 
 .btn-success {
@@ -4233,7 +4233,7 @@ fieldset[disabled] a.btn {
     }
 
 .btn-link {
-    color: #98635b;
+    color: darkgoldenrod;
     font-weight: normal;
     border-radius: 0;
 }
@@ -5698,12 +5698,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     }
 
     .navbar-inverse .navbar-toggle {
-        border-color: #98635b;
+        border-color: darkgoldenrod;
     }
 
         .navbar-inverse .navbar-toggle:hover,
         .navbar-inverse .navbar-toggle:focus {
-            background-color: #98635b;
+            background-color: darkgoldenrod;
         }
 
         .navbar-inverse .navbar-toggle .icon-bar {
@@ -5724,11 +5724,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-        border-color: #98635b;
+        border-color: darkgoldenrod;
     }
 
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-        background-color: #98635b;
+        background-color: darkgoldenrod;
     }
 
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
@@ -5963,7 +5963,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     font-size: 75%;
     font-weight: bold;
     line-height: 1;
-    color: #ffffff;
+    color: darkgoldenrod;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
@@ -5972,7 +5972,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 a.label:hover,
 a.label:focus {
-    color: #ffffff;
+    color: darkgoldenrod;
     text-decoration: none;
     cursor: pointer;
 }
@@ -5996,12 +5996,12 @@ a.label:focus {
     }
 
 .label-primary {
-    background-color: #150865;
+    background-color: darkgoldenrod;
 }
 
     .label-primary[href]:hover,
     .label-primary[href]:focus {
-        background-color: #98635b;
+        background-color: darkgoldenrod;
     }
 
 .label-success {
@@ -6100,9 +6100,9 @@ a.badge:focus {
     padding-bottom: 30px;
     margin-bottom: 30px;
     color: inherit;
-    background-color: #707078;
+    background-color: #368BC1;
     max-height: 200px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 
@@ -6707,6 +6707,7 @@ button.list-group-item-danger {
     border-bottom: 1px solid transparent;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
+    color: darkgoldenrod;
 }
 
     .panel-heading > .dropdown .dropdown-toggle {
@@ -6717,7 +6718,7 @@ button.list-group-item-danger {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 17px;
-    color: inherit;
+    color: darkgoldenrod;
 }
 
     .panel-title > a,
@@ -6725,7 +6726,7 @@ button.list-group-item-danger {
     .panel-title > .small,
     .panel-title > small > a,
     .panel-title > .small > a {
-        color: inherit;
+        color: darkgoldenrod;
     }
 
 .panel-footer {
@@ -7712,10 +7713,10 @@ button.close {
     left: 0;
     bottom: 0;
     width: 15%;
-    opacity: 0.5;
+    opacity: 0.8;
     filter: alpha(opacity=50);
     font-size: 20px;
-    color: #ffffff;
+    color: grey;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
     background-color: rgba(0, 0, 0, 0);
@@ -8228,7 +8229,7 @@ button.close {
 
 .navbar {
     font-size: 18px;
-    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+    font-family: Lato;
     font-weight: 700;
 }
 
@@ -8317,7 +8318,7 @@ button.close {
 .jumbotron h4,
 .jumbotron h5,
 .jumbotron h6 {
-    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+    font-family: Lato;
     font-weight: 700;
     color: #000;
 }
