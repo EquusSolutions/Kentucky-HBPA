@@ -6,11 +6,9 @@
 }
 
 <div class="body-content-padded">
-    @*<div class="photo-gallery">*@
         @foreach (var photo in Model)
         {
             @Html.Partial("_FetchImage", photo)
         }
-    @*</div>*@
 </div>
 &nbsp;
