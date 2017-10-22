@@ -5,10 +5,16 @@
     ViewBag.Title = "PhotoGallery | KYHBPA";
 }
 
+@*Don't know why this is not working for me. I made the css class in the site.css but nothing is happening when I run the page
+I want this to make the pictures not look so shitty but I can't figure out why it is not working and my searches have not 
+been helpful at all. If anyone has an idea what to do here please let me know, because I'm out of ideas*@
+
 <div class="body-content-padded">
+    <div class="photo-gallery">
         @foreach (var photo in Model)
         {
             @Html.Partial("_FetchImage", photo)
         }
+    </div>
 </div>
 &nbsp;
