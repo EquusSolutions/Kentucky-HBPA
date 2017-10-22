@@ -1,7 +1,7 @@
 ﻿@model KYHBPA.Models.CallToAction
 
 <div>
-    <h4>CallToAction</h4>
+    <h4>@Html.DisplayFor(model => model.TypeOfAction)</h4>
     <hr />
     <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.Image.FileBytes)))" />
     <dl class="dl-horizontal">
