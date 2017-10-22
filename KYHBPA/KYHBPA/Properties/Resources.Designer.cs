@@ -63,16 +63,6 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap banneraboutus {
-            get {
-                object obj = ResourceManager.GetObject("banneraboutus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap bannercontactus {
             get {
                 object obj = ResourceManager.GetObject("bannercontactus", resourceCulture);
@@ -176,6 +166,46 @@ namespace KYHBPA.Properties {
         public static System.Drawing.Bitmap HBPAhighres141_11 {
             get {
                 object obj = ResourceManager.GetObject("HBPAhighres141_11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Jockey1 {
+            get {
+                object obj = ResourceManager.GetObject("Jockey1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Jockey2 {
+            get {
+                object obj = ResourceManager.GetObject("Jockey2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Jockey3 {
+            get {
+                object obj = ResourceManager.GetObject("Jockey3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Jockey4 {
+            get {
+                object obj = ResourceManager.GetObject("Jockey4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

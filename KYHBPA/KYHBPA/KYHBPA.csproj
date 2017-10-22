@@ -395,7 +395,6 @@
     <None Include="Properties\PublishProfiles\hawks.cis420.net - Web Deploy.pubxml" />
     <None Include="Resources\favicon.ico" />
     <None Include="Images\donate-btn.png" />
-    <Content Include="Images\banneraboutus.png" />
     <Content Include="Images\bannercontactus.jpg" />
     <None Include="Images\ellis1.jpg" />
     <Content Include="Images\EquusSolutions-logo.png" />
