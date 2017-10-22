@@ -1,6 +1,6 @@
 ﻿@model KYHBPA.Models.RegisterViewModel
 @{
-    ViewBag.Title = "Register";
+    ViewBag.Title = "Become a Member";
 }
 
 <div class="body-content-padded">
@@ -126,15 +126,15 @@
         <div class="form-group">
             @Html.LabelFor(model => model.IsAgreedToTerms, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                <div class="checkbox" style="float:left">
+                    @Html.EditorFor(model => model.IsAgreedToTerms)
+                    @Html.ValidationMessageFor(model => model.IsAgreedToTerms, "", new { @class = "text-danger" })
+                </div>
                 *By clicking this checkbox, you aggre to hereby appoint the Kentucky Horsemen's Benevolent and Protective<br>
                 Association, Inc. to act as your sole and exclusive agent and representitative for the purpose of negotiating<br>
                 and executing, or refusing to execute, with Throughbred race tracks in Kentucky any and all contracts and<br>
                 aggreements relating to Throroughbred racing in the state. By this appointment, I hereby revoke and and all<br>
                 previous authorities given by me for similar purposes.
-                <div class="checkbox" style="float:left">
-                    @Html.EditorFor(model => model.IsAgreedToTerms)
-                    @Html.ValidationMessageFor(model => model.IsAgreedToTerms, "", new { @class = "text-danger" })
-                </div>
             </div>
         </div>
 
