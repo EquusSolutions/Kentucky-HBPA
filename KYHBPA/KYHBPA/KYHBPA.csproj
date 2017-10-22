@@ -419,6 +419,10 @@
     <None Include="Images\news-Seattle-Slew-Plate.jpg" />
     <None Include="Images\news-social-media-logos.png" />
     <None Include="Images\news-kentucky-downs.jpg" />
+    <Content Include="Images\Jockey1.jpg" />
+    <Content Include="Images\Jockey2.jpg" />
+    <Content Include="Images\Jockey3.jpg" />
+    <Content Include="Images\Jockey4.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">

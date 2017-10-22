@@ -3908,7 +3908,7 @@ fieldset[disabled] a.btn {
     }
 
 .btn-primary {
-    color: darkgoldenrod;
+    color: white;
     background-color: darkgoldenrod;
     border-color: goldenrod;
 }
@@ -6993,7 +6993,7 @@ button.list-group-item-danger {
 
     .panel-primary > .panel-heading {
         color: #ffffff;
-        background-color: #90632d;
+        background-color: goldenrod;
         border-color: #90632d;
     }
 
