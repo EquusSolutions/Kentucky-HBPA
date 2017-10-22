@@ -8,6 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    @*Navbar*@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -69,8 +70,6 @@
                     }
                 </ul>
 
-
-
                 <ul class="nav navbar-nav navbar-right">
 
                     <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
@@ -93,16 +92,18 @@
             </div>
         </div>
     </div>
+    @*Body*@
     <div class="container body-content">
         @RenderBody()
         <hr />
+        @*Footer*@
         <footer>
             <div class="footer">
                 <!-- Add icon library -->
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                <table class="padCols td" style="border-style:none; padding:66px;">
+                <table style="border-style:none;" class="col-md-12">
                     <tr>
-                        <td align="center">
+                        <td class="padCols td" align="center">
                             @*Social Media Buttons*@
                             Connect with us on:
                             <br />
@@ -118,7 +119,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="center">
+                        <td class="padCols td" align="center">
                             @*Donate Button*@
                             <a href="https://www.paypal.com/us/webapps/mpp/donations" target="_blank" style="height: 60px">
                                 <img src="~/Images/donate-btn.png" alt="Donate through PayPal" height="30" width="128" />
@@ -126,7 +127,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="center">
+                        <td class="padCols td" align="center">
                             @*Copyright, address, and design*@
                             &copy; @DateTime.Now.Year - Kentucky Horsemen’s Benevolent and Protective Association, Inc.
                             | All Rights Reserved | 3729 S. Fourth St. Louisville, KY 40214-1712 | 800-928-4272
