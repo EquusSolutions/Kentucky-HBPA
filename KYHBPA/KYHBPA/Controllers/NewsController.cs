@@ -90,7 +90,7 @@ namespace KYHBPA.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View(news);
+            return View();
         }
 
         //I think I need to do something like this so that i can hold the images that are uploaded
