@@ -98,8 +98,6 @@ namespace KYHBPA.Controllers
                 mail.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
 
-                //from class
-                //var image = db.Documents.FirstOrDefault();
                 if (file != null)
                 {
                     byte[] uploadedFile = new byte[file.InputStream.Length];

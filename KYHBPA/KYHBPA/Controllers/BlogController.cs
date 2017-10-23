@@ -23,12 +23,14 @@ namespace KYHBPA.Controllers
         }
 
         // GET: Blog/Blog
+        [AllowAnonymous]
         public ActionResult Blog()
         {
             return View(db.Posts.Where(p => p.Published).ToList());
         }
 
         // GET: Blog/Post
+        [AllowAnonymous]
         public ActionResult Post(int? id)
         {
             if (id == null)
