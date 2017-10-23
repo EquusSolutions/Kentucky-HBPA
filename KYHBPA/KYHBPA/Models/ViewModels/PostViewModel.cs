@@ -25,7 +25,7 @@ namespace KYHBPA.Models.ViewModels
         [DisplayName("Post Type")]
         [EnumDataType(typeof(PostType))]
         public PostType PostType { get; set; }
-        public List<Comment> Comments { get; set; }
+        public List<CommentViewModel> Comments { get; set; }
         public Comment Comment { get; set; }
     }
 }

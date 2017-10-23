@@ -45,6 +45,27 @@ namespace KYHBPA.Controllers
 
             var comments = db.Comments.Where(c => c.PostId == post.Id).ToList();
 
+            var commentViewModel = new List<CommentViewModel>();
+
+            foreach (var comment in comments)
+            {
+                var member = db.Members.FirstOrDefault(m => m.Id == comment.MemberId);
+                if (member == null)
+                    member = new Member();
+
+                commentViewModel.Add(
+                    new CommentViewModel
+                    {
+                        Id = comment.Id,
+                        MemberId = comment.MemberId,
+                        Email = member.Email,
+                        Text = comment.Text,
+                        Posted = comment.Posted,
+                        PostId = comment.PostId,
+                        Post = comment.Post
+                    });
+            }
+
             var viewModel = new PostViewModel
             {
                 Id = post.Id,
@@ -55,7 +76,7 @@ namespace KYHBPA.Controllers
                 Posted = post.Posted,
                 Modified = post.Modified,
                 PostType = post.PostType,
-                Comments = comments,
+                Comments = commentViewModel,
                 Comment = new Comment()
             };
 

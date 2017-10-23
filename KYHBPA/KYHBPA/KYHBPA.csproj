@@ -370,6 +370,7 @@
     <Compile Include="Models\Poll.cs" />
     <Compile Include="Models\PollOption.cs" />
     <Compile Include="Models\RoleName.cs" />
+    <Compile Include="Models\ViewModels\CommentViewModel.cs" />
     <Compile Include="Models\ViewModels\DocumentViewModel.cs" />
     <Compile Include="Models\ViewModels\MemberViewModel.cs" />
     <Compile Include="Models\ViewModels\MinutesViewModel.cs" />
