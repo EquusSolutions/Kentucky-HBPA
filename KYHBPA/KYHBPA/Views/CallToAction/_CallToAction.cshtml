@@ -1,24 +1,17 @@
 ﻿@model KYHBPA.Models.CallToAction
 
 <div>
-    <h4>CallToAction</h4>
+    <h4>@Html.DisplayFor(model => model.TypeOfAction)</h4>
     <hr />
     <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.Image.FileBytes)))" />
     <dl class="dl-horizontal">
-        <dt>
-             @Html.DisplayNameFor(model => model.URL)
-        </dt>
-
-        <dd>
-            <a href="@Model.URL">@Html.DisplayFor(model => model.URL)</a>
-        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.Headline)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Headline)
+            <h3>@Html.DisplayFor(model => model.Headline)</h3>
         </dd>
 
         <dt>
@@ -27,6 +20,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Summary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.URL)
+        </dt>
+
+        <dd>
+            <a href="@Model.URL" target="_blank">@Html.DisplayFor(model => model.URL)</a>
         </dd>
 
         <dt>

@@ -1,7 +1,6 @@
 ﻿@model KYHBPA.Models.News
 
 <div>
-    <h4>News</h4>
     <hr />
     <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.Picture.FileBytes)))" />
     <dl class="dl-horizontal">
@@ -10,7 +9,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Headline)
+            <h3>@Html.DisplayFor(model => model.Headline)</h3>
         </dd>
 
         <dt>
@@ -26,7 +25,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.URL)
+            <a href="@Model.URL" target="_blank">@Html.DisplayFor(model => model.URL)</a>
         </dd>
 
         <dt>
@@ -35,13 +34,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Date)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Picture)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Picture)
         </dd>
     </dl>
 </div>
