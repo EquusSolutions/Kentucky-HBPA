@@ -7,29 +7,8 @@
 
 <div class="body-content-padded">
     <h2>Photo Gallery</h2>
-    <div class="photo-gallery">
-        <table>
-            <tr>
-                <td>
-                    @foreach (var photo in Model)
-                    {
-                        @Html.Partial("_FetchImage", photo)
-                    }
-                </td>
-                <td>
-                    @foreach (var photo in Model)
-                    {
-                        @Html.Partial("_FetchImage", photo)
-                    }
-                </td>
-                <td>
-                    @foreach (var photo in Model)
-                    {
-                        @Html.Partial("_FetchImage", photo)
-                    }
-                </td>
-            </tr>
-        </table>
-    </div>
+    @foreach (var photo in Model)
+    {
+        @Html.Partial("_FetchImage", photo)
+    }
 </div>
-&nbsp;
