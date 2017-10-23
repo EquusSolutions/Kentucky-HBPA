@@ -100,14 +100,15 @@ namespace KYHBPA.Controllers
 
                 //from class
                 //var image = db.Documents.FirstOrDefault();
+                if (file != null)
+                {
+                    byte[] uploadedFile = new byte[file.InputStream.Length];
+                    file.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
 
-                byte[] uploadedFile = new byte[file.InputStream.Length];
-                file.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
+                    Attachment attachment = new Attachment(new MemoryStream(uploadedFile), file.FileName);
 
-                Attachment attachment = new Attachment(new MemoryStream(uploadedFile), file.FileName);
-
-                mail.Attachments.Add(attachment);
-
+                    mail.Attachments.Add(attachment);
+                }
 #if DEBUG
                 smtp = debugSmtpClient;
 #else
