@@ -7830,14 +7830,7 @@ button.close {
     z-index: 10;
     padding-top: 10px;
     padding-bottom: 10px;
-    /*color: #ffffff;*/
-    /*background: rgb(0, 0, 0); /* Fallback for older browsers without RGBA-support */
-    /*background: rgba(0, 0, 0, 1);*/
-    background: black; /* For browsers that do not support gradients */ 
-    background: -webkit-linear-gradient(darkgray, black); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(darkgray, black); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(darkgray, black); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(darkgray, black); /* Standard syntax (must be last) */
+    color: #ffffff;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
@@ -7868,8 +7861,13 @@ button.close {
     }
 
     .carousel-caption {
-        background-color: black;
-        opacity:0.65;
+        background: rgb(0, 0, 0); /* Fallback for older browsers without RGBA-support */
+        background: rgba(0, 0, 0, 0.6);
+        /*background: black; /* For browsers that do not support gradients */
+        /*background: -webkit-linear-gradient(darkgray, black); /* For Safari 5.1 to 6.0 */
+        /*background: -o-linear-gradient(darkgray, black); /* For Opera 11.1 to 12.0 */
+        /*background: -moz-linear-gradient(darkgray, black); /* For Firefox 3.6 to 15 */
+        /*background: linear-gradient(darkgray, black); /* Standard syntax (must be last) */
         left: 10%;
         right: 10%;
         padding-bottom: 30px;
