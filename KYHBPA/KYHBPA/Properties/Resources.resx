@@ -208,4 +208,7 @@
   <data name="Jockey4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Jockey4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="news_academy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\news-academy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

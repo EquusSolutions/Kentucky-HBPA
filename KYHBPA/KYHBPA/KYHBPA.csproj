@@ -423,6 +423,7 @@
     <Content Include="Images\Jockey2.jpg" />
     <Content Include="Images\Jockey3.jpg" />
     <Content Include="Images\Jockey4.jpg" />
+    <None Include="Images\news-academy.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
