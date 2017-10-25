@@ -398,6 +398,7 @@
     <None Include="Images\donate-btn.png" />
     <Content Include="Images\bannercontactus.jpg" />
     <None Include="Images\ellis1.jpg" />
+    <Content Include="Images\bod.png" />
     <Content Include="Images\EquusSolutions-logo.png" />
     <None Include="Images\gi_blog.gif" />
     <None Include="Images\gi_donate.gif" />
