@@ -39,7 +39,6 @@ textarea {
     color: #e4bc1b;
     font-size: 250%;
     font-weight: 900;
-    /*opacity:1;*/
 }
 
 .carousel-text {
@@ -49,9 +48,6 @@ textarea {
 }
     
 .footer {
-        /*background: white;*/
-        /*margin-left: auto;
-    margin-right: auto;*/
         margin-left: 12%;
         margin-right: 12%;
     }
