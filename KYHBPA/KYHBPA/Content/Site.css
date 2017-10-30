@@ -36,12 +36,16 @@ textarea {
 }
 
 .carousel-title {
-    color: #C7A317;
-    opacity:1;
+    color: #e4bc1b;
+    font-size: 250%;
+    font-weight: 900;
+    /*opacity:1;*/
 }
 
 .carousel-text {
     color: white;
+    font-size: 150%;
+    font-weight: 900;
 }
     
 .footer {
