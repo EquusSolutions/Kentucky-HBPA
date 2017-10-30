@@ -7864,11 +7864,6 @@ button.close {
     .carousel-caption {
         background: rgb(0, 0, 0); /* Fallback for older browsers without RGBA-support */
         background: rgba(0, 0, 0, 0.4);
-        /*background: black; /* For browsers that do not support gradients */
-        /*background: -webkit-linear-gradient(darkgray, black); /* For Safari 5.1 to 6.0 */
-        /*background: -o-linear-gradient(darkgray, black); /* For Opera 11.1 to 12.0 */
-        /*background: -moz-linear-gradient(darkgray, black); /* For Firefox 3.6 to 15 */
-        /*background: linear-gradient(darkgray, black); /* Standard syntax (must be last) */
         left: 10%;
         right: 10%;
         padding-bottom: 30px;
