@@ -18,8 +18,8 @@ namespace KYHBPA.Controllers
 
         public ActionResult Index()
         {
-            var topPolls = db.Polls.Where(p => DateTime.Compare(DateTime.Today, p.EndDate) <= 0).ToList().Take(3);
-            var topNews = db.News.ToList().Take(4);
+            var topPolls = db.Polls.Where(p => DateTime.Compare(DateTime.Today, p.EndDate) <= 0).ToList().OrderByDescending(p => p.StartDate).Take(3);
+            var topNews = db.News.ToList().OrderByDescending(n => n.Date).Take(5);
             var polls = new List<Poll>();
             var news = new List<News>();
 
@@ -38,6 +38,9 @@ namespace KYHBPA.Controllers
 
             foreach (var n in topNews)
             {
+                var picture = db.Documents.FirstOrDefault(p => p.Id == n.PictureId);
+                n.Picture = picture;
+
                 news.Add(
                     new News { 
                         Id = n.Id,
