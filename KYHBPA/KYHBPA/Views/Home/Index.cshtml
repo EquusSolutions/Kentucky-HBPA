@@ -7,72 +7,72 @@
 <div class="row">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-    </ol>
-        
-    <div class="carousel-inner" role="listbox">            
-        @{
-            if (Model.News.Count > 0)
-            {
-                <div class="item active">
-                    <a href=@Model.News[0].URL target="_blank">
-                        <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.News[0].Picture.FileBytes)))"/>
-                    </a>
-                    <div class="carousel-caption">
-                        <h3 class="carousel-title">
-                            @Model.News[0].Headline
-                        </h3>
-                        <p class="carousel-text">
-                            @Model.News[0].Summary
-                        </p>
-                        <p>
-                            <a href="https://www.facebook.com/KYhbpa/" class="btn btn-social-icon btn-facebook" target="_blank">
-                                <span class="fa fa-facebook"></span>
-                            </a>
-                            <a href="https://twitter.com/kyhbpa" class="btn btn-social-icon btn-twitter" target="_blank">
-                                <span class="fa fa-twitter"></span>
-                            </a>
-                            <a href="https://www.instagram.com/kentuckyhbpa/" class="btn btn-social-icon btn-instagram" target="_blank">
-                                <span class="fa fa-instagram"></span>
-                            </a>
-                        </p>
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+            @{
+                if (Model.News.Count > 0)
+                {
+                    <div class="item active">
+                        <a href=@Model.News[0].URL target="_blank">
+                            <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.News[0].Picture.FileBytes)))" />
+                        </a>
+                        <div class="carousel-caption">
+                            <h3 class="carousel-title">
+                                @Model.News[0].Headline
+                            </h3>
+                            <p class="carousel-text">
+                                @Model.News[0].Summary
+                            </p>
+                            <p>
+                                <a href="https://www.facebook.com/KYhbpa/" class="btn btn-social-icon btn-facebook" target="_blank">
+                                    <span class="fa fa-facebook"></span>
+                                </a>
+                                <a href="https://twitter.com/kyhbpa" class="btn btn-social-icon btn-twitter" target="_blank">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                                <a href="https://www.instagram.com/kentuckyhbpa/" class="btn btn-social-icon btn-instagram" target="_blank">
+                                    <span class="fa fa-instagram"></span>
+                                </a>
+                            </p>
+                        </div>
                     </div>
-                </div>
-            }
-            for (var i = 1; i < Model.News.Count; i++)
-            {
-                <div class="item">
-                    <a href=@Model.News[i].URL target="_blank">
-                        <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(@Model.News[i].Picture.FileBytes)))"/>
-                    </a>
-                    <div class="carousel-caption">
-                        <h3 class="carousel-title">
-                            @Model.News[i].Headline
-                        </h3>
-                        <p class="carousel-text">
-                            @Model.News[i].Summary
-                        </p>
-                        <p>
-                            <a href="https://www.facebook.com/KYhbpa/" class="btn btn-social-icon btn-facebook" target="_blank">
-                                <span class="fa fa-facebook"></span>
-                            </a>
-                            <a href="https://twitter.com/kyhbpa" class="btn btn-social-icon btn-twitter" target="_blank">
-                                <span class="fa fa-twitter"></span>
-                            </a>
-                            <a href="https://www.instagram.com/kentuckyhbpa/" class="btn btn-social-icon btn-instagram" target="_blank">
-                                <span class="fa fa-instagram"></span>
-                            </a>
-                        </p>
+                }
+                for (var i = 1; i < Model.News.Count; i++)
+                {
+                    <div class="item">
+                        <a href=@Model.News[i].URL target="_blank">
+                            <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(@Model.News[i].Picture.FileBytes)))" />
+                        </a>
+                        <div class="carousel-caption">
+                            <h3 class="carousel-title">
+                                @Model.News[i].Headline
+                            </h3>
+                            <p class="carousel-text">
+                                @Model.News[i].Summary
+                            </p>
+                            <p>
+                                <a href="https://www.facebook.com/KYhbpa/" class="btn btn-social-icon btn-facebook" target="_blank">
+                                    <span class="fa fa-facebook"></span>
+                                </a>
+                                <a href="https://twitter.com/kyhbpa" class="btn btn-social-icon btn-twitter" target="_blank">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                                <a href="https://www.instagram.com/kentuckyhbpa/" class="btn btn-social-icon btn-instagram" target="_blank">
+                                    <span class="fa fa-instagram"></span>
+                                </a>
+                            </p>
+                        </div>
                     </div>
-                </div>
+                }
             }
-        }
-        
+
         </div>
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -185,10 +185,10 @@
                 </a>
                 <a href="https://twitter.com/KyHBPA"><h3>Twitter</h3></a><hr />
             </center>
-            <a class="twitter-timeline" href="https://twitter.com/KyHBPA?ref_src=twsrc%5Etfw" data-height="939px">
+            <a class="twitter-timeline" href="https://twitter.com/KyHBPA?ref_src=twsrc%5Etfw">
                 Tweets by @@KyHBPA
             </a>
-            <script async src="platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
 
@@ -201,7 +201,7 @@
         </div>
         @foreach (var poll in Model.Polls)
         {
-            Html.RenderAction("DisplayPoll", "Poll", new {id = poll.Id});
+            Html.RenderAction("DisplayPoll", "Poll", new { id = poll.Id });
         }
     </div>
     <center><p><a class="btn btn-default" href="/Poll/DisplayPolls/">See All Polls &raquo;</a></p></center>
