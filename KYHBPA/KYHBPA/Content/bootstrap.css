@@ -36,6 +36,7 @@ nav,
 section,
 summary {
     display: block;
+  
 }
 
 audio,
@@ -127,6 +128,10 @@ hr {
     height: 0;
 }
 
+hr1
+{
+    height: 0;
+}
 pre {
     overflow: auto;
 }
@@ -3777,7 +3782,7 @@ select[multiple].input-lg {
     background: rgba(199, 163, 23, 0.85);
     margin-top: 30px;
     height: 45px;
-    opacity: 0.9;
+    opacity: 0.75;
 }
 
 .btn {
@@ -8329,8 +8334,4 @@ button.close {
 .panel-danger .panel-title,
 .panel-info .panel-title {
     color: #fff;
-}
-
-.body-content {
-    width: 100%;
 }
