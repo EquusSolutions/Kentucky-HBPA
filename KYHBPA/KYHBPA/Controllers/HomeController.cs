@@ -18,45 +18,19 @@ namespace KYHBPA.Controllers
 
         public ActionResult Index()
         {
-            var topPolls = db.Polls.Where(p => DateTime.Compare(DateTime.Today, p.EndDate) <= 0).ToList().OrderByDescending(p => p.StartDate).Take(3);
-            var topNews = db.News.ToList().OrderByDescending(n => n.Date).Take(5);
-            var polls = new List<Poll>();
-            var news = new List<News>();
-
-            foreach (var poll in topPolls)
-            {
-                polls.Add(
-                    new Poll { 
-                        Id = poll.Id,
-                        Name = poll.Name,
-                        Question = poll.Question,
-                        StartDate = poll.StartDate,
-                        EndDate = poll.EndDate,
-                        PollOptions = poll.PollOptions
-                    });    
-            }
+            var topPolls = db.Polls.Where(p => DateTime.Compare(DateTime.Today, p.EndDate) <= 0).OrderByDescending(p => p.StartDate).Take(3).ToList();
+            var topNews = db.News.OrderByDescending(n => n.Date).Take(5).ToList();
 
             foreach (var n in topNews)
             {
                 var picture = db.Documents.FirstOrDefault(p => p.Id == n.PictureId);
                 n.Picture = picture;
-
-                news.Add(
-                    new News { 
-                        Id = n.Id,
-                        Date = n.Date,
-                        Headline = n.Headline,
-                        Picture = n.Picture,
-                        PictureId = n.PictureId,
-                        Summary = n.Summary,
-                        URL = n.URL
-                    });
             }
 
             var home = new HomeViewModel
             {
-                Polls = polls,
-                News = news
+                Polls = topPolls,
+                News = topNews
             };
 
             return View(home);
