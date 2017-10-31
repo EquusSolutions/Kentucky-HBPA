@@ -177,11 +177,13 @@ namespace KYHBPA.Controllers
             return RedirectToAction("Index", "Poll");
         }
 
+        [AllowAnonymous]
         public ActionResult DisplayPolls()
         {
             return View("PollGallery", db.Polls.Where(p => DateTime.Compare(DateTime.Today,p.EndDate) <= 0).ToList());
         }
 
+        [AllowAnonymous]
         public ActionResult DisplayPoll(int? id)
         {
             if (id == null)

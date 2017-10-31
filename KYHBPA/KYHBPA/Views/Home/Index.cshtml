@@ -1,4 +1,6 @@
-﻿@{
+﻿@model KYHBPA.Models.ViewModels.HomeViewModel
+
+@{
     ViewBag.Title = "Home | KYHBPA";
 }
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -269,59 +271,17 @@
     </div>
 
     @*Polls Section*@
-    <hr />
 
+    <hr />
     <div class="col-md-12" style="padding-bottom:2.5%">
         <div class="boxed">
             <center><h2 style="color: white;">Latest Polls</h2></center>
         </div>
-        <div class="col-md-4">
-            <table class="table">
-                <tr>
-                    <td>
-                        <h4>What color should we paint the office?</h4>
-                        <input id="RadioBLue" name="color" type="radio" /> Blue <br>
-                        <input id="RadioGreen" name="color" type="radio" /> Green<br>
-                        <input id="RadioYellow" name="color" type="radio" /> Yellow<br>
-                        <input id="RadioOther" name="color" type="radio" /> Other<br>
-                        <input id="SubmitPoll" name="color" type="submit" value="Submit" />
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="col-md-4">
-            <table class="table">
-                <tr>
-                    <td>
-                        <h4>What's your favorite social network?</h4>
-                        <input id="RadioFb" name="social" type="radio" /> Facebook <br>
-                        <input id="RadioTwitter" name="social" type="radio" /> Twitter<br>
-                        <input id="RadioInstagram" name="social" type="radio" /> Instagram<br>
-                        <input id="RadioOther" name="social" type="radio" /> Other<br>
-                        <input id="SubmitPoll" name="social" type="submit" value="Submit" />
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="col-md-4">
-            <table class="table">
-                <tr>
-                    <td>
-                        <h4>What's your favorite hobby?</h4>
-                        <input id="RadioCooking" name="hobby" type="radio" /> Cooking <br>
-                        <input id="RadioDance" name="hobby" type="radio" /> Dance <br>
-                        <input id="RadioReading" name="hobby" type="radio" /> Reading<br>
-                        <input id="RadioOther" name="hobby" type="radio" /> Other<br>
-                        <input id="SubmitPoll" name="hobby" type="submit" value="Submit" />
-                    </td>
-                </tr>
-            </table>
-        </div>
+        @foreach (var poll in Model.Polls)
+        {
+            Html.RenderAction("DisplayPoll", "Poll", new {id = poll.Id});
+        }
     </div>
-
-
     <center><p><a class="btn btn-default" href="/Poll/DisplayPolls/">See All Polls &raquo;</a></p></center>
 
     @*Sponsors Section*@
@@ -386,7 +346,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                @Html.Partial("_ContactForm")
+                @Html.Partial("_ContactForm", @Model.Contact)
             </div>
         </div>
     </div>

@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity;
 
 namespace KYHBPA.Controllers
 {
+    [Authorize]
     public class PollOptionController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
+using KYHBPA.Models.ViewModels;
 
 namespace KYHBPA.Controllers
 {
@@ -17,7 +18,45 @@ namespace KYHBPA.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var topPolls = db.Polls.Where(p => DateTime.Compare(DateTime.Today, p.EndDate) <= 0).ToList().Take(3);
+            var topNews = db.News.ToList().Take(4);
+            var polls = new List<Poll>();
+            var news = new List<News>();
+
+            foreach (var poll in topPolls)
+            {
+                polls.Add(
+                    new Poll { 
+                        Id = poll.Id,
+                        Name = poll.Name,
+                        Question = poll.Question,
+                        StartDate = poll.StartDate,
+                        EndDate = poll.EndDate,
+                        PollOptions = poll.PollOptions
+                    });    
+            }
+
+            foreach (var n in topNews)
+            {
+                news.Add(
+                    new News { 
+                        Id = n.Id,
+                        Date = n.Date,
+                        Headline = n.Headline,
+                        Picture = n.Picture,
+                        PictureId = n.PictureId,
+                        Summary = n.Summary,
+                        URL = n.URL
+                    });
+            }
+
+            var home = new HomeViewModel
+            {
+                Polls = polls,
+                News = news
+            };
+
+            return View(home);
         }
 
         public ActionResult About()
