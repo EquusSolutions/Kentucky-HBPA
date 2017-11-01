@@ -3778,11 +3778,10 @@ select[multiple].input-lg {
 }
 
 .boxed {
-    border: 60px;
-    background: rgba(199, 163, 23, 0.85);
-    margin-top: 30px;
-    height: 45px;
-    opacity: 0.75;
+    border:60px;
+    background:rgba(199, 163, 23, 0.85);
+    margin-top:30px;
+    height:45px;
 }
 
 .btn {
@@ -5280,8 +5279,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
     float: left;
     padding: 19.5px 15px;
-    font-size: 19px;
-    line-height: 21px;
+    /*font-size: 19px;*/
+    line-height: 15px;
     height: 60px;
 }
 
@@ -6103,11 +6102,12 @@ a.badge:focus {
 .jumbotron {
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-bottom: 30px;
     color: inherit;
     background-color: #368BC1;
     max-height: 200px;
-    opacity: 0.9;
 }
 
 
