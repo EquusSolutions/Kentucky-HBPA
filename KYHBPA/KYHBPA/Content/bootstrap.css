@@ -3778,10 +3778,10 @@ select[multiple].input-lg {
 }
 
 .boxed {
-    border: 60px;
-    background: rgba(199, 163, 23, 0.85);
-    margin-top: 30px;
-    height: 45px;
+    border:60px;
+    background:rgba(199, 163, 23, 0.85);
+    margin-top:30px;
+    height:45px;
 }
 
 .btn {
