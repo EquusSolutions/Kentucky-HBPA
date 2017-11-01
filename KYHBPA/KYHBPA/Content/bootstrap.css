@@ -3782,7 +3782,6 @@ select[multiple].input-lg {
     background: rgba(199, 163, 23, 0.85);
     margin-top: 30px;
     height: 45px;
-    opacity: 0.75;
 }
 
 .btn {
@@ -5280,8 +5279,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
     float: left;
     padding: 19.5px 15px;
-    font-size: 19px;
-    line-height: 21px;
+    /*font-size: 19px;*/
+    line-height: 15px;
     height: 60px;
 }
 
