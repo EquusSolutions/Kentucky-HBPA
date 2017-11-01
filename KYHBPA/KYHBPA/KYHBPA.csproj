@@ -399,7 +399,8 @@
     <None Include="Images\donate-btn.png" />
     <Content Include="Images\bannercontactus.jpg" />
     <None Include="Images\ellis1.jpg" />
-    <Content Include="Images\bod.png" />
+    <Content Include="Images\bodf1.jpg" />
+    <Content Include="Images\bodm.jpg" />
     <Content Include="Images\EquusSolutions-logo.png" />
     <None Include="Images\gi_blog.gif" />
     <None Include="Images\gi_donate.gif" />
@@ -426,6 +427,7 @@
     <Content Include="Images\Jockey3.jpg" />
     <Content Include="Images\Jockey4.jpg" />
     <None Include="Images\news-academy.jpg" />
+    <None Include="Images\member-benefits.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
