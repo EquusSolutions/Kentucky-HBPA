@@ -5,12 +5,14 @@
     ViewBag.Title = "Blog | KYHBPA";
 }
 
-<div class="body-content-padded">
-    <h2>Blog</h2>
-    <br />
+<div class="row">
+    <div class="body-content-padded">
+        <h2>Blog</h2>
+        <br />
 
-    @foreach (var post in Model)
-    {
-        @Html.Partial("_PostSummary", post)
-    }
+        @foreach (var post in Model)
+        {
+            @Html.Partial("_PostSummary", post)
+        }
+    </div>
 </div>
