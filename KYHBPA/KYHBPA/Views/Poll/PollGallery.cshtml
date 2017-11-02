@@ -4,12 +4,14 @@
     ViewBag.Title = "PollGallery";
 }
 
-<div class="body-content-padded">
-    <h2 class="col-md-12">Polls</h2>
+<div class="row">
+    <div class="body-content-padded">
+        <h2 class="col-md-12">Polls</h2>
 
-    @foreach (var item in Model)
-    {
+        @foreach (var item in Model)
+        {
 
-        Html.RenderAction("DisplayPoll", "Poll", new { id = item.Id });
-    }
+            Html.RenderAction("DisplayPoll", "Poll", new { id = item.Id });
+        }
+    </div>
 </div>
