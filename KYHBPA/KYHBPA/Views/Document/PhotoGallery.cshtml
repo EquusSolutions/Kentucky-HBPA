@@ -5,10 +5,12 @@
     ViewBag.Title = "PhotoGallery | KYHBPA";
 }
 
-<div class="body-content-padded">
-    <h2>Photo Gallery</h2>
-    @foreach (var photo in Model)
-    {
-        @Html.Partial("_FetchImage", photo)
-    }
+<div class="row">
+    <div class="body-content-padded">
+        <h2>Photo Gallery</h2>
+        @foreach (var photo in Model)
+        {
+            @Html.Partial("_FetchImage", photo)
+        }
+    </div>
 </div>
