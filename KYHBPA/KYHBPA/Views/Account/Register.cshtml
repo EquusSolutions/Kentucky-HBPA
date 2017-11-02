@@ -5,7 +5,7 @@
 
 <div class="body-content-padded">
     <h2>@ViewBag.Title.</h2>
-    <img src="~/Images/become-a-member.png" style="float:right;height:40%;width:40%" />
+    
     @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
     {
         @Html.AntiForgeryToken()
