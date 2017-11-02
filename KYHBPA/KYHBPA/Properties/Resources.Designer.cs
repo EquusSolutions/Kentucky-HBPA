@@ -73,6 +73,16 @@ namespace KYHBPA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap become_a_member {
+            get {
+                object obj = ResourceManager.GetObject("become_a_member", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap bodf1 {
             get {
                 object obj = ResourceManager.GetObject("bodf1", resourceCulture);
