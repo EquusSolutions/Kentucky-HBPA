@@ -12,7 +12,7 @@
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
             @*<li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>*@
+                <li data-target="#myCarousel" data-slide-to="4"></li>*@
         </ol>
 
         <div class="carousel-inner" role="listbox">
@@ -107,40 +107,38 @@
 <div class="body-content-padded">
     @*Get Involved Section*@
     <div class="row" style="padding-bottom:2.5%">
-        <div class="col-md-12">
-            <div class="boxed" style="border-radius: 25px">
-                <center><h2 style="color: white;">Get Involved</h2></center>
-            </div>
-            <br />
-            <center>
-                <br />
-                <div class="col-sm-2">
-                    <a href="~/Account/Register">
-                        <img src="~/Images/gi_member.gif" alt="" data-mh="bottomTextStyle" style="height: 170px; width: 180px;">
-                    </a>
-                </div>
-                <div class="col-sm-3">
-                    <a href="~/Event">
-                        <img src="~/Images/gi_event.gif" alt="" data-mh="bottomTextStyle" style="height: 170px; width: 180px;">
-                    </a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="~/Blog/Blog">
-                        <img src="~/Images/gi_blog.gif" alt="" data-mh="bottomTextStyle" style="height: 170px; width: 180px;">
-                    </a>
-                </div>
-                <div class="col-sm-3">
-                    <a href="~/CallToAction/CallToActionGallery">
-                        <img src="~/Images/gi_legislation.gif" alt="" data-mh="bottomTextStyle" style="height: 170px; width: 180px;">
-                    </a>
-                </div>
-                <div class="col-sm-2">
-                    <a href="https://www.paypal.com/us/webapps/mpp/donations" target="_blank">
-                        <img src="~/Images/gi_donate.gif" alt="" data-mh="bottomTextStyle" style="height: 170px; width: 180px;">
-                    </a>
-                </div>
-            </center>
+        <div class="boxed" style="border-radius: 25px;">
+            <center><h2 style="color: white;">Get Involved</h2></center>
         </div>
+        <br />
+        <center>
+            <br />
+            <div class="col-sm-2">
+                <a href="~/Account/Register">
+                    <img src="~/Images/gi_member.gif" alt="" data-mh="bottomTextStyle" style="height: 170px; width: 180px;">
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="~/Event">
+                    <img src="~/Images/gi_event.gif" alt="" data-mh="bottomTextStyle" style="height: 170px; width: 180px;">
+                </a>
+            </div>
+            <div class="col-sm-2">
+                <a href="~/Blog/Blog">
+                    <img src="~/Images/gi_blog.gif" alt="" data-mh="bottomTextStyle" style="height: 170px; width: 180px;">
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="~/CallToAction/CallToActionGallery">
+                    <img src="~/Images/gi_legislation.gif" alt="" data-mh="bottomTextStyle" style="height: 170px; width: 180px;">
+                </a>
+            </div>
+            <div class="col-sm-2">
+                <a href="https://www.paypal.com/us/webapps/mpp/donations" target="_blank">
+                    <img src="~/Images/gi_donate.gif" alt="" data-mh="bottomTextStyle" style="height: 170px; width: 180px;">
+                </a>
+            </div>
+        </center>
     </div>
 
     @*Connect with Us Section*@
@@ -179,7 +177,7 @@
                 <iframe src="//users.instush.com/collage/?cols=5&rows=9&sl=true&user_id=6245001207&username=equussolutions&sid=-1&susername=-1&tag=-1&stype=mine&bg=1c5380&space=true&rd=true&grd=true&gpd=6&drp=false&pin=true&t=999999OYIw7-dhQQ-lNRLWiXHT1IG8u85CgU8AB-mBXKTW_PMeVmLro4OEBgvsmIDck8LxxCAHywz3ZoQ" allowtransparency="true" frameborder="0" scrolling="no" style="display:block;width:527px;height:939px;border:none;overflow:hidden;"></iframe>
                 <!-- SnapWidget -->
                 @*<script src="https://snapwidget.com/js/snapwidget.js"></script>
-                <iframe src="https://snapwidget.com/embed/463800" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="yes" style="border:none; overflow:hidden; width:100%; "></iframe>*@
+                    <iframe src="https://snapwidget.com/embed/463800" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="yes" style="border:none; overflow:hidden; width:100%; "></iframe>*@
             </center>
         </div>
 
@@ -202,21 +200,21 @@
     @*Polls Section*@
 
     <hr />
-    <div class="col-md-12" style="padding-bottom:2.5%">
-        <div class="boxed" style="border-radius: 25px">
+    <div class="row" style="padding-bottom:2.5%">
+        <div class="boxed" style="border-radius: 25px;">
             <center><h2 style="color: white;">Latest Polls</h2></center>
         </div>
         @foreach (var poll in Model.Polls)
-        {
-            Html.RenderAction("DisplayPoll", "Poll", new { id = poll.Id });
-        }
+            {
+                Html.RenderAction("DisplayPoll", "Poll", new { id = poll.Id });
+            }
     </div>
     <center><p><a class="btn btn-default" href="/Poll/DisplayPolls/">See All Polls &raquo;</a></p></center>
 
     @*Sponsors Section*@
     <hr />
 
-    <div class="row" style="background-color:white; padding-bottom: 5%; border-radius: 25px">
+    <div class="row" style="background-color:white; padding-bottom: 5%; border-radius: 25px;">
         <div class="boxed">
             <center><p><h2 style="color: white;">Meet Our Partners</h2></p></center>
         </div>
@@ -269,14 +267,12 @@
 
     @*Contact Us Section*@
     <hr />
-    <div style="padding-bottom: 0;">
-        <div class="boxed" style="border-radius: 25px">
+    <div class="row" style="padding-bottom:0">
+        <div class="boxed" style="border-radius: 25px;">
             <center><p><h2 style="color: white;">Contact Us</h2></p></center>
         </div>
         <div class="row">
-            <div class="col-md-12">
                 @Html.Partial("_ContactForm", @Model.Contact)
-            </div>
         </div>
     </div>
 </div>
