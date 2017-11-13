@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KYHBPA.Models;
+using DHTMLX.Scheduler;
 
 namespace KYHBPA.Controllers
 {
@@ -19,10 +20,11 @@ namespace KYHBPA.Controllers
 
         public ActionResult Index()
         {
-            //try { 
-            //var scheduler = new DHXScheduler(this); //initializes dhtmlxScheduler
-            //scheduler.LoadData = true;// allows loading data
-            //scheduler.EnableDataprocessor = true;// enables DataProcessor in order to enable implementation CRUD operations
+            //try
+            //{
+            //    var scheduler = new DHXScheduler(this); //initializes dhtmlxScheduler
+            //    scheduler.LoadData = true;// allows loading data
+            //    scheduler.EnableDataprocessor = true;// enables DataProcessor in order to enable implementation CRUD operations
 
             //    return View(scheduler);
             //}
@@ -31,7 +33,7 @@ namespace KYHBPA.Controllers
             //    if (ex != null)
             //    {
             //        return RedirectToAction("Index", "Home");
-            //    }                
+            //    }
             //}
 
             //return RedirectToAction("Index", "Home");
@@ -49,14 +51,12 @@ namespace KYHBPA.Controllers
                 var formattingEvent = new
                 {
                     id = ev.Id,
-                    start_date = ev.StartDate.ToString(),
-                    end_date = ev.EndDate.ToString(),
+                    start_date = ev.StartDate.ToString("MM/dd/yy H:mm"),
+                    end_date = ev.EndDate.ToString("MM/dd/yy H:mm"),
                     text = ev.Description
                 };
                 formatedEvents.Add(formattingEvent);
             }
-
-
 
             return Json(formatedEvents, JsonRequestBehavior.AllowGet);
 
@@ -92,8 +92,6 @@ namespace KYHBPA.Controllers
             }
 
             db.SaveChanges();
-
-
 
             return View("Calendar");
         }
