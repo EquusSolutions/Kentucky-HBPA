@@ -2,7 +2,9 @@
 
 <div>
     <hr />
-    <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.Picture.FileBytes)))" />
+
+    <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.Picture.FileBytes)))" class="thumbnail" style="height:10%; width:10%" />
+
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Headline)

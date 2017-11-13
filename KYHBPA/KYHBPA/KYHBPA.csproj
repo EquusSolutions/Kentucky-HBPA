@@ -784,6 +784,7 @@
     <Content Include="Views\Event\Data.cshtml" />
     <Content Include="Views\Account\Manager.cshtml" />
     <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\News\_FetchNewsImage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
