@@ -2,40 +2,28 @@
 
 <div>
     <hr />
-
-    <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.Picture.FileBytes)))" style="height:55%; width:55%" />
-
+    <center>
+        <img src="@(string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.Picture.FileBytes)))" style="height:55%; width:55%" />
+    </center>
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Headline)
-        </dt>
 
         <dd>
-            <h3>@Html.DisplayFor(model => model.Headline)</h3>
+            <center>
+                <h3>@Html.DisplayFor(model => model.Headline)</h3>
+            </center>
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Summary)
-        </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Summary)
+            <p>
+                @Html.DisplayFor(model => model.Summary)
+            </p>
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.URL)
-        </dt>
 
         <dd>
-            <a href="@Model.URL" target="_blank">@Html.DisplayFor(model => model.URL)</a>
+            <p>
+                See full article at: <a href="@Model.URL" target="_blank">@Html.DisplayFor(model => model.URL)</a>
+            </p>
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Date)
-        </dd>
     </dl>
 </div>
